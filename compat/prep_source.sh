@@ -222,5 +222,100 @@ if os.path.exists(p):
         print("== stackprotector.h 补 #include <linux/version.h> ==")
 PY
 
+# 第五遍 a：.c 文件里的 #include 也要处理。第二遍只扫了头文件，但厂商在
+# kernel/irq/cpuhotplug.c:18 之类的地方直接 #include <soc/oplus/system/oplus_project.h>，
+# 这些目录公开分支没有。规则与第二遍一致（含 generated 白名单，避免误伤）。
+python3 - "$K" <<'PY'
+import os, re, sys
+K = sys.argv[1]
+roots = [K, os.path.join(K, "arch/arm64")]
+def resolves(inc):
+    hdrs = (inc, os.path.join("uapi", inc), os.path.join("generated", inc))
+    for r in roots:
+        for h in hdrs:
+            if os.path.exists(os.path.join(r, "include", h)):
+                return True
+    return False
+def gen_exists(inc):
+    for r in (os.path.join(K, "include", "generated", "uapi"),
+              os.path.join(K, "include", "generated"),
+              os.path.join(K, "arch", "arm64", "include", "generated")):
+        if os.path.exists(os.path.join(r, inc)):
+            return True
+    return False
+def topdir_exists(inc):
+    return any(os.path.isdir(os.path.join(r, "include", inc.split("/")[0])) for r in roots)
+SKIP = ("generated/", "config/", "asm/", "asm-generic/", "uapi/",
+        "dt-bindings/", "mach/", "plat/", "xen/", "linux/", "net/", "media/", "sound/")
+# linux/ 之类的根必须存在（否则把整个内核的头文件全删了）；只处理"根存在、路径不存在"的厂商路径
+GEN_NAMES = ("linux/version.h", "linux/utsrelease.h", "linux/compile.h",
+             "linux/bounds.h", "asm-offsets.h", "linux/timeconst.h")
+n = 0; miss = set()
+for base in (os.path.join(K, "kernel"), os.path.join(K, "mm"), os.path.join(K, "fs"),
+             os.path.join(K, "drivers"), os.path.join(K, "arch", "arm64"),
+             os.path.join(K, "block"), os.path.join(K, "security")):
+    for root, dirs, files in os.walk(base):
+        for fn in files:
+            if not fn.endswith(".c"):
+                continue
+            path = os.path.join(root, fn)
+            try:
+                src = open(path, encoding="utf-8", errors="ignore").read()
+            except OSError:
+                continue
+            out, mod = [], False
+            for ln in src.splitlines(True):
+                m = re.match(r'\s*#\s*include\s*<([^>]+)>', ln)
+                if m:
+                    inc = m.group(1)
+                    if (inc.startswith(SKIP) or inc in GEN_NAMES or "/" not in inc
+                            or resolves(inc) or gen_exists(inc) or not topdir_exists(inc)):
+                        out.append(ln); continue
+                    miss.add(inc)
+                    out.append("/* NL-MISSING-INCLUDE: " + ln.strip() + " */\n")
+                    mod = True; n += 1
+                    continue
+                out.append(ln)
+            if mod:
+                open(path, "w", encoding="utf-8").write("".join(out))
+print("== .c 里被注释的缺失 include: %d 处 ==" % n)
+for x in sorted(miss):
+    print("   -", x)
+PY
+
+# 第五遍 b：Makefile 里引用了不存在的 .c/.S 的 obj-* 行也注释掉。
+# 例：mm/Makefile 里有 process_mm_reclaim_weak.o，但公开分支没有对应源文件，
+# 会报 "No rule to make target 'mm/process_mm_reclaim_weak.c'"。
+python3 - "$K" <<'PY'
+import os, re, sys
+K = sys.argv[1]
+pat = re.compile(r'^(\s*)(obj-\S*|extra-\S*)\s*(\+=|\?=)\s*([^\s#]+\.o)\s*$')
+n = 0
+for root, dirs, files in os.walk(K):
+    if '/.git' in root:
+        continue
+    for fn in files:
+        if fn not in ("Makefile", "Kbuild"):
+            continue
+        p = os.path.join(root, fn)
+        try:
+            lines = open(p, encoding="utf-8", errors="ignore").read().split("\n")
+        except OSError:
+            continue
+        ch = False
+        for i, ln in enumerate(lines):
+            m = pat.match(ln)
+            if not m:
+                continue
+            stem = m.group(4)[:-2]
+            if any(os.path.isfile(os.path.join(root, stem + e)) for e in (".c", ".S", ".s", ".c_shipped", ".S_shipped")):
+                continue
+            lines[i] = "# NL-NOSRC: " + ln
+            ch = True; n += 1
+        if ch:
+            open(p, "w", encoding="utf-8").write("\n".join(lines))
+print("== obj-* 指向缺失源文件已注释 %d 处 ==" % n)
+PY
+
 echo "== 校验 block/Kconfig 引用 =="
 grep -n 'uxio_first' "$K/block/Kconfig" || echo "   已无 uxio_first 引用"
