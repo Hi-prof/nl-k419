@@ -47,6 +47,12 @@ jobs:
       CCACHE_DIR: /home/runner/.ccache
       CCACHE_MAXSIZE: 4G
       CCACHE_COMPILERCHECK: content
+      OPLUS_FEATURE_PROCESS_RECLAIM: 'yes'
+      OPLUS_FEATURE_MEMLEAK_DETECT: 'yes'
+      OPLUS_FEATURE_UFS_SHOW_LATENCY: 'yes'
+      OPLUS_FEATURE_PADL_STATISTICS: 'yes'
+      OPLUS_FEATURE_UFSPLUS: 'yes'
+      OPLUS_FEATURE_WIFI_ROUTERBOOST: 'yes'
     steps:
       - name: 检出本仓库
         uses: actions/checkout@v4

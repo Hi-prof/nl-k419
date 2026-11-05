@@ -314,7 +314,7 @@ for root, dirs, files in os.walk(K):
             stem = m.group(4)[:-2]
             if "$" in stem:
                 continue
-            if any(os.path.isfile(os.path.join(root, stem + e)) for e in (".c", ".S", ".s", ".c_shipped", ".S_shipped", ".o_shipped")):
+            if any(os.path.isfile(os.path.join(root, stem + e)) for e in (".c", ".S", ".s", ".c_shipped", ".S_shipped", ".o_shipped", ".ppm", ".pbm", ".pgm")):
                 continue
             # 复合对象和显式生成目标不需要同名源文件。
             composite = r'^\s*' + re.escape(stem) + r'-(?:y|m|objs|\$\([^)]+\))\s*[:+?]?='
