@@ -27,14 +27,17 @@ for path in glob.glob(os.path.join(K, "**", "Kconfig*"), recursive=True):
         continue
     out, mod = [], False
     for ln in src.splitlines(True):
-        m = re.match(r'\s*source\s+"([^"]+)"', ln)
+        # 注意：内核 Kconfig 的 source 既可能带引号也可能不带（本树 block/Kconfig:248/251 就没引号）
+        m = re.match(r'\s*source\s+(?:"([^"]+)"|(\S+))', ln)
         if m:
-            tgt = m.group(1)
+            tgt = m.group(1) or m.group(2)
             if not tgt.startswith("$"):
-                cand = os.path.normpath(os.path.join(os.path.dirname(path), tgt))
-                cand2 = os.path.normpath(os.path.join(K, tgt))
-                if not os.path.exists(cand) and not os.path.exists(cand2):
-                    missing.append(os.path.relpath(cand, K))
+                cands = [
+                    os.path.normpath(os.path.join(os.path.dirname(path), tgt)),
+                    os.path.normpath(os.path.join(K, tgt)),
+                ]
+                if not any(os.path.exists(c) for c in cands):
+                    missing.append(tgt)
                     out.append("# NL-STRIPPED (missing): " + ln)
                     mod = True
                     continue
