@@ -93,6 +93,8 @@ jobs:
           mv source/kernel/msm-4.19 source/kernel/vendor-overlay
           mv ksrc source/kernel/msm-4.19
           ln -s source/kernel/msm-4.19 ksrc
+          ln -sfn "$GITHUB_WORKSPACE/source/vendor/oplus/kernel/wakelock_profiler" ksrc/drivers/soc/oplus/owakelock
+          ln -sfn "$GITHUB_WORKSPACE/source/vendor/oplus/kernel/wakelock_profiler/oplus_wakelock_profiler.h" ksrc/include/soc/oplus/oplus_wakelock_profiler.h
           echo "vendor HEAD: $(git -C source rev-parse HEAD)"
           test -f ksrc/drivers/input/touchscreen/oplus_touchscreen/Kconfig
           test -f ksrc/kernel/sched_assist/Makefile

@@ -1,3 +1,11 @@
+diff --git a/vendor/oplus/kernel/oplus_performance/uxio_first/Makefile b/vendor/oplus/kernel/oplus_performance/uxio_first/Makefile
+--- a/vendor/oplus/kernel/oplus_performance/uxio_first/Makefile
++++ b/vendor/oplus/kernel/oplus_performance/uxio_first/Makefile
+@@ -1,2 +1,4 @@
++ccflags-y += -I$(src)
++
+ # SPDX-License-Identifier: GPL-2.0-only
+ # Copyright (C) 2018-2020 Oplus. All rights reserved.
 diff --git a/vendor/oplus/kernel/oplus_performance/sched_assist/Makefile b/vendor/oplus/kernel/oplus_performance/sched_assist/Makefile
 --- a/vendor/oplus/kernel/oplus_performance/sched_assist/Makefile
 +++ b/vendor/oplus/kernel/oplus_performance/sched_assist/Makefile
