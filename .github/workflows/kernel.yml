@@ -1,0 +1,128 @@
+name: kernel-419
+
+# 目标：编出与 OPPO PDNM00（SM7250 / lito，uname -r = 4.19.157-perf+）ABI 对齐、
+# 但关掉强制模块签名与符号 CRC 的内核 Image，用来 insmod 改过的 fuck1337 模块。
+#
+# 关键三改：
+#   CONFIG_MODULE_SIG_FORCE  → n   （不再要求厂商密钥签名）
+#   CONFIG_MODULE_SIG_ALL    → n   （不签名，省掉 openssl 那套）
+#   CONFIG_MODVERSIONS       → n   （不再校验 .ko 的 __versions 符号 CRC）
+# 保持 CONFIG_LOCALVERSION="-perf"，让 uname -r 仍是 4.19.157-perf+
+
+on:
+  workflow_dispatch:
+    inputs:
+      jobs:
+        description: '并行度（public 仓库建议 4，private 用 2）'
+        required: false
+        default: '4'
+      kernel_repo:
+        description: '上游内核仓库'
+        required: false
+        default: 'https://github.com/oppo-source/android_kernel_oppo_sm7250.git'
+      kernel_branch:
+        description: '上游分支'
+        required: false
+        default: 'oppo/sm7250_s_12.1_reno4_5g'
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 350
+    env:
+      ARCH: arm64
+      SUBARCH: arm64
+      JOBS: ${{ github.event.inputs.jobs || '4' }}
+    steps:
+      - name: 检出本仓库
+        uses: actions/checkout@v4
+
+      - name: 安装构建依赖
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends \
+            git make bc bison flex libssl-dev libelf-dev device-tree-compiler \
+            cpio gzip xz-utils zstd python3 rsync ca-certificates
+          # 优先 gcc-10（对 4.19 最友好），没有就退回 gcc-11 / 默认版本
+          sudo apt-get install -y --no-install-recommends gcc-10-aarch64-linux-gnu \
+            || sudo apt-get install -y --no-install-recommends gcc-aarch64-linux-gnu
+          sudo apt-get install -y --no-install-recommends binutils-aarch64-linux-gnu
+          for c in aarch64-linux-gnu-gcc-10 aarch64-linux-gnu-gcc-11 aarch64-linux-gnu-gcc; do
+            if command -v "$c" >/dev/null 2>&1; then
+              echo "CROSS_CC=$c" >> "$GITHUB_ENV"
+              break
+            fi
+          done
+          echo "选中编译器: $(command -v "$CROSS_CC" || true)"
+          "$CROSS_CC" --version | head -1
+
+      - name: 拉取内核源码
+        run: |
+          git clone --depth 1 --single-branch \
+            --branch "${{ github.event.inputs.kernel_branch }}" \
+            "${{ github.event.inputs.kernel_repo }}" ksrc
+          cd ksrc
+          echo "HEAD: $(git rev-parse HEAD)"
+          head -5 Makefile | sed -n '1,5p'
+          du -sh .git .
+          df -h /
+
+      - name: 打厂商符号补丁
+        run: |
+          chmod +x compat/apply_compat.sh
+          ./compat/apply_compat.sh ksrc
+
+      - name: 以设备真实配置为基线生成 .config
+        run: |
+          cd ksrc
+          cp ../config/device.config .config
+          scripts/config --file .config -d MODULE_SIG_FORCE
+          scripts/config --file .config -d MODULE_SIG_ALL
+          scripts/config --file .config -d MODVERSIONS
+          scripts/config --file .config --set-str LOCALVERSION "-perf"
+          scripts/config --file .config -e MODULES
+          make ARCH=arm64 olddefconfig
+          echo "==== 关键项 ===="
+          grep -E '^CONFIG_MODULE_SIG|^# CONFIG_MODULE_SIG|MODVERSIONS|^CONFIG_LOCALVERSION=|^CONFIG_MODULES=' .config
+          echo "==== 版本 ===="
+          grep -E '^(VERSION|PATCHLEVEL|SUBLEVEL) =' Makefile
+
+      - name: 编译 Image + dtbs
+        run: |
+          set -o pipefail
+          cd ksrc
+          make -j"$JOBS" ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- \
+               CC="$CROSS_CC" KCFLAGS="-Wno-error" \
+               Image dtbs 2>&1 | tee ../build.log
+          ls -l arch/arm64/boot/Image
+
+      - name: 核对符号与 vermagic
+        run: |
+          cd ksrc
+          echo "== 厂商符号是否导出（必须两行）=="
+          grep -E 'kmalloc_debug_(enable|caches)' Module.symvers || {
+            echo "::error::厂商符号未导出，模块会 Unknown symbol"; exit 1; }
+          echo "== vmlinux 里是否真的存在 =="
+          nm vmlinux | grep -E 'kmalloc_debug_(enable|caches)' || true
+          echo "== kernel release =="
+          cat include/config/kernel.release
+          echo "== 预期 vermagic =="
+          echo "$(cat include/config/kernel.release) SMP preempt mod_unload aarch64"
+
+      - name: 上传产物
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: kernel-419-image
+          path: |
+            ksrc/arch/arm64/boot/Image
+            ksrc/arch/arm64/boot/dts/**/*.dtb
+            ksrc/Module.symvers
+            ksrc/.config
+            ksrc/include/config/kernel.release
+            build.log
+          if-no-files-found: warn
