@@ -344,18 +344,20 @@ grep -n 'uxio_first' "$K/block/Kconfig" || echo "   已无 uxio_first 引用"
 # 处理：只让 vermagic 字符串带上 modversions 标记，CONFIG_MODVERSIONS 仍然是 n，
 #      这样 __versions 段的 CRC 校验代码根本不会被编进内核，符号按名字解析。
 python3 - "$K" <<'PY'
-import os, sys
+import os, re, sys
 p = os.path.join(sys.argv[1], "include/linux/vermagic.h")
 if not os.path.isfile(p):
     print("::error::include/linux/vermagic.h 不存在"); sys.exit(1)
 s = open(p, encoding="utf-8", errors="ignore").read()
-if 'MODULE_VERMAGIC_MODVERSIONS "modversions "' in s:
-    print("== vermagic.h: 已带 modversions 标记 ==")
-elif 'MODULE_VERMAGIC_MODVERSIONS ""' in s:
-    s = s.replace('MODULE_VERMAGIC_MODVERSIONS ""',
-                  'MODULE_VERMAGIC_MODVERSIONS "modversions "')
-    open(p, "w", encoding="utf-8").write(s)
-    print("== vermagic.h: 已强制带上 modversions 标记 ==")
-else:
+# 注意：文件里本来就是 #ifdef CONFIG_MODVERSIONS → "modversions " / #else → ""，
+# 直接找 "modversions " 字符串会误判成"已经改好"。必须精确替换空串那一行。
+pat = re.compile(r'^#define\s+MODULE_VERMAGIC_MODVERSIONS\s+""\s*$', re.M)
+if not pat.search(s):
+    if re.search(r'^#define\s+MODULE_VERMAGIC_MODVERSIONS\s+"modversions "\s*$', s, re.M):
+        print("::error::vermagic.h 里没有空串分支，结构异常，需人工确认"); sys.exit(1)
     print("::error::vermagic.h 结构与预期不符，需人工确认"); sys.exit(1)
+s2 = pat.sub('#define MODULE_VERMAGIC_MODVERSIONS "modversions "', s, count=1)
+assert 'MODULE_VERMAGIC_MODVERSIONS ""' not in s2
+open(p, "w", encoding="utf-8").write(s2)
+print("== vermagic.h: 已强制带上 modversions 标记 ==")
 PY
