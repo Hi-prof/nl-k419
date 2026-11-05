@@ -1,3 +1,81 @@
+diff --git a/kernel/msm-4.19/drivers/tty/serial/Makefile b/kernel/msm-4.19/drivers/tty/serial/Makefile
+--- a/kernel/msm-4.19/drivers/tty/serial/Makefile
++++ b/kernel/msm-4.19/drivers/tty/serial/Makefile
+@@ -2,6 +2,8 @@
+ #
+ # Makefile for the kernel serial device drivers.
+ #
++
++ccflags-y += -I$(src)
+ 
+ obj-$(CONFIG_SERIAL_CORE) += serial_core.o
+ 
+diff --git a/kernel/msm-4.19/drivers/staging/android/ion/ion.h b/kernel/msm-4.19/drivers/staging/android/ion/ion.h
+--- a/kernel/msm-4.19/drivers/staging/android/ion/ion.h
++++ b/kernel/msm-4.19/drivers/staging/android/ion/ion.h
+@@ -472,7 +472,7 @@
+ int ion_page_pool_total(struct ion_page_pool *pool, bool high);
+ size_t ion_system_heap_secure_page_pool_total(struct ion_heap *heap, int vmid);
+ 
+-inline struct page *ion_page_pool_alloc_pages(struct ion_page_pool *pool);
++struct page *ion_page_pool_alloc_pages(struct ion_page_pool *pool);
+ #ifdef CONFIG_ION_SYSTEM_HEAP
+ long ion_page_pool_nr_pages(void);
+ #else
+diff --git a/kernel/msm-4.19/drivers/staging/android/ion/ion_page_pool.c b/kernel/msm-4.19/drivers/staging/android/ion/ion_page_pool.c
+--- a/kernel/msm-4.19/drivers/staging/android/ion/ion_page_pool.c
++++ b/kernel/msm-4.19/drivers/staging/android/ion/ion_page_pool.c
+@@ -54,7 +54,7 @@
+ 	return true;
+ }
+ 
+-inline struct page *ion_page_pool_alloc_pages(struct ion_page_pool *pool)
++struct page *ion_page_pool_alloc_pages(struct ion_page_pool *pool)
+ {
+ 	if (fatal_signal_pending(current))
+ 		return NULL;
+diff --git a/kernel/msm-4.19/drivers/dma-buf/dma-buf.c b/kernel/msm-4.19/drivers/dma-buf/dma-buf.c
+--- a/kernel/msm-4.19/drivers/dma-buf/dma-buf.c
++++ b/kernel/msm-4.19/drivers/dma-buf/dma-buf.c
+@@ -520,7 +520,7 @@
+ #ifdef OPLUS_FEATURE_LOWMEM_DBG
+ /* Add for dump memory */
+ /* usage when lowmmem occurs. */
+-inline int oplus_is_dma_buf_file(struct file *file)
++int oplus_is_dma_buf_file(struct file *file)
+ {
+        return is_dma_buf_file(file);
+ }
+diff --git a/vendor/oplus/kernel/oplus_performance/lowmem_dbg/lowmem_dbg.h b/vendor/oplus/kernel/oplus_performance/lowmem_dbg/lowmem_dbg.h
+--- a/vendor/oplus/kernel/oplus_performance/lowmem_dbg/lowmem_dbg.h
++++ b/vendor/oplus/kernel/oplus_performance/lowmem_dbg/lowmem_dbg.h
+@@ -11,7 +11,7 @@
+ void oplus_lowmem_dbg(bool critical);
+ 
+ #ifndef CONFIG_MTK_ION
+-inline int oplus_is_dma_buf_file(struct file *file);
++int oplus_is_dma_buf_file(struct file *file);
+ #endif /* CONFIG_MTK_ION */
+ #ifdef CONFIG_KSWAPD_DEBUG_STATISTICS
+ int kswapd_debug_init(struct proc_dir_entry *parent);
+diff --git a/vendor/oplus/kernel/system/theia/powerkey_monitor.c b/vendor/oplus/kernel/system/theia/powerkey_monitor.c
+--- a/vendor/oplus/kernel/system/theia/powerkey_monitor.c
++++ b/vendor/oplus/kernel/system/theia/powerkey_monitor.c
+@@ -14,9 +14,11 @@
+ static char *flow_buf_curr = NULL;
+ static int flow_index=0;
+ static int stage_start=0;
+-static const int flow_size = 16;
+-static const int stage_brief_size = 64;
+-static const int stage_total_size = stage_brief_size*flow_size;
++enum {
++    flow_size = 16,
++    stage_brief_size = 64,
++    stage_total_size = stage_brief_size * flow_size,
++};
+ 
+ static struct task_struct *block_thread = NULL;
+ static bool timer_started = false;
 diff --git a/kernel/msm-4.19/techpack/display/oplus/oplus_display_panel.c b/kernel/msm-4.19/techpack/display/oplus/oplus_display_panel.c
 --- a/kernel/msm-4.19/techpack/display/oplus/oplus_display_panel.c
 +++ b/kernel/msm-4.19/techpack/display/oplus/oplus_display_panel.c

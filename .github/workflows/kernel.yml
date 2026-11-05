@@ -143,7 +143,7 @@ jobs:
           cd ksrc
           echo "==== 诊断：-k 跑完全部 prepare，把所有缺失头文件一次性收齐 ===="
           make -k -j"$JOBS" ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- \
-               CC="ccache $CROSS_CC" HOSTCC=gcc KCFLAGS="-Wno-error" \
+               CC="ccache $CROSS_CC" HOSTCC=gcc KCFLAGS="-Wno-error -Wno-error=strict-prototypes -Wno-error=implicit-int" \
                prepare > "$GITHUB_WORKSPACE/prepare.log" 2>&1 || true
           grep -oE 'fatal error: [^:]+: No such file' "$GITHUB_WORKSPACE/prepare.log" | sed 's/fatal error: //' | sort -u || true
           echo "==== autoconf.h 里的 64BIT ===="
@@ -152,7 +152,7 @@ jobs:
           cat include/config/kernel.release || true
           echo "==== 冒烟：单独编 kernel/bounds.s（10 分钟内必须过）===="
           timeout 600 make -j"$JOBS" ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- \
-               CC="ccache $CROSS_CC" HOSTCC=gcc KCFLAGS="-Wno-error" \
+               CC="ccache $CROSS_CC" HOSTCC=gcc KCFLAGS="-Wno-error -Wno-error=strict-prototypes -Wno-error=implicit-int" \
                kernel/bounds.s 2>&1 | tee "$GITHUB_WORKSPACE/smoke.log" | tail -30
           echo "冒烟通过"
 
@@ -162,7 +162,7 @@ jobs:
           cd ksrc
           export CCACHE_SLOPPINESS=time_macros,include_file_mtime,include_file_ctime
           timeout 19500 make -k -j"$JOBS" ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- \
-               CC="ccache $CROSS_CC" HOSTCC="ccache gcc" KCFLAGS="-Wno-error" \
+               CC="ccache $CROSS_CC" HOSTCC="ccache gcc" KCFLAGS="-Wno-error -Wno-error=strict-prototypes -Wno-error=implicit-int" \
                --output-sync=target Image 2>&1 | tee "$GITHUB_WORKSPACE/build.log" | tail -5
           ls -l arch/arm64/boot/Image
           ccache -s | head -12
