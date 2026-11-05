@@ -107,7 +107,16 @@ for path in glob.glob(os.path.join(K, "include", "**", "*.h"), recursive=True) +
         m = re.match(r'\s*#\s*include\s*<([^>]+)>', ln)
         if m:
             inc = m.group(1)
-            if not inc.startswith(("generated/", "config/")) and not resolves(inc) and topdir_exists(inc):
+            # 这些前缀要么是构建时现场生成（generated/、config/），要么走 generic-y 兜底：
+            # arm64 的 <asm/types.h> 并不存在于源码树，是 arch/arm64/include/asm/Kbuild 里
+            # generic-y 条目在构建时生成到 arch/arm64/include/generated/asm/ 的。
+            # 上一轮没排除 asm/，把 <asm/types.h> 注释掉，导致 __u32 全部未定义。
+            SKIP = ("generated/", "config/", "asm/", "asm-generic/", "uapi/",
+                    "dt-bindings/", "mach/", "plat/", "xen/")
+            if inc.startswith(SKIP) or inc.startswith(".") or "/" not in inc:
+                out.append(ln)
+                continue
+            if not resolves(inc) and topdir_exists(inc):
                 missing.append(inc)
                 out.append("/* NL-MISSING-INCLUDE: " + ln.strip() + " */\n")
                 mod = True
