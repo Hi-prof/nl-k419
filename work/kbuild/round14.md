@@ -1,6 +1,6 @@
 # ROUND 14
 
-- run：42057563431（提交 93b4f821，完整 SHA 见 Actions 运行记录）
+- run：42057563431（提交 93b4f828a056637060debd37f3c64c65f6f751bf）
 - 结果：失败；步骤：编译 Image。配套源码布局、基础驱动配置断言和 bounds.s 冒烟全部通过。
 - 日志：ci14/kernel-419-image/build.log。
 

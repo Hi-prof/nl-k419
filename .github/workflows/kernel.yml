@@ -97,7 +97,7 @@ jobs:
           test -f ksrc/drivers/input/touchscreen/oplus_touchscreen/Kconfig
           test -f ksrc/kernel/sched_assist/Makefile
           test -f ksrc/include/soc/oplus/system/boot_mode.h
-          git -C source apply "$GITHUB_WORKSPACE/compat/vendor-guards.patch"
+          git -C source -c core.autocrlf=true apply "$GITHUB_WORKSPACE/compat/vendor-guards.patch"
           cd ksrc
           echo "HEAD: $(git rev-parse HEAD)"
           du -sh .git .
