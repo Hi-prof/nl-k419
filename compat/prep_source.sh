@@ -158,5 +158,55 @@ else:
     print("!! 没找到 ALLOWED_MCROS 的 foreach，需人工确认")
 PY
 
+# 第四遍 a：把引用了"不存在的子目录"的 obj-* 行注释掉。
+# arch/arm64/kernel/Makefile:77-79 是个假 #ifdef（Makefile 不认识 C 注释），
+# 只要 CONFIG_OPLUS_SECURE_GUARD 非空就会去编 rootguard/，而公开分支没有这个目录；
+# 而 OplusKernelEnvConfig.mk:146-148 会直接 export CONFIG_OPLUS_SECURE_GUARD=y，
+# 所以关 .config 根本没用。
+python3 - "$K" <<'PY'
+import os, re, sys
+K = sys.argv[1]
+pat = re.compile(r'^(\s*)(obj-\S*|extra-\S*)\s*(\+=|\?=)\s*([^\s#]+/)\s*$')
+n = 0
+for root, dirs, files in os.walk(K):
+    if '/.git' in root or '/tools/' in root:
+        continue
+    for fn in files:
+        if fn not in ("Makefile", "Kbuild"):
+            continue
+        p = os.path.join(root, fn)
+        try:
+            lines = open(p, encoding="utf-8", errors="ignore").read().split("\n")
+        except OSError:
+            continue
+        ch = False
+        for i, ln in enumerate(lines):
+            m = pat.match(ln)
+            if not m:
+                continue
+            d = os.path.join(root, m.group(4))
+            if os.path.isfile(os.path.join(d, "Makefile")) or os.path.isfile(os.path.join(d, "Kbuild")):
+                continue
+            lines[i] = "# NL-NODIR: " + ln
+            ch = True; n += 1
+        if ch:
+            open(p, "w", encoding="utf-8").write("\n".join(lines))
+print("== obj-* 指向缺失目录已注释 %d 处 ==" % n)
+PY
+
+# 第四遍 b：stackprotector.h:33 用 LINUX_VERSION_CODE 却没 include linux/version.h
+# （4.19 原版靠 init/main.c 的隐式包含；厂商的 oplus_phoenix.h 被我们跳过后就断了）
+python3 - "$K" <<'PY'
+import os, sys
+p = os.path.join(sys.argv[1], "arch/arm64/include/asm/stackprotector.h")
+if os.path.exists(p):
+    s = open(p, encoding="utf-8", errors="ignore").read()
+    if "linux/version.h" not in s:
+        s = s.replace("#define _ASM_STACKPROTECTOR_H",
+                      "#define _ASM_STACKPROTECTOR_H\n\n#include <linux/version.h>", 1)
+        open(p, "w", encoding="utf-8").write(s)
+        print("== stackprotector.h 补 #include <linux/version.h> ==")
+PY
+
 echo "== 校验 block/Kconfig 引用 =="
 grep -n 'uxio_first' "$K/block/Kconfig" || echo "   已无 uxio_first 引用"
