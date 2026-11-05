@@ -94,6 +94,15 @@ def topdir_exists(inc):
     top = inc.split("/")[0]
     return any(os.path.isdir(os.path.join(r, top)) for r in roots)
 
+def gen_exists(inc):
+    """构建时才生成的头文件（include/generated/uapi 等）也算能解析。"""
+    for r in (os.path.join(K, "include", "generated", "uapi"),
+              os.path.join(K, "include", "generated"),
+              os.path.join(K, "arch", "arm64", "include", "generated")):
+        if os.path.exists(os.path.join(r, inc)):
+            return True
+    return False
+
 patched, missing = [], []
 
 for path in glob.glob(os.path.join(K, "include", "**", "*.h"), recursive=True) + \
@@ -113,10 +122,15 @@ for path in glob.glob(os.path.join(K, "include", "**", "*.h"), recursive=True) +
             # 上一轮没排除 asm/，把 <asm/types.h> 注释掉，导致 __u32 全部未定义。
             SKIP = ("generated/", "config/", "asm/", "asm-generic/", "uapi/",
                     "dt-bindings/", "mach/", "plat/", "xen/")
-            if inc.startswith(SKIP) or inc.startswith(".") or "/" not in inc:
+            # 还有一批"名字在 include/ 下但文件是构建时生成"的：<linux/version.h>
+            # 实际来自 include/generated/uapi/linux/version.h（Kbuild 的 filechk_version.h），
+            # 源码树里没有，但 include 路径里有，所以不能算缺；同理 utsrelease/compile 等。
+            GEN_NAMES = ("linux/version.h", "linux/utsrelease.h", "linux/compile.h",
+                         "linux/bounds.h", "asm-offsets.h", "linux/timeconst.h")
+            if inc.startswith(SKIP) or inc.startswith(".") or "/" not in inc or inc in GEN_NAMES:
                 out.append(ln)
                 continue
-            if not resolves(inc) and topdir_exists(inc):
+            if not resolves(inc) and not gen_exists(inc) and topdir_exists(inc):
                 missing.append(inc)
                 out.append("/* NL-MISSING-INCLUDE: " + ln.strip() + " */\n")
                 mod = True
