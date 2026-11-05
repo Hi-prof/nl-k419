@@ -1,7 +1,0 @@
-fix(ci): CONFIG_64BIT 未生效导致 atomic64_t 未定义；拆小步骤防 6 小时超时
-
-- config 后断言 CONFIG_64BIT/ARM64/MODULES，坏配置立即失败
-- prepare + 冒烟编译 kernel/bounds.s，十分钟内出结论
-- 关 CONFIG_DEBUG_INFO，只编 Image 不编 dtbs
-- 加 ccache + actions/cache，超时可跨 run 续编
-- 产物补 .config / autoconf.h / smoke.log

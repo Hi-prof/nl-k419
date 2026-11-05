@@ -32,7 +32,9 @@ for path in glob.glob(os.path.join(K, "**", "Kconfig*"), recursive=True):
         m = re.match(r'source\s+(?:"([^"]+)"|(\S+))', ln)
         if m:
             tgt = m.group(1) or m.group(2)
-            if not tgt.startswith("$"):
+            # 路径里含 $(...) / ${...} 变量的一律跳过：arch/$(SRCARCH)/Kconfig 这种一旦被注释，conf 就读不到任何架构符号，
+            # .config 会被 olddefconfig 洗成空壳（表现为 CONFIG_64BIT/ARM64 全丢、atomic64_t 未定义）
+            if "$" not in tgt:
                 cands = [
                     os.path.normpath(os.path.join(os.path.dirname(path), tgt)),
                     os.path.normpath(os.path.join(K, tgt)),
