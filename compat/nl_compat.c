@@ -65,3 +65,10 @@ EXPORT_SYMBOL(kmalloc_debug_caches);
 
 int kmalloc_debug_enable __read_mostly;
 EXPORT_SYMBOL(kmalloc_debug_enable);
+
+/*
+ * nl_forced.h 需要的两个全局量（原定义在缺失的厂商头/源里）。
+ * 取值保持"原厂默认"：串口不静音、直接回收 swappiness 与全局一致(100)。
+ */
+int printk_disable_uart;
+int direct_vm_swappiness = 100;

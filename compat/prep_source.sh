@@ -317,5 +317,9 @@ for root, dirs, files in os.walk(K):
 print("== obj-* 指向缺失源文件已注释 %d 处 ==" % n)
 PY
 
+# 厂商功能关闭时，引用与声明使用相同的编译条件。
+HERE="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+git -C "$K" apply "$HERE/source-guards.patch"
+
 echo "== 校验 block/Kconfig 引用 =="
 grep -n 'uxio_first' "$K/block/Kconfig" || echo "   已无 uxio_first 引用"

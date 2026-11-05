@@ -1,0 +1,39 @@
+diff --git a/kernel/printk/printk.c b/kernel/printk/printk.c
+--- a/kernel/printk/printk.c
++++ b/kernel/printk/printk.c
+@@ -1795,12 +1795,14 @@
+ 		return;
+ 
+ 	for_each_console(con) {
++#ifdef OPLUS_BUG_STABILITY
+ 		if ((con->flags & CON_CONSDEV) &&
+ 				(printk_disable_uart ||
+ 				get_boot_mode() == MSM_BOOT_MODE__FACTORY ||
+ 				get_boot_mode() == MSM_BOOT_MODE__RF ||
+ 				get_boot_mode() == MSM_BOOT_MODE__WLAN))
+ 			continue;
++#endif
+ 		if (exclusive_console && con != exclusive_console)
+ 			continue;
+ 		if (!(con->flags & CON_ENABLED))
+diff --git a/mm/vmscan.c b/mm/vmscan.c
+--- a/mm/vmscan.c
++++ b/mm/vmscan.c
+@@ -62,6 +62,7 @@
+ 
+ #include "internal.h"
+ 
++#include <linux/proc_fs.h>
+ #define CREATE_TRACE_POINTS
+ #include <trace/events/vmscan.h>
+ 
+@@ -200,7 +201,8 @@
+ int swappiness_threshold1_size = 0;
+ int swappiness_threshold2_size = 0;
+ #endif
+-#if defined(OPLUS_FEATURE_ZRAM_OPT) && defined(CONFIG_OPLUS_ZRAM_OPT)
++#if (defined(OPLUS_FEATURE_ZRAM_OPT) && defined(CONFIG_OPLUS_ZRAM_OPT)) || \
++	defined(CONFIG_HYBRIDSWAP_SWAPD)
+ /*
+  * Direct reclaim swappiness, exptct 0 - 60. Higher means more swappy and slower.
+  */
