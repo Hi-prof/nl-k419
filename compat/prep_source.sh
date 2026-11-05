@@ -134,5 +134,29 @@ for p in patched[:40]:
     print("   *", p)
 PY
 
+# 第三遍：OplusKernelEnvConfig.mk 会把一份硬编码的 ALLOWED_MCROS 列表无条件 -D 成宏，
+# 跟 CONFIG 一点关系都没有（这就是为什么关了 CONFIG 也没用）：
+#   $(foreach myfeature,$(ALLOWED_MCROS), $(eval KBUILD_CFLAGS += -D$(myfeature)))
+# 这些宏一旦定义，init/main.c:105 就会去 include 公开分支里根本不存在的
+# drivers/soc/oplus/system/oplus_phoenix/oplus_phoenix.h。把 foreach 的列表换成空变量，
+# 所有 OPLUS_FEATURE_* 分支统一切到"关"，剩下的就是干净的 AOSP/qcom 代码。
+python3 - "$K" <<'PY'
+import os, sys
+p = os.path.join(sys.argv[1], "OplusKernelEnvConfig.mk")
+if not os.path.exists(p):
+    print("!! 找不到 OplusKernelEnvConfig.mk"); raise SystemExit(0)
+s = open(p, encoding="utf-8", errors="ignore").read()
+before = s
+s = s.replace("$(foreach myfeature,$(ALLOWED_MCROS),",
+              "$(foreach myfeature,$(NL_NO_FEATURE_MACROS),")
+s = s.replace("$(foreach myfeature, $(ALLOWED_MCROS),",
+              "$(foreach myfeature, $(NL_NO_FEATURE_MACROS),")
+if s != before:
+    open(p, "w", encoding="utf-8").write(s)
+    print("== OplusKernelEnvConfig.mk: ALLOWED_MCROS 宏注入已停用 ==")
+else:
+    print("!! 没找到 ALLOWED_MCROS 的 foreach，需人工确认")
+PY
+
 echo "== 校验 block/Kconfig 引用 =="
 grep -n 'uxio_first' "$K/block/Kconfig" || echo "   已无 uxio_first 引用"

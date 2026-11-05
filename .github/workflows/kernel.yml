@@ -112,6 +112,7 @@ jobs:
           # 公开分支缺 kernel/sched_assist/ 整个目录，这个特性一开就会把
           # include/linux/mutex.h 带进不存在的头文件，必须关掉
           scripts/config --file .config -d OPLUS_FEATURE_SCHED_ASSIST
+          scripts/config --file .config -d OPLUS_SECURE_GUARD
           make ARCH=arm64 CC="$CROSS_CC" HOSTCC=gcc olddefconfig
           echo "==== 关键项 ===="
           grep -E '^CONFIG_MODULE_SIG|^# CONFIG_MODULE_SIG|MODVERSIONS|^CONFIG_LOCALVERSION=|^CONFIG_MODULES=|^CONFIG_64BIT|^CONFIG_ARM64=|^CONFIG_DEBUG_INFO' .config
@@ -180,6 +181,7 @@ jobs:
             build.log
             smoke.log
           if-no-files-found: warn
+          include-hidden-files: true
 
       - name: 保存 ccache
         if: always()
