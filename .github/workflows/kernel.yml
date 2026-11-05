@@ -109,6 +109,9 @@ jobs:
           scripts/config --file .config -d DEBUG_INFO
           scripts/config --file .config --set-str LOCALVERSION "-perf"
           scripts/config --file .config -e MODULES
+          # 公开分支缺 kernel/sched_assist/ 整个目录，这个特性一开就会把
+          # include/linux/mutex.h 带进不存在的头文件，必须关掉
+          scripts/config --file .config -d OPLUS_FEATURE_SCHED_ASSIST
           make ARCH=arm64 CC="$CROSS_CC" HOSTCC=gcc olddefconfig
           echo "==== 关键项 ===="
           grep -E '^CONFIG_MODULE_SIG|^# CONFIG_MODULE_SIG|MODVERSIONS|^CONFIG_LOCALVERSION=|^CONFIG_MODULES=|^CONFIG_64BIT|^CONFIG_ARM64=|^CONFIG_DEBUG_INFO' .config
@@ -122,11 +125,15 @@ jobs:
         run: |
           set -o pipefail
           cd ksrc
-          make ARCH=arm64 CC="$CROSS_CC" HOSTCC=gcc prepare 2>&1 | tail -20
+          echo "==== 诊断：-k 跑完全部 prepare，把所有缺失头文件一次性收齐 ===="
+          make -k -j"$JOBS" ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- \
+               CC="ccache $CROSS_CC" HOSTCC=gcc KCFLAGS="-Wno-error" \
+               prepare > ../prepare.log 2>&1 || true
+          grep -oE 'fatal error: [^:]+: No such file' ../prepare.log | sed 's/fatal error: //' | sort -u || true
           echo "==== autoconf.h 里的 64BIT ===="
           grep -E 'CONFIG_64BIT' include/generated/autoconf.h || echo "!! autoconf.h 里没有 CONFIG_64BIT"
           echo "==== kernel.release ===="
-          cat include/config/kernel.release
+          cat include/config/kernel.release || true
           echo "==== 冒烟：单独编 kernel/bounds.s（10 分钟内必须过）===="
           timeout 600 make -j"$JOBS" ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- \
                CC="ccache $CROSS_CC" HOSTCC=gcc KCFLAGS="-Wno-error" \

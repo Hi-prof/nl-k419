@@ -72,5 +72,58 @@ print("gcc-wrapper.py: print 语法已转 python3")
 PY
 fi
 
+# 第二遍：公开分支省略了厂商目录，头文件里却仍 #include 它们。
+# 例：include/linux/mutex.h:95  #include <linux/sched_assist/sched_assist_mutex.h>
+#    （整个 kernel/sched_assist/ 与 include/linux/sched_assist/ 都没给）
+# 处理：只注释掉"根目录存在、但子路径不存在"的 #include，改成 // NL-MISSING-INCLUDE，
+#      不动 generated/ 这种会现场生成的，也不动本来就能解析到的。
+python3 - "$K" <<'PY'
+import os, re, sys, glob
+
+K = sys.argv[1]
+ROOTS = [
+    "include", "include/uapi", "include/generated", "include/generated/uapi",
+    "arch/arm64/include", "arch/arm64/include/uapi", "arch/arm64/include/generated",
+]
+roots = [os.path.join(K, r) for r in ROOTS if os.path.isdir(os.path.join(K, r))]
+
+def resolves(inc):
+    return any(os.path.exists(os.path.join(r, inc)) for r in roots)
+
+def topdir_exists(inc):
+    top = inc.split("/")[0]
+    return any(os.path.isdir(os.path.join(r, top)) for r in roots)
+
+patched, missing = [], []
+
+for path in glob.glob(os.path.join(K, "include", "**", "*.h"), recursive=True) + \
+            glob.glob(os.path.join(K, "arch", "arm64", "include", "**", "*.h"), recursive=True):
+    try:
+        src = open(path, encoding="utf-8", errors="ignore").read()
+    except OSError:
+        continue
+    out, mod = [], False
+    for ln in src.splitlines(True):
+        m = re.match(r'\s*#\s*include\s*<([^>]+)>', ln)
+        if m:
+            inc = m.group(1)
+            if not inc.startswith(("generated/", "config/")) and not resolves(inc) and topdir_exists(inc):
+                missing.append(inc)
+                out.append("/* NL-MISSING-INCLUDE: " + ln.strip() + " */\n")
+                mod = True
+                continue
+        out.append(ln)
+    if mod:
+        open(path, "w", encoding="utf-8").write("".join(out))
+        patched.append(os.path.relpath(path, K))
+
+print("== 被注释掉的缺失头文件 (%d 处) ==" % len(missing))
+for m in sorted(set(missing)):
+    print("   -", m)
+print("== 被修改的头文件 (%d 个) ==" % len(patched))
+for p in patched[:40]:
+    print("   *", p)
+PY
+
 echo "== 校验 block/Kconfig 引用 =="
 grep -n 'uxio_first' "$K/block/Kconfig" || echo "   已无 uxio_first 引用"
