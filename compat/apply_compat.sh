@@ -8,6 +8,11 @@ HERE="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 [ -d "$K/mm" ] || { echo "::error::$K 不像内核树（缺 mm/）"; exit 1; }
 [ -f "$K/Makefile" ] || { echo "::error::$K 缺 Makefile"; exit 1; }
 
+if [ -f "$K/mm/malloc_track/slub_track.c" ]; then
+    echo "== 使用配套厂商源码中的 kmalloc_debug_* 实现 =="
+    exit 0
+fi
+
 cp "$HERE/nl_compat.c" "$K/mm/nl_compat.c"
 
 if ! grep -q 'nl_compat\.o' "$K/mm/Makefile"; then

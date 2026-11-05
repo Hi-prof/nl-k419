@@ -157,6 +157,9 @@ PY
 python3 - "$K" <<'PY'
 import os, sys
 p = os.path.join(sys.argv[1], "OplusKernelEnvConfig.mk")
+if os.path.isfile(os.path.join(sys.argv[1], "include/soc/oplus/system/boot_mode.h")):
+    print("== 配套厂商源码已就绪，保留 OPLUS 功能宏 ==")
+    raise SystemExit(0)
 if not os.path.exists(p):
     print("!! 找不到 OplusKernelEnvConfig.mk"); raise SystemExit(0)
 s = open(p, encoding="utf-8", errors="ignore").read()
@@ -302,13 +305,21 @@ for root, dirs, files in os.walk(K):
             lines = open(p, encoding="utf-8", errors="ignore").read().split("\n")
         except OSError:
             continue
+        rules = "\n".join(lines)
         ch = False
         for i, ln in enumerate(lines):
             m = pat.match(ln)
             if not m:
                 continue
             stem = m.group(4)[:-2]
-            if any(os.path.isfile(os.path.join(root, stem + e)) for e in (".c", ".S", ".s", ".c_shipped", ".S_shipped")):
+            if "$" in stem:
+                continue
+            if any(os.path.isfile(os.path.join(root, stem + e)) for e in (".c", ".S", ".s", ".c_shipped", ".S_shipped", ".o_shipped")):
+                continue
+            # 复合对象和显式生成目标不需要同名源文件。
+            composite = r'^\s*' + re.escape(stem) + r'-(?:y|m|objs|\$\([^)]+\))\s*[:+?]?='
+            generated = r'^[^#\n]*' + re.escape(m.group(4)) + r'\s*:'
+            if re.search(composite, rules, re.M) or re.search(generated, rules, re.M):
                 continue
             lines[i] = "# NL-NOSRC: " + ln
             ch = True; n += 1

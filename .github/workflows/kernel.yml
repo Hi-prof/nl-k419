@@ -85,6 +85,18 @@ jobs:
           git clone --depth 1 --single-branch \
             --branch "${{ github.event.inputs.kernel_branch }}" \
             "${{ github.event.inputs.kernel_repo }}" ksrc
+          git clone --depth 1 --single-branch \
+            --branch "${{ github.event.inputs.kernel_branch }}" \
+            https://github.com/oppo-source/android_kernel_modules_and_devicetree_oppo_sm7250.git source
+          # 两个上游仓库共同组成 kernel/msm-4.19 + vendor 的源码布局。
+          rsync -a --ignore-existing source/kernel/msm-4.19/ ksrc/
+          mv source/kernel/msm-4.19 source/kernel/vendor-overlay
+          mv ksrc source/kernel/msm-4.19
+          ln -s source/kernel/msm-4.19 ksrc
+          echo "vendor HEAD: $(git -C source rev-parse HEAD)"
+          test -f ksrc/drivers/input/touchscreen/oplus_touchscreen/Kconfig
+          test -f ksrc/kernel/sched_assist/Makefile
+          test -f ksrc/include/soc/oplus/system/boot_mode.h
           cd ksrc
           echo "HEAD: $(git rev-parse HEAD)"
           du -sh .git .
@@ -102,22 +114,22 @@ jobs:
       - name: 以设备真实配置为基线生成 .config
         run: |
           cd ksrc
-          cp ../config/device.config .config
+          cp "$GITHUB_WORKSPACE/config/device.config" .config
           scripts/config --file .config -d MODULE_SIG_FORCE
           scripts/config --file .config -d MODULE_SIG_ALL
           scripts/config --file .config -d MODVERSIONS
           scripts/config --file .config -d DEBUG_INFO
           scripts/config --file .config --set-str LOCALVERSION "-perf"
           scripts/config --file .config -e MODULES
-          # 公开分支缺 kernel/sched_assist/ 整个目录，这个特性一开就会把
-          # include/linux/mutex.h 带进不存在的头文件，必须关掉
-          scripts/config --file .config -d OPLUS_FEATURE_SCHED_ASSIST
+          if [ ! -f kernel/sched_assist/Makefile ]; then
+            scripts/config --file .config -d OPLUS_FEATURE_SCHED_ASSIST
+          fi
           scripts/config --file .config -d OPLUS_SECURE_GUARD
           make ARCH=arm64 CC="$CROSS_CC" HOSTCC=gcc olddefconfig
           echo "==== 关键项 ===="
           grep -E '^CONFIG_MODULE_SIG|^# CONFIG_MODULE_SIG|MODVERSIONS|^CONFIG_LOCALVERSION=|^CONFIG_MODULES=|^CONFIG_64BIT|^CONFIG_ARM64=|^CONFIG_DEBUG_INFO' .config
           echo "==== 断言：这三项没了就不用往下跑了 ===="
-          for k in CONFIG_64BIT CONFIG_ARM64 CONFIG_MODULES; do
+          for k in CONFIG_64BIT CONFIG_ARM64 CONFIG_MODULES CONFIG_TOUCHPANEL_OPLUS CONFIG_DRM_MSM CONFIG_SCSI_UFS_QCOM CONFIG_WLAN CONFIG_CNSS_UTILS; do
             grep -q "^${k}=y" .config || { echo "::error::${k} 未生效，配置基线有问题"; exit 1; }
           done
           echo "OK"
@@ -129,8 +141,8 @@ jobs:
           echo "==== 诊断：-k 跑完全部 prepare，把所有缺失头文件一次性收齐 ===="
           make -k -j"$JOBS" ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- \
                CC="ccache $CROSS_CC" HOSTCC=gcc KCFLAGS="-Wno-error" \
-               prepare > ../prepare.log 2>&1 || true
-          grep -oE 'fatal error: [^:]+: No such file' ../prepare.log | sed 's/fatal error: //' | sort -u || true
+               prepare > "$GITHUB_WORKSPACE/prepare.log" 2>&1 || true
+          grep -oE 'fatal error: [^:]+: No such file' "$GITHUB_WORKSPACE/prepare.log" | sed 's/fatal error: //' | sort -u || true
           echo "==== autoconf.h 里的 64BIT ===="
           grep -E 'CONFIG_64BIT' include/generated/autoconf.h || echo "!! autoconf.h 里没有 CONFIG_64BIT"
           echo "==== kernel.release ===="
@@ -138,7 +150,7 @@ jobs:
           echo "==== 冒烟：单独编 kernel/bounds.s（10 分钟内必须过）===="
           timeout 600 make -j"$JOBS" ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- \
                CC="ccache $CROSS_CC" HOSTCC=gcc KCFLAGS="-Wno-error" \
-               kernel/bounds.s 2>&1 | tee ../smoke.log | tail -30
+               kernel/bounds.s 2>&1 | tee "$GITHUB_WORKSPACE/smoke.log" | tail -30
           echo "冒烟通过"
 
       - name: 编译 Image
@@ -148,7 +160,7 @@ jobs:
           export CCACHE_SLOPPINESS=time_macros,include_file_mtime,include_file_ctime
           timeout 19500 make -j"$JOBS" ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- \
                CC="ccache $CROSS_CC" HOSTCC="ccache gcc" KCFLAGS="-Wno-error" \
-               --output-sync=target Image 2>&1 | tee ../build.log | tail -5
+               --output-sync=target Image 2>&1 | tee "$GITHUB_WORKSPACE/build.log" | tail -5
           ls -l arch/arm64/boot/Image
           ccache -s | head -12
 
@@ -180,6 +192,7 @@ jobs:
             ksrc/include/generated/autoconf.h
             build.log
             smoke.log
+            prepare.log
           if-no-files-found: warn
           include-hidden-files: true
 
