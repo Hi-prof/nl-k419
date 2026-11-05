@@ -1,0 +1,35 @@
+awk: cmd. line:1: (FILENAME=- FNR=1) fatal: attempt to access field -1
+OplusKernelEnvConfig.mk:185: "ln the wakelock_profiler_h fail, mkis /home/runner/work/nl-k419/nl-k419/ksrc, dir is , wakelock_dir is "
+  HOSTCC  scripts/bin2c
+  HOSTCC  scripts/dtc/dtc.o
+  CC      scripts/mod/empty.o
+  HOSTCC  scripts/selinux/genheaders/genheaders
+  HOSTCC  scripts/mod/mk_elfconfig
+  HOSTCC  scripts/dtc/flattree.o
+  HOSTCC  scripts/dtc/fstree.o
+In file included from ./include/linux/dcache.h:13,
+                 from ./include/linux/fs.h:8,
+                 from ./include/linux/proc_fs.h:9,
+                 from /home/runner/work/nl-k419/nl-k419/compat/nl_forced.h:16,
+                 from <command-line>:
+./include/linux/lockref.h:19:10: fatal error: generated/bounds.h: No such file or directory
+   19 | #include <generated/bounds.h>
+      |          ^~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+  HOSTCC  scripts/selinux/mdp/mdp
+make[2]: *** [scripts/Makefile.build:339: scripts/mod/empty.o] Error 1
+make[1]: *** [scripts/Makefile.build:642: scripts/mod] Error 2
+make[1]: *** Waiting for unfinished jobs....
+  HOSTCC  scripts/dtc/data.o
+  HOSTCC  scripts/dtc/livetree.o
+  HOSTCC  scripts/dtc/treesource.o
+  HOSTCC  scripts/dtc/srcpos.o
+  HOSTCC  scripts/dtc/checks.o
+  HOSTCC  scripts/dtc/util.o
+  LEX     scripts/dtc/dtc-lexer.lex.c
+  YACC    scripts/dtc/dtc-parser.tab.h
+  YACC    scripts/dtc/dtc-parser.tab.c
+  HOSTCC  scripts/dtc/dtc-lexer.lex.o
+  HOSTCC  scripts/dtc/dtc-parser.tab.o
+  HOSTLD  scripts/dtc/dtc
+make: *** [Makefile:1291: scripts] Error 2

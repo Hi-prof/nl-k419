@@ -1,0 +1,488 @@
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_FG_IO_OPT to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_SPECIALOPT to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_PERFORMANCE to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_STORAGE_TOOL to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_UFS_DRIVER to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_UFS_SHOW_LATENCY to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_UFSPLUS to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_PADL_STATISTICS to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_EMMC_SDCARD_OPTIMIZE to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_EMMC_DRIVER to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_HEALTHINFO to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_TASK_CPUSTATS to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_HANS_FREEZE to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_SCHED_ASSIST to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_IOMONITOR to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_TP_BSPFWUPDATE to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_LOWMEM_DBG to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_QCOM_PMICWD to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_CHG_BASIC to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_NWPOWER to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_WIFI_BDF to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_CONNFCSOFT to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_AGINGTEST to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_SENSOR_SMEM to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_SSR to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_TP_BASIC to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_EDTASK_IMPROVE to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_WIFI_SLA to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_WIFI_ROUTERBOOST to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_IPV6_OPTIMIZE to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_DATA_EVAL to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_DHCP to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_PHOENIX to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_DUMPDEVICE to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_SAUPWK to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_MEMORY_ISOLATE to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_MULTI_KSWAPD to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_WIFI_MTUDETECT to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_XTOWNER_INPUT to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_SELINUX_CONTROL_LOG to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_PXLW_IRIS5 to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_MULTI_FREEAREA to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_VIRTUAL_RESERVE_MEMORY to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_GPU_MINIDUMP to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_PROCESS_RECLAIM to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_ZRAM_OPT to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_AUDIO_FTM to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_SPEAKER_MUTE to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_MM_FEEDBACK to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_MI2S_SLAVE to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_KTV to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_QCOM_WATCHDOG to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_MEMLEAK_DETECT to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_EXFAT_SUPPORT to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_SDCARDFS_SUPPORT to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_CAMERA_OIS to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_BUG_COMPATIBILITY to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_BUG_STABILITY to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_BUG_DEBUG to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_ARCH_INJECT to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_ARCH_EXTENDS to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_AUDIODETECT to be a macro here
+OplusKernelEnvConfig.mk:136: make COLOROS_EDIT to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_DC to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_POWERINFO_STANDBY to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_POWERINFO_RPMH to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_CAMERA_COMMON to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_ADSP_RECOVERY to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_SMARTPA_PM to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_IMPEDANCE_MATCH to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_MODEM_MINIDUMP to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_THEIA to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_POWER_CPUFREQ to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_MIDAS to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_WIFI_OPLUSWFD to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_WIFI_DUALSTA_AP_BLACKLIST to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_WIFI_DCS_SWITCH to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_IM to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_TPD to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_APP_MONITOR to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_RT_INFO to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_MIC_VA_MIC_CLK_SWITCH to be a macro here
+awk: cmd. line:1: (FILENAME=- FNR=1) fatal: attempt to access field -1
+OplusKernelEnvConfig.mk:185: "ln the wakelock_profiler_h fail, mkis /home/runner/work/nl-k419/nl-k419/source/kernel/msm-4.19, dir is , wakelock_dir is "
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_FG_IO_OPT to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_SPECIALOPT to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_PERFORMANCE to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_STORAGE_TOOL to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_UFS_DRIVER to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_UFS_SHOW_LATENCY to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_UFSPLUS to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_PADL_STATISTICS to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_EMMC_SDCARD_OPTIMIZE to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_EMMC_DRIVER to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_HEALTHINFO to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_TASK_CPUSTATS to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_HANS_FREEZE to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_SCHED_ASSIST to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_IOMONITOR to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_TP_BSPFWUPDATE to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_LOWMEM_DBG to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_QCOM_PMICWD to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_CHG_BASIC to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_NWPOWER to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_WIFI_BDF to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_CONNFCSOFT to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_AGINGTEST to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_SENSOR_SMEM to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_SSR to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_TP_BASIC to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_EDTASK_IMPROVE to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_WIFI_SLA to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_WIFI_ROUTERBOOST to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_IPV6_OPTIMIZE to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_DATA_EVAL to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_DHCP to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_PHOENIX to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_DUMPDEVICE to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_SAUPWK to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_MEMORY_ISOLATE to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_MULTI_KSWAPD to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_WIFI_MTUDETECT to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_XTOWNER_INPUT to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_SELINUX_CONTROL_LOG to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_PXLW_IRIS5 to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_MULTI_FREEAREA to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_VIRTUAL_RESERVE_MEMORY to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_GPU_MINIDUMP to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_PROCESS_RECLAIM to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_ZRAM_OPT to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_AUDIO_FTM to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_SPEAKER_MUTE to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_MM_FEEDBACK to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_MI2S_SLAVE to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_KTV to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_QCOM_WATCHDOG to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_MEMLEAK_DETECT to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_EXFAT_SUPPORT to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_SDCARDFS_SUPPORT to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_CAMERA_OIS to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_BUG_COMPATIBILITY to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_BUG_STABILITY to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_BUG_DEBUG to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_ARCH_INJECT to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_ARCH_EXTENDS to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_AUDIODETECT to be a macro here
+OplusKernelEnvConfig.mk:136: make COLOROS_EDIT to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_DC to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_POWERINFO_STANDBY to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_POWERINFO_RPMH to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_CAMERA_COMMON to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_ADSP_RECOVERY to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_SMARTPA_PM to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_IMPEDANCE_MATCH to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_MODEM_MINIDUMP to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_THEIA to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_POWER_CPUFREQ to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_MIDAS to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_WIFI_OPLUSWFD to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_WIFI_DUALSTA_AP_BLACKLIST to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_WIFI_DCS_SWITCH to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_IM to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_TPD to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_APP_MONITOR to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_RT_INFO to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_MIC_VA_MIC_CLK_SWITCH to be a macro here
+awk: cmd. line:1: (FILENAME=- FNR=1) fatal: attempt to access field -1
+OplusKernelEnvConfig.mk:185: "ln the wakelock_profiler_h fail, mkis /home/runner/work/nl-k419/nl-k419/source/kernel/msm-4.19, dir is , wakelock_dir is "
+  HOSTCC  scripts/basic/fixdep
+  HOSTCC  scripts/kconfig/conf.o
+  HOSTCC  scripts/kconfig/zconf.tab.o
+  HOSTLD  scripts/kconfig/conf
+scripts/kconfig/conf  --syncconfig Kconfig
+drivers/misc/aw8697_haptic/Kconfig:1:warning: ignoring unsupported character ''
+drivers/misc/aw8697_haptic/Kconfig:2:warning: ignoring unsupported character ''
+drivers/misc/aw8697_haptic/Kconfig:3:warning: ignoring unsupported character ''
+drivers/misc/aw8697_haptic/Kconfig:4:warning: ignoring unsupported character ''
+drivers/power/oplus/Kconfig:14:warning: ignoring type redefinition of 'OPLUS_SHORT_C_BATT_CHECK' from 'tristate' to 'bool'
+drivers/power/oplus/Kconfig:24:warning: ignoring type redefinition of 'OPLUS_SHORT_IC_CHECK' from 'tristate' to 'bool'
+drivers/power/oplus/Kconfig:29:warning: ignoring type redefinition of 'OPLUS_SHORT_HW_CHECK' from 'tristate' to 'bool'
+drivers/soc/oplus/system/oplus_saupwk/Kconfig:4:warning: ignoring unsupported character ''
+drivers/soc/oplus/system/oplus_saupwk/Kconfig:5:warning: ignoring unsupported character ''
+drivers/soc/oplus/system/oplus_saupwk/Kconfig:6:warning: ignoring unsupported character ''
+drivers/soc/oplus/system/oplus_saupwk/Kconfig:7:warning: ignoring unsupported character ''
+drivers/soc/oplus/system/cmdline_parser/Kconfig:3:warning: ignoring unsupported character ''
+drivers/soc/oplus/system/cmdline_parser/Kconfig:4:warning: ignoring unsupported character ''
+drivers/soc/oplus/system/cmdline_parser/Kconfig:5:warning: ignoring unsupported character ''
+drivers/soc/oplus/system/cmdline_parser/Kconfig:6:warning: ignoring unsupported character ''
+drivers/soc/oplus/system/cmdline_parser/Kconfig:8:warning: ignoring unsupported character ''
+drivers/soc/oplus/system/cmdline_parser/Kconfig:9:warning: ignoring unsupported character ''
+drivers/soc/oplus/system/cmdline_parser/Kconfig:10:warning: ignoring unsupported character ''
+drivers/soc/oplus/system/cmdline_parser/Kconfig:11:warning: ignoring unsupported character ''
+drivers/soc/oplus/system/cmdline_parser/Kconfig:12:warning: ignoring unsupported character ''
+drivers/soc/oplus/system/cmdline_parser/Kconfig:14:warning: ignoring unsupported character ''
+drivers/soc/oplus/system/cmdline_parser/Kconfig:15:warning: ignoring unsupported character ''
+drivers/soc/oplus/system/cmdline_parser/Kconfig:16:warning: ignoring unsupported character ''
+drivers/soc/oplus/system/cmdline_parser/Kconfig:17:warning: ignoring unsupported character ''
+drivers/soc/oplus/system/cmdline_parser/Kconfig:18:warning: ignoring unsupported character ''
+drivers/soc/oplus/system/cmdline_parser/Kconfig:20:warning: ignoring unsupported character ''
+drivers/soc/oplus/system/cmdline_parser/Kconfig:21:warning: ignoring unsupported character ''
+drivers/soc/oplus/system/cmdline_parser/Kconfig:22:warning: ignoring unsupported character ''
+drivers/soc/oplus/system/cmdline_parser/Kconfig:23:warning: ignoring unsupported character ''
+drivers/soc/oplus/system/cmdline_parser/Kconfig:24:warning: ignoring unsupported character ''
+drivers/soc/oplus/system/cmdline_parser/Kconfig:26:warning: ignoring unsupported character ''
+drivers/soc/oplus/system/cmdline_parser/Kconfig:27:warning: ignoring unsupported character ''
+drivers/soc/oplus/system/cmdline_parser/Kconfig:28:warning: ignoring unsupported character ''
+drivers/soc/oplus/system/cmdline_parser/Kconfig:29:warning: ignoring unsupported character ''
+drivers/soc/oplus/system/cmdline_parser/Kconfig:30:warning: ignoring unsupported character ''
+drivers/soc/oplus/system/cmdline_parser/Kconfig:32:warning: ignoring unsupported character ''
+drivers/soc/oplus/system/cmdline_parser/Kconfig:33:warning: ignoring unsupported character ''
+drivers/soc/oplus/system/cmdline_parser/Kconfig:34:warning: ignoring unsupported character ''
+drivers/soc/oplus/system/cmdline_parser/Kconfig:35:warning: ignoring unsupported character ''
+drivers/soc/oplus/system/cmdline_parser/Kconfig:36:warning: ignoring unsupported character ''
+drivers/soc/oplus/system/cmdline_parser/Kconfig:38:warning: ignoring unsupported character ''
+drivers/soc/oplus/system/cmdline_parser/Kconfig:39:warning: ignoring unsupported character ''
+drivers/soc/oplus/system/cmdline_parser/Kconfig:40:warning: ignoring unsupported character ''
+drivers/soc/oplus/system/cmdline_parser/Kconfig:41:warning: ignoring unsupported character ''
+drivers/soc/oplus/system/cmdline_parser/Kconfig:42:warning: ignoring unsupported character ''
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_FG_IO_OPT to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_SPECIALOPT to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_PERFORMANCE to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_STORAGE_TOOL to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_UFS_DRIVER to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_UFS_SHOW_LATENCY to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_UFSPLUS to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_PADL_STATISTICS to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_EMMC_SDCARD_OPTIMIZE to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_EMMC_DRIVER to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_HEALTHINFO to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_TASK_CPUSTATS to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_HANS_FREEZE to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_SCHED_ASSIST to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_IOMONITOR to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_TP_BSPFWUPDATE to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_LOWMEM_DBG to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_QCOM_PMICWD to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_CHG_BASIC to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_NWPOWER to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_WIFI_BDF to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_CONNFCSOFT to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_AGINGTEST to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_SENSOR_SMEM to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_SSR to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_TP_BASIC to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_EDTASK_IMPROVE to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_WIFI_SLA to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_WIFI_ROUTERBOOST to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_IPV6_OPTIMIZE to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_DATA_EVAL to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_DHCP to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_PHOENIX to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_DUMPDEVICE to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_SAUPWK to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_MEMORY_ISOLATE to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_MULTI_KSWAPD to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_WIFI_MTUDETECT to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_XTOWNER_INPUT to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_SELINUX_CONTROL_LOG to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_PXLW_IRIS5 to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_MULTI_FREEAREA to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_VIRTUAL_RESERVE_MEMORY to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_GPU_MINIDUMP to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_PROCESS_RECLAIM to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_ZRAM_OPT to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_AUDIO_FTM to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_SPEAKER_MUTE to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_MM_FEEDBACK to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_MI2S_SLAVE to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_KTV to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_QCOM_WATCHDOG to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_MEMLEAK_DETECT to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_EXFAT_SUPPORT to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_SDCARDFS_SUPPORT to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_CAMERA_OIS to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_BUG_COMPATIBILITY to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_BUG_STABILITY to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_BUG_DEBUG to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_ARCH_INJECT to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_ARCH_EXTENDS to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_AUDIODETECT to be a macro here
+OplusKernelEnvConfig.mk:136: make COLOROS_EDIT to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_DC to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_POWERINFO_STANDBY to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_POWERINFO_RPMH to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_CAMERA_COMMON to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_ADSP_RECOVERY to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_SMARTPA_PM to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_IMPEDANCE_MATCH to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_MODEM_MINIDUMP to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_THEIA to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_POWER_CPUFREQ to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_MIDAS to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_WIFI_OPLUSWFD to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_WIFI_DUALSTA_AP_BLACKLIST to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_WIFI_DCS_SWITCH to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_IM to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_TPD to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_APP_MONITOR to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_RT_INFO to be a macro here
+OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_MIC_VA_MIC_CLK_SWITCH to be a macro here
+awk: cmd. line:1: (FILENAME=- FNR=1) fatal: attempt to access field -1
+OplusKernelEnvConfig.mk:185: "ln the wakelock_profiler_h fail, mkis /home/runner/work/nl-k419/nl-k419/source/kernel/msm-4.19, dir is , wakelock_dir is "
+  HOSTCC  scripts/dtc/dtc.o
+  HOSTCC  scripts/dtc/flattree.o
+  HOSTCC  scripts/dtc/fstree.o
+  HOSTCC  scripts/dtc/data.o
+  HOSTCC  scripts/dtc/livetree.o
+  HOSTCC  scripts/bin2c
+  HOSTCC  scripts/dtc/treesource.o
+  HOSTCC  scripts/mod/mk_elfconfig
+  HOSTCC  scripts/dtc/srcpos.o
+  MKELF   scripts/mod/elfconfig.h
+  HOSTCC  scripts/dtc/checks.o
+  HOSTCC  scripts/dtc/util.o
+  HOSTCC  scripts/mod/modpost.o
+  HOSTCC  scripts/mod/file2alias.o
+  HOSTCC  scripts/dtc/dtc-lexer.lex.o
+  HOSTCC  scripts/mod/sumversion.o
+  HOSTCC  scripts/dtc/dtc-parser.tab.o
+  HOSTCC  scripts/selinux/genheaders/genheaders
+  HOSTLD  scripts/mod/modpost
+  HOSTLD  scripts/dtc/dtc
+  HOSTCC  scripts/selinux/mdp/mdp
+  HOSTCC  scripts/kallsyms
+  HOSTCC  scripts/pnmtologo
+  HOSTCC  scripts/sortextable
+  HOSTCC  scripts/sign-file
+scripts/sign-file.c: In function ‘display_openssl_errors’:
+scripts/sign-file.c:89:9: warning: ‘ERR_get_error_line’ is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+   89 |         while ((e = ERR_get_error_line(&file, &line))) {
+      |         ^~~~~
+In file included from scripts/sign-file.c:29:
+/usr/include/openssl/err.h:411:15: note: declared here
+  411 | unsigned long ERR_get_error_line(const char **file, int *line);
+      |               ^~~~~~~~~~~~~~~~~~
+scripts/sign-file.c: In function ‘drain_openssl_errors’:
+scripts/sign-file.c:102:9: warning: ‘ERR_get_error_line’ is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  102 |         while (ERR_get_error_line(&file, &line)) {}
+      |         ^~~~~
+In file included from scripts/sign-file.c:29:
+/usr/include/openssl/err.h:411:15: note: declared here
+  411 | unsigned long ERR_get_error_line(const char **file, int *line);
+      |               ^~~~~~~~~~~~~~~~~~
+scripts/sign-file.c: In function ‘read_private_key’:
+scripts/sign-file.c:142:17: warning: ‘ENGINE_load_builtin_engines’ is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  142 |                 ENGINE_load_builtin_engines();
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from scripts/sign-file.c:30:
+/usr/include/openssl/engine.h:358:28: note: declared here
+  358 | OSSL_DEPRECATEDIN_3_0 void ENGINE_load_builtin_engines(void);
+      |                            ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+scripts/sign-file.c:144:17: warning: ‘ENGINE_by_id’ is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  144 |                 e = ENGINE_by_id("pkcs11");
+      |                 ^
+In file included from scripts/sign-file.c:30:
+/usr/include/openssl/engine.h:336:31: note: declared here
+  336 | OSSL_DEPRECATEDIN_3_0 ENGINE *ENGINE_by_id(const char *id);
+      |                               ^~~~~~~~~~~~
+scripts/sign-file.c:146:17: warning: ‘ENGINE_init’ is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  146 |                 if (ENGINE_init(e))
+      |                 ^~
+In file included from scripts/sign-file.c:30:
+/usr/include/openssl/engine.h:620:27: note: declared here
+  620 | OSSL_DEPRECATEDIN_3_0 int ENGINE_init(ENGINE *e);
+      |                           ^~~~~~~~~~~
+scripts/sign-file.c:151:25: warning: ‘ENGINE_ctrl_cmd_string’ is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  151 |                         ERR(!ENGINE_ctrl_cmd_string(e, "PIN", key_pass, 0),
+      |                         ^~~
+In file included from scripts/sign-file.c:30:
+/usr/include/openssl/engine.h:479:5: note: declared here
+  479 | int ENGINE_ctrl_cmd_string(ENGINE *e, const char *cmd_name, const char *arg,
+      |     ^~~~~~~~~~~~~~~~~~~~~~
+scripts/sign-file.c:153:17: warning: ‘ENGINE_load_private_key’ is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  153 |                 private_key = ENGINE_load_private_key(e, private_key_name,
+      |                 ^~~~~~~~~~~
+In file included from scripts/sign-file.c:30:
+/usr/include/openssl/engine.h:638:11: note: declared here
+  638 | EVP_PKEY *ENGINE_load_private_key(ENGINE *e, const char *key_id,
+      |           ^~~~~~~~~~~~~~~~~~~~~~~
+  HOSTCC  scripts/extract-cert
+scripts/extract-cert.c: In function ‘display_openssl_errors’:
+scripts/extract-cert.c:46:9: warning: ‘ERR_get_error_line’ is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+   46 |         while ((e = ERR_get_error_line(&file, &line))) {
+      |         ^~~~~
+In file included from scripts/extract-cert.c:23:
+/usr/include/openssl/err.h:411:15: note: declared here
+  411 | unsigned long ERR_get_error_line(const char **file, int *line);
+      |               ^~~~~~~~~~~~~~~~~~
+scripts/extract-cert.c: In function ‘drain_openssl_errors’:
+scripts/extract-cert.c:59:9: warning: ‘ERR_get_error_line’ is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+   59 |         while (ERR_get_error_line(&file, &line)) {}
+      |         ^~~~~
+In file included from scripts/extract-cert.c:23:
+/usr/include/openssl/err.h:411:15: note: declared here
+  411 | unsigned long ERR_get_error_line(const char **file, int *line);
+      |               ^~~~~~~~~~~~~~~~~~
+scripts/extract-cert.c: In function ‘main’:
+scripts/extract-cert.c:124:17: warning: ‘ENGINE_load_builtin_engines’ is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  124 |                 ENGINE_load_builtin_engines();
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from scripts/extract-cert.c:24:
+/usr/include/openssl/engine.h:358:28: note: declared here
+  358 | OSSL_DEPRECATEDIN_3_0 void ENGINE_load_builtin_engines(void);
+      |                            ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+scripts/extract-cert.c:126:17: warning: ‘ENGINE_by_id’ is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  126 |                 e = ENGINE_by_id("pkcs11");
+      |                 ^
+In file included from scripts/extract-cert.c:24:
+/usr/include/openssl/engine.h:336:31: note: declared here
+  336 | OSSL_DEPRECATEDIN_3_0 ENGINE *ENGINE_by_id(const char *id);
+      |                               ^~~~~~~~~~~~
+scripts/extract-cert.c:128:17: warning: ‘ENGINE_init’ is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  128 |                 if (ENGINE_init(e))
+      |                 ^~
+In file included from scripts/extract-cert.c:24:
+/usr/include/openssl/engine.h:620:27: note: declared here
+  620 | OSSL_DEPRECATEDIN_3_0 int ENGINE_init(ENGINE *e);
+      |                           ^~~~~~~~~~~
+scripts/extract-cert.c:133:25: warning: ‘ENGINE_ctrl_cmd_string’ is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  133 |                         ERR(!ENGINE_ctrl_cmd_string(e, "PIN", key_pass, 0), "Set PKCS#11 PIN");
+      |                         ^~~
+In file included from scripts/extract-cert.c:24:
+/usr/include/openssl/engine.h:479:5: note: declared here
+  479 | int ENGINE_ctrl_cmd_string(ENGINE *e, const char *cmd_name, const char *arg,
+      |     ^~~~~~~~~~~~~~~~~~~~~~
+scripts/extract-cert.c:134:17: warning: ‘ENGINE_ctrl_cmd’ is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  134 |                 ENGINE_ctrl_cmd(e, "LOAD_CERT_CTRL", 0, &parms, NULL, 1);
+      |                 ^~~~~~~~~~~~~~~
+In file included from scripts/extract-cert.c:24:
+/usr/include/openssl/engine.h:450:27: note: declared here
+  450 | OSSL_DEPRECATEDIN_3_0 int ENGINE_ctrl_cmd(ENGINE *e, const char *cmd_name,
+      |                           ^~~~~~~~~~~~~~~
+  HOSTCC  scripts/asn1_compiler
+  CALL    scripts/checksyscalls.sh
+  CHK     include/generated/compile.h
+  UPD     include/generated/compile.h
+  HOSTCC  usr/gen_init_cpio
+  GEN     usr/initramfs_data.cpio
+  AS      usr/initramfs_data.o
+  AR      usr/built-in.a
+  CC      arch/arm64/kernel/probes/uprobes.o
+  CC      arch/arm64/kernel/probes/decode-insn.o
+  CC      init/do_mounts.o
+  CC      init/main.o
+  CC      arch/arm64/kernel/rootguard/oplus_root_check.o
+  OBJCOPY arch/arm64/kernel/vdso/vdso.so
+  AS      arch/arm64/kernel/vdso/vdso.o
+  AR      arch/arm64/kernel/vdso/built-in.a
+  CC      arch/arm64/kernel/probes/simulate-insn.o
+  AR      arch/arm64/kernel/probes/built-in.a
+  CC      init/do_mounts_rd.o
+  CC      init/do_mounts_initrd.o
+  CC      arch/arm64/kernel/rootguard/oplus_exec_block.o
+  CC      arch/arm64/kernel/debug-monitors.o
+  CC      init/do_mounts_dm.o
+  CC      arch/arm64/kernel/rootguard/oplus_mount_block.o
+  CC      arch/arm64/mm/dma-mapping.o
+  CC      arch/arm64/kernel/rootguard/oplus_guard_general.o
+arch/arm64/kernel/rootguard/oplus_guard_general.c:86:20: error: function declaration isn’t a prototype [-Werror=strict-prototypes]
+   86 | static void __exit boot_state_exit()
+      |                    ^~~~~~~~~~~~~~~
+cc1: some warnings being treated as errors
+make[2]: *** [scripts/Makefile.build:338: arch/arm64/kernel/rootguard/oplus_guard_general.o] Error 1
+make[1]: *** [scripts/Makefile.build:642: arch/arm64/kernel/rootguard] Error 2
+make: *** [Makefile:1275: arch/arm64/kernel] Error 2
+make: *** Waiting for unfinished jobs....
+  CC      init/noinitramfs.o
+  CC      arch/arm64/mm/extable.o
+  CC      init/calibrate.o
+  CC      arch/arm64/net/bpf_jit_comp.o
+  AR      arch/arm64/net/built-in.a
+  CC      init/initramfs.o
+  AS      arch/arm64/mm/cache.o
+  CC      init/init_task.o
+  CC      arch/arm64/mm/fault.o
+  CC      init/version.o
+  AR      init/built-in.a
+  CC      arch/arm64/mm/copypage.o
+  CC      arch/arm64/mm/init.o
+  CC      arch/arm64/mm/flush.o
+  CC      arch/arm64/mm/ioremap.o
+  CC      arch/arm64/mm/mmap.o
+  AS      arch/arm64/mm/proc.o
+  CC      arch/arm64/mm/pgd.o
+  CC      arch/arm64/mm/context.o
+  CC      arch/arm64/mm/pageattr.o
+  CC      arch/arm64/mm/mmu.o
+  AR      arch/arm64/mm/built-in.a

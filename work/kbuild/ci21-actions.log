@@ -1,0 +1,394 @@
+build	Set up job	﻿2026-11-05T16:19:37.9324087Z Current runner version: '2.338.2'
+build	Set up job	2026-11-05T16:19:37.9345682Z ##[group]Runner Image Provisioner
+build	Set up job	2026-11-05T16:19:37.9346444Z Hosted Compute Agent
+build	Set up job	2026-11-05T16:19:37.9347055Z Version: 20261028.624
+build	Set up job	2026-11-05T16:19:37.9347625Z Commit: 54898b74c23fde5556c9b3c3a2290865feef0dfe
+build	Set up job	2026-11-05T16:19:37.9348256Z Build Date: 2026-10-28T21:51:42Z
+build	Set up job	2026-11-05T16:19:37.9348912Z Worker ID: {019ded77-3d54-4acc-8830-ca19fa1c66ce}
+build	Set up job	2026-11-05T16:19:37.9349520Z Region: westus2
+build	Set up job	2026-11-05T16:19:37.9350166Z Cloud: Azure
+build	Set up job	2026-11-05T16:19:37.9350750Z ##[endgroup]
+build	Set up job	2026-11-05T16:19:37.9351874Z ##[group]Operating System
+build	Set up job	2026-11-05T16:19:37.9352476Z Ubuntu
+build	Set up job	2026-11-05T16:19:37.9352949Z 22.04.5
+build	Set up job	2026-11-05T16:19:37.9353408Z LTS
+build	Set up job	2026-11-05T16:19:37.9353930Z ##[endgroup]
+build	Set up job	2026-11-05T16:19:37.9354452Z ##[group]Runner Image
+build	Set up job	2026-11-05T16:19:37.9355322Z Image: ubuntu-22.04
+build	Set up job	2026-11-05T16:19:37.9355838Z Version: 20261101.347.1
+build	Set up job	2026-11-05T16:19:37.9356756Z Included Software: https://github.com/actions/runner-images/blob/ubuntu22/20261101.347/images/ubuntu/Ubuntu2204-Readme.md
+build	Set up job	2026-11-05T16:19:37.9358317Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu22%2F20261101.347
+build	Set up job	2026-11-05T16:19:37.9359156Z ##[endgroup]
+build	Set up job	2026-11-05T16:19:37.9360336Z ##[group]GITHUB_TOKEN Permissions
+build	Set up job	2026-11-05T16:19:37.9362110Z Contents: read
+build	Set up job	2026-11-05T16:19:37.9362704Z Metadata: read
+build	Set up job	2026-11-05T16:19:37.9363197Z Packages: read
+build	Set up job	2026-11-05T16:19:37.9363754Z ##[endgroup]
+build	Set up job	2026-11-05T16:19:37.9365399Z Secret source: Actions
+build	Set up job	2026-11-05T16:19:37.9366285Z Cache mode: write
+build	Set up job	2026-11-05T16:19:37.9366935Z Prepare workflow directory
+build	Set up job	2026-11-05T16:19:37.9910599Z Prepare all required actions
+build	Set up job	2026-11-05T16:19:37.9948075Z Getting action download info
+build	Set up job	2026-11-05T16:19:38.3135844Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+build	Set up job	2026-11-05T16:19:38.7286514Z Download action repository 'actions/cache@v4' (SHA:0057852bfaa89a56745cba8c7296529d2fc39830)
+build	Set up job	2026-11-05T16:19:39.0279329Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+build	Set up job	2026-11-05T16:19:39.3170299Z Complete job name: build
+build	检出本仓库	﻿2026-11-05T16:19:39.3876498Z ##[group]Run actions/checkout@v4
+build	检出本仓库	2026-11-05T16:19:39.3877380Z with:
+build	检出本仓库	2026-11-05T16:19:39.3877946Z   repository: Hi-prof/nl-k419
+build	检出本仓库	2026-11-05T16:19:39.3881428Z   token: ***
+build	检出本仓库	2026-11-05T16:19:39.3881981Z   ssh-strict: true
+build	检出本仓库	2026-11-05T16:19:39.3882530Z   ssh-user: git
+build	检出本仓库	2026-11-05T16:19:39.3883082Z   persist-credentials: true
+build	检出本仓库	2026-11-05T16:19:39.3883666Z   clean: true
+build	检出本仓库	2026-11-05T16:19:39.3884218Z   sparse-checkout-cone-mode: true
+build	检出本仓库	2026-11-05T16:19:39.3884843Z   fetch-depth: 1
+build	检出本仓库	2026-11-05T16:19:39.3885380Z   fetch-tags: false
+build	检出本仓库	2026-11-05T16:19:39.3885922Z   show-progress: true
+build	检出本仓库	2026-11-05T16:19:39.3886469Z   lfs: false
+build	检出本仓库	2026-11-05T16:19:39.3887004Z   submodules: false
+build	检出本仓库	2026-11-05T16:19:39.3887558Z   set-safe-directory: true
+build	检出本仓库	2026-11-05T16:19:39.3888157Z   allow-unsafe-pr-checkout: false
+build	检出本仓库	2026-11-05T16:19:39.3888976Z env:
+build	检出本仓库	2026-11-05T16:19:39.3889493Z   ARCH: arm64
+build	检出本仓库	2026-11-05T16:19:39.3890220Z   SUBARCH: arm64
+build	检出本仓库	2026-11-05T16:19:39.3890748Z   JOBS: 4
+build	检出本仓库	2026-11-05T16:19:39.3891266Z   CCACHE_DIR: /home/runner/.ccache
+build	检出本仓库	2026-11-05T16:19:39.3891922Z   CCACHE_MAXSIZE: 4G
+build	检出本仓库	2026-11-05T16:19:39.3892465Z   CCACHE_COMPILERCHECK: content
+build	检出本仓库	2026-11-05T16:19:39.3893048Z ##[endgroup]
+build	检出本仓库	2026-11-05T16:19:39.8331107Z Syncing repository: Hi-prof/nl-k419
+build	检出本仓库	2026-11-05T16:19:39.8333306Z ##[group]Getting Git version info
+build	检出本仓库	2026-11-05T16:19:39.8334339Z Working directory is '/home/runner/work/nl-k419/nl-k419'
+build	检出本仓库	2026-11-05T16:19:39.8336033Z [command]/usr/bin/git version
+build	检出本仓库	2026-11-05T16:19:39.8625698Z git version 2.56.0
+build	检出本仓库	2026-11-05T16:19:39.8652570Z ##[endgroup]
+build	检出本仓库	2026-11-05T16:19:39.8664317Z Temporarily overriding HOME='/home/runner/work/_temp/ed7a6486-55a7-4fdc-b139-a85b20762027' before making global git config changes
+build	检出本仓库	2026-11-05T16:19:39.8667130Z Adding repository directory to the temporary git global config as a safe directory
+build	检出本仓库	2026-11-05T16:19:39.8669395Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/nl-k419/nl-k419
+build	检出本仓库	2026-11-05T16:19:39.8703138Z Deleting the contents of '/home/runner/work/nl-k419/nl-k419'
+build	检出本仓库	2026-11-05T16:19:39.8713135Z ##[group]Initializing the repository
+build	检出本仓库	2026-11-05T16:19:39.8716575Z [command]/usr/bin/git init /home/runner/work/nl-k419/nl-k419
+build	检出本仓库	2026-11-05T16:19:39.9090836Z hint: Using 'master' as the name for the initial branch. This default branch name
+build	检出本仓库	2026-11-05T16:19:39.9093421Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+build	检出本仓库	2026-11-05T16:19:39.9095977Z hint: to use in all of your new repositories, which will suppress this warning,
+build	检出本仓库	2026-11-05T16:19:39.9097615Z hint: call:
+build	检出本仓库	2026-11-05T16:19:39.9098331Z hint:
+build	检出本仓库	2026-11-05T16:19:39.9099267Z hint: 	git config --global init.defaultBranch <name>
+build	检出本仓库	2026-11-05T16:19:39.9101826Z hint:
+build	检出本仓库	2026-11-05T16:19:39.9102881Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+build	检出本仓库	2026-11-05T16:19:39.9104918Z hint: 'development'. The just-created branch can be renamed via this command:
+build	检出本仓库	2026-11-05T16:19:39.9106567Z hint:
+build	检出本仓库	2026-11-05T16:19:39.9107243Z hint: 	git branch -m <name>
+build	检出本仓库	2026-11-05T16:19:39.9108072Z hint:
+build	检出本仓库	2026-11-05T16:19:39.9109372Z hint: Disable this message with "git config set advice.defaultBranchName false"
+build	检出本仓库	2026-11-05T16:19:39.9112322Z Initialized empty Git repository in /home/runner/work/nl-k419/nl-k419/.git/
+build	检出本仓库	2026-11-05T16:19:39.9115839Z [command]/usr/bin/git remote add origin https://github.com/Hi-prof/nl-k419
+build	检出本仓库	2026-11-05T16:19:39.9139523Z ##[endgroup]
+build	检出本仓库	2026-11-05T16:19:39.9140543Z ##[group]Disabling automatic garbage collection
+build	检出本仓库	2026-11-05T16:19:39.9142876Z [command]/usr/bin/git config --local gc.auto 0
+build	检出本仓库	2026-11-05T16:19:39.9224078Z ##[endgroup]
+build	检出本仓库	2026-11-05T16:19:39.9224855Z ##[group]Setting up auth
+build	检出本仓库	2026-11-05T16:19:39.9229282Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+build	检出本仓库	2026-11-05T16:19:39.9262613Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+build	检出本仓库	2026-11-05T16:19:39.9538080Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+build	检出本仓库	2026-11-05T16:19:39.9573378Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+build	检出本仓库	2026-11-05T16:19:39.9795691Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+build	检出本仓库	2026-11-05T16:19:39.9832143Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+build	检出本仓库	2026-11-05T16:19:40.0049701Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+build	检出本仓库	2026-11-05T16:19:40.0089645Z ##[endgroup]
+build	检出本仓库	2026-11-05T16:19:40.0091568Z ##[group]Fetching the repository
+build	检出本仓库	2026-11-05T16:19:40.0098284Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +e088a002dd54b46236e6b98c7063761614059146:refs/remotes/origin/main
+build	检出本仓库	2026-11-05T16:19:40.2775942Z From https://github.com/Hi-prof/nl-k419
+build	检出本仓库	2026-11-05T16:19:40.2777255Z  * [new ref]         e088a002dd54b46236e6b98c7063761614059146 -> origin/main
+build	检出本仓库	2026-11-05T16:19:40.2780268Z ##[endgroup]
+build	检出本仓库	2026-11-05T16:19:40.2781209Z ##[group]Determining the checkout info
+build	检出本仓库	2026-11-05T16:19:40.2782407Z ##[endgroup]
+build	检出本仓库	2026-11-05T16:19:40.2787118Z [command]/usr/bin/git sparse-checkout disable
+build	检出本仓库	2026-11-05T16:19:40.3727392Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+build	检出本仓库	2026-11-05T16:19:40.3762171Z ##[group]Checking out the ref
+build	检出本仓库	2026-11-05T16:19:40.3765803Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+build	检出本仓库	2026-11-05T16:19:40.4492576Z Switched to a new branch 'main'
+build	检出本仓库	2026-11-05T16:19:40.4493750Z branch 'main' set up to track 'origin/main'.
+build	检出本仓库	2026-11-05T16:19:40.4500501Z ##[endgroup]
+build	检出本仓库	2026-11-05T16:19:40.4541017Z [command]/usr/bin/git log -1 --format=%H
+build	检出本仓库	2026-11-05T16:19:40.4568392Z e088a002dd54b46236e6b98c7063761614059146
+build	安装构建依赖	﻿2026-11-05T16:19:40.4840222Z ##[group]Run sudo apt-get update
+build	安装构建依赖	2026-11-05T16:19:40.4840978Z [36;1msudo apt-get update[0m
+build	安装构建依赖	2026-11-05T16:19:40.4841751Z [36;1msudo apt-get install -y --no-install-recommends \[0m
+build	安装构建依赖	2026-11-05T16:19:40.4842962Z [36;1m  git make bc bison flex libssl-dev libelf-dev device-tree-compiler \[0m
+build	安装构建依赖	2026-11-05T16:19:40.4844281Z [36;1m  cpio gzip xz-utils zstd python3 rsync ca-certificates ccache[0m
+build	安装构建依赖	2026-11-05T16:19:40.4845298Z [36;1m# 优先 gcc-10（对 4.19 最友好），没有就退回 gcc-11 / 默认版本[0m
+build	安装构建依赖	2026-11-05T16:19:40.4846448Z [36;1msudo apt-get install -y --no-install-recommends gcc-10-aarch64-linux-gnu \[0m
+build	安装构建依赖	2026-11-05T16:19:40.4847945Z [36;1m  || sudo apt-get install -y --no-install-recommends gcc-aarch64-linux-gnu[0m
+build	安装构建依赖	2026-11-05T16:19:40.4849467Z [36;1msudo apt-get install -y --no-install-recommends binutils-aarch64-linux-gnu[0m
+build	安装构建依赖	2026-11-05T16:19:40.4851344Z [36;1mfor c in aarch64-linux-gnu-gcc-10 aarch64-linux-gnu-gcc-11 aarch64-linux-gnu-gcc; do[0m
+build	安装构建依赖	2026-11-05T16:19:40.4852685Z [36;1m  if command -v "$c" >/dev/null 2>&1; then[0m
+build	安装构建依赖	2026-11-05T16:19:40.4853517Z [36;1m    echo "CROSS_CC=$c" >> "$GITHUB_ENV"[0m
+build	安装构建依赖	2026-11-05T16:19:40.4854194Z [36;1m    break[0m
+build	安装构建依赖	2026-11-05T16:19:40.4854603Z [36;1m  fi[0m
+build	安装构建依赖	2026-11-05T16:19:40.4854979Z [36;1mdone[0m
+build	安装构建依赖	2026-11-05T16:19:40.4855495Z [36;1mecho "选中编译器: $(command -v "$CROSS_CC" || true)"[0m
+build	安装构建依赖	2026-11-05T16:19:40.4856288Z [36;1m"$CROSS_CC" --version | head -1[0m
+build	安装构建依赖	2026-11-05T16:19:40.4856978Z [36;1mccache --version | head -1[0m
+build	安装构建依赖	2026-11-05T16:19:40.5334750Z shell: /usr/bin/bash -e {0}
+build	安装构建依赖	2026-11-05T16:19:40.5335313Z env:
+build	安装构建依赖	2026-11-05T16:19:40.5335656Z   ARCH: arm64
+build	安装构建依赖	2026-11-05T16:19:40.5336031Z   SUBARCH: arm64
+build	安装构建依赖	2026-11-05T16:19:40.5336421Z   JOBS: 4
+build	安装构建依赖	2026-11-05T16:19:40.5336820Z   CCACHE_DIR: /home/runner/.ccache
+build	安装构建依赖	2026-11-05T16:19:40.5337418Z   CCACHE_MAXSIZE: 4G
+build	安装构建依赖	2026-11-05T16:19:40.5337881Z   CCACHE_COMPILERCHECK: content
+build	安装构建依赖	2026-11-05T16:19:40.5338412Z ##[endgroup]
+build	安装构建依赖	2026-11-05T16:19:40.9651677Z Get:1 file:/etc/apt/apt-mirrors.txt Mirrorlist [144 B]
+build	安装构建依赖	2026-11-05T16:19:40.9906739Z Get:6 https://packages.microsoft.com/ubuntu/22.04/prod jammy InRelease [3632 B]
+build	安装构建依赖	2026-11-05T16:19:41.0616210Z Get:7 https://packages.microsoft.com/ubuntu/22.04/prod jammy/main amd64 Packages [1027 kB]
+build	安装构建依赖	2026-11-05T16:19:41.2672438Z Get:8 https://packages.microsoft.com/ubuntu/22.04/prod jammy/main arm64 Packages [756 kB]
+build	安装构建依赖	2026-11-05T16:19:55.9873183Z Hit:2 http://azure.archive.ubuntu.com/ubuntu jammy InRelease
+build	安装构建依赖	2026-11-05T16:19:55.9881733Z Get:3 http://azure.archive.ubuntu.com/ubuntu jammy-updates InRelease [128 kB]
+build	安装构建依赖	2026-11-05T16:19:56.0095261Z Get:4 http://azure.archive.ubuntu.com/ubuntu jammy-backports InRelease [127 kB]
+build	安装构建依赖	2026-11-05T16:19:56.0217603Z Get:5 http://azure.archive.ubuntu.com/ubuntu jammy-security InRelease [129 kB]
+build	安装构建依赖	2026-11-05T16:19:56.1975363Z Get:9 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 Packages [3941 kB]
+build	安装构建依赖	2026-11-05T16:19:56.2942316Z Get:10 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main Translation-en [580 kB]
+build	安装构建依赖	2026-11-05T16:19:56.3115022Z Get:11 http://azure.archive.ubuntu.com/ubuntu jammy-updates/universe amd64 Packages [1291 kB]
+build	安装构建依赖	2026-11-05T16:19:56.3222617Z Get:12 http://azure.archive.ubuntu.com/ubuntu jammy-updates/universe Translation-en [327 kB]
+build	安装构建依赖	2026-11-05T16:19:56.3395605Z Get:13 http://azure.archive.ubuntu.com/ubuntu jammy-security/main amd64 Packages [3675 kB]
+build	安装构建依赖	2026-11-05T16:19:56.3568839Z Get:14 http://azure.archive.ubuntu.com/ubuntu jammy-security/main Translation-en [513 kB]
+build	安装构建依赖	2026-11-05T16:19:56.3599580Z Get:15 http://azure.archive.ubuntu.com/ubuntu jammy-security/restricted Translation-en [1261 kB]
+build	安装构建依赖	2026-11-05T16:19:56.3673806Z Get:16 http://azure.archive.ubuntu.com/ubuntu jammy-security/universe amd64 Packages [1057 kB]
+build	安装构建依赖	2026-11-05T16:19:56.3757836Z Get:17 http://azure.archive.ubuntu.com/ubuntu jammy-security/universe Translation-en [238 kB]
+build	安装构建依赖	2026-11-05T16:20:05.0703036Z Fetched 15.1 MB in 17s (909 kB/s)
+build	安装构建依赖	2026-11-05T16:20:06.3726490Z Reading package lists...
+build	安装构建依赖	2026-11-05T16:20:06.4326748Z Reading package lists...
+build	安装构建依赖	2026-11-05T16:20:06.7374936Z Building dependency tree...
+build	安装构建依赖	2026-11-05T16:20:06.7386203Z Reading state information...
+build	安装构建依赖	2026-11-05T16:20:06.9091948Z bc is already the newest version (1.07.1-3build1).
+build	安装构建依赖	2026-11-05T16:20:06.9092460Z bc set to manually installed.
+build	安装构建依赖	2026-11-05T16:20:06.9092703Z flex is already the newest version (2.6.4-8build2).
+build	安装构建依赖	2026-11-05T16:20:06.9092969Z make is already the newest version (4.3-4.1build1).
+build	安装构建依赖	2026-11-05T16:20:06.9093522Z zstd is already the newest version (1.4.8+dfsg-3build1).
+build	安装构建依赖	2026-11-05T16:20:06.9094007Z zstd set to manually installed.
+build	安装构建依赖	2026-11-05T16:20:06.9094582Z bison is already the newest version (2:3.8.2+dfsg-1ubuntu0.22.04.1).
+build	安装构建依赖	2026-11-05T16:20:06.9095106Z cpio is already the newest version (2.13+dfsg-7ubuntu0.2).
+build	安装构建依赖	2026-11-05T16:20:06.9095566Z cpio set to manually installed.
+build	安装构建依赖	2026-11-05T16:20:06.9096024Z gzip is already the newest version (1.10-4ubuntu4.2).
+build	安装构建依赖	2026-11-05T16:20:06.9096534Z libssl-dev is already the newest version (3.0.2-0ubuntu1.30).
+build	安装构建依赖	2026-11-05T16:20:06.9097158Z python3 is already the newest version (3.10.6-1~22.04.1).
+build	安装构建依赖	2026-11-05T16:20:06.9097817Z rsync is already the newest version (3.2.7-0ubuntu0.22.04.7).
+build	安装构建依赖	2026-11-05T16:20:06.9098337Z xz-utils is already the newest version (5.2.5-2ubuntu1.2).
+build	安装构建依赖	2026-11-05T16:20:06.9098955Z git is already the newest version (1:2.56.0-0ppa1~ubuntu22.04.2).
+build	安装构建依赖	2026-11-05T16:20:06.9099342Z The following additional packages will be installed:
+build	安装构建依赖	2026-11-05T16:20:06.9100039Z   libfdt1 libhiredis0.14
+build	安装构建依赖	2026-11-05T16:20:06.9103460Z Suggested packages:
+build	安装构建依赖	2026-11-05T16:20:06.9103710Z   distcc | icecc
+build	安装构建依赖	2026-11-05T16:20:07.3589048Z The following NEW packages will be installed:
+build	安装构建依赖	2026-11-05T16:20:07.3594185Z   ccache device-tree-compiler libelf-dev libfdt1 libhiredis0.14
+build	安装构建依赖	2026-11-05T16:20:07.3596404Z The following packages will be upgraded:
+build	安装构建依赖	2026-11-05T16:20:07.3601325Z   ca-certificates
+build	安装构建依赖	2026-11-05T16:20:07.3752001Z 1 upgraded, 5 newly installed, 0 to remove and 30 not upgraded.
+build	安装构建依赖	2026-11-05T16:20:07.3752538Z Need to get 980 kB of archives.
+build	安装构建依赖	2026-11-05T16:20:07.3752896Z After this operation, 2329 kB of additional disk space will be used.
+build	安装构建依赖	2026-11-05T16:20:07.3753293Z Get:1 file:/etc/apt/apt-mirrors.txt Mirrorlist [144 B]
+build	安装构建依赖	2026-11-05T16:20:37.4205452Z Ign:2 http://azure.archive.ubuntu.com/ubuntu jammy-security/main amd64 ca-certificates all 20260816ubuntu0.22.04.2
+build	安装构建依赖	2026-11-05T16:20:53.0009301Z Get:3 http://azure.archive.ubuntu.com/ubuntu jammy/universe amd64 libhiredis0.14 amd64 0.14.1-2 [32.8 kB]
+build	安装构建依赖	2026-11-05T16:20:54.3597198Z Get:4 http://azure.archive.ubuntu.com/ubuntu jammy/universe amd64 ccache amd64 4.5.1-1 [495 kB]
+build	安装构建依赖	2026-11-05T16:21:04.5049437Z Get:5 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libelf-dev amd64 0.186-1ubuntu0.1 [64.4 kB]
+build	安装构建依赖	2026-11-05T16:21:06.3855995Z Get:6 http://azure.archive.ubuntu.com/ubuntu jammy/main amd64 libfdt1 amd64 1.6.1-1 [20.0 kB]
+build	安装构建依赖	2026-11-05T16:21:07.3142455Z Get:7 http://azure.archive.ubuntu.com/ubuntu jammy/main amd64 device-tree-compiler amd64 1.6.1-1 [228 kB]
+build	安装构建依赖	2026-11-05T16:21:11.9671268Z Get:2 http://azure.archive.ubuntu.com/ubuntu jammy-security/main amd64 ca-certificates all 20260816ubuntu0.22.04.2 [140 kB]
+build	安装构建依赖	2026-11-05T16:21:14.8802702Z Preconfiguring packages ...
+build	安装构建依赖	2026-11-05T16:21:15.5114389Z Fetched 980 kB in 1min 7s (14.6 kB/s)
+build	安装构建依赖	2026-11-05T16:21:15.5612254Z (Reading database ... 
+build	安装构建依赖	2026-11-05T16:21:15.5612564Z (Reading database ... 5%
+build	安装构建依赖	2026-11-05T16:21:15.5612763Z (Reading database ... 10%
+build	安装构建依赖	2026-11-05T16:21:15.5612955Z (Reading database ... 15%
+build	安装构建依赖	2026-11-05T16:21:15.5613133Z (Reading database ... 20%
+build	安装构建依赖	2026-11-05T16:21:15.5613318Z (Reading database ... 25%
+build	安装构建依赖	2026-11-05T16:21:15.5613495Z (Reading database ... 30%
+build	安装构建依赖	2026-11-05T16:21:15.5613671Z (Reading database ... 35%
+build	安装构建依赖	2026-11-05T16:21:15.5613876Z (Reading database ... 40%
+build	安装构建依赖	2026-11-05T16:21:15.5614065Z (Reading database ... 45%
+build	安装构建依赖	2026-11-05T16:21:15.5614238Z (Reading database ... 50%
+build	安装构建依赖	2026-11-05T16:21:15.5971799Z (Reading database ... 55%
+build	安装构建依赖	2026-11-05T16:21:15.9100174Z (Reading database ... 60%
+build	安装构建依赖	2026-11-05T16:21:16.3036449Z (Reading database ... 65%
+build	安装构建依赖	2026-11-05T16:21:16.4561761Z (Reading database ... 70%
+build	安装构建依赖	2026-11-05T16:21:16.7516259Z (Reading database ... 75%
+build	安装构建依赖	2026-11-05T16:21:17.0037027Z (Reading database ... 80%
+build	安装构建依赖	2026-11-05T16:21:17.2595591Z (Reading database ... 85%
+build	安装构建依赖	2026-11-05T16:21:17.6981588Z (Reading database ... 90%
+build	安装构建依赖	2026-11-05T16:21:18.0660790Z (Reading database ... 95%
+build	安装构建依赖	2026-11-05T16:21:18.0661118Z (Reading database ... 100%
+build	安装构建依赖	2026-11-05T16:21:18.0661405Z (Reading database ... 263778 files and directories currently installed.)
+build	安装构建依赖	2026-11-05T16:21:18.0726624Z Preparing to unpack .../0-ca-certificates_20260816ubuntu0.22.04.2_all.deb ...
+build	安装构建依赖	2026-11-05T16:21:18.1205303Z Unpacking ca-certificates (20260816ubuntu0.22.04.2) over (20260816ubuntu0.22.04.1) ...
+build	安装构建依赖	2026-11-05T16:21:18.1994506Z Selecting previously unselected package libhiredis0.14:amd64.
+build	安装构建依赖	2026-11-05T16:21:18.2186958Z Preparing to unpack .../1-libhiredis0.14_0.14.1-2_amd64.deb ...
+build	安装构建依赖	2026-11-05T16:21:18.2201364Z Unpacking libhiredis0.14:amd64 (0.14.1-2) ...
+build	安装构建依赖	2026-11-05T16:21:18.2414820Z Selecting previously unselected package ccache.
+build	安装构建依赖	2026-11-05T16:21:18.2601856Z Preparing to unpack .../2-ccache_4.5.1-1_amd64.deb ...
+build	安装构建依赖	2026-11-05T16:21:18.2610446Z Unpacking ccache (4.5.1-1) ...
+build	安装构建依赖	2026-11-05T16:21:18.3059718Z Selecting previously unselected package libelf-dev:amd64.
+build	安装构建依赖	2026-11-05T16:21:18.3245549Z Preparing to unpack .../3-libelf-dev_0.186-1ubuntu0.1_amd64.deb ...
+build	安装构建依赖	2026-11-05T16:21:18.3252687Z Unpacking libelf-dev:amd64 (0.186-1ubuntu0.1) ...
+build	安装构建依赖	2026-11-05T16:21:18.4079632Z Selecting previously unselected package libfdt1:amd64.
+build	安装构建依赖	2026-11-05T16:21:18.4267067Z Preparing to unpack .../4-libfdt1_1.6.1-1_amd64.deb ...
+build	安装构建依赖	2026-11-05T16:21:18.4274699Z Unpacking libfdt1:amd64 (1.6.1-1) ...
+build	安装构建依赖	2026-11-05T16:21:18.4635505Z Selecting previously unselected package device-tree-compiler.
+build	安装构建依赖	2026-11-05T16:21:18.4825554Z Preparing to unpack .../5-device-tree-compiler_1.6.1-1_amd64.deb ...
+build	安装构建依赖	2026-11-05T16:21:18.4832232Z Unpacking device-tree-compiler (1.6.1-1) ...
+build	安装构建依赖	2026-11-05T16:21:18.5547699Z Setting up libfdt1:amd64 (1.6.1-1) ...
+build	安装构建依赖	2026-11-05T16:21:18.5565870Z Setting up ca-certificates (20260816ubuntu0.22.04.2) ...
+build	安装构建依赖	2026-11-05T16:21:20.2565269Z Setting up libelf-dev:amd64 (0.186-1ubuntu0.1) ...
+build	安装构建依赖	2026-11-05T16:21:20.2581683Z Setting up device-tree-compiler (1.6.1-1) ...
+build	安装构建依赖	2026-11-05T16:21:20.2637837Z Setting up libhiredis0.14:amd64 (0.14.1-2) ...
+build	安装构建依赖	2026-11-05T16:21:20.2655339Z Setting up ccache (4.5.1-1) ...
+build	安装构建依赖	2026-11-05T16:21:20.2677252Z Updating symlinks in /usr/lib/ccache ...
+build	安装构建依赖	2026-11-05T16:21:20.3021227Z Processing triggers for libc-bin (2.35-0ubuntu3.15) ...
+build	安装构建依赖	2026-11-05T16:21:34.3717628Z Processing triggers for man-db (2.10.2-1) ...
+build	安装构建依赖	2026-11-05T16:21:34.3737112Z Not building database; man-db/auto-update is not 'true'.
+build	安装构建依赖	2026-11-05T16:21:34.3750710Z Processing triggers for ca-certificates (20260816ubuntu0.22.04.2) ...
+build	安装构建依赖	2026-11-05T16:21:34.3790552Z Updating certificates in /etc/ssl/certs...
+build	安装构建依赖	2026-11-05T16:21:34.8253263Z 0 added, 0 removed; done.
+build	安装构建依赖	2026-11-05T16:21:34.8253787Z Running hooks in /etc/ca-certificates/update.d...
+build	安装构建依赖	2026-11-05T16:21:34.9700373Z /etc/ssl/certs/adoptium/cacerts successfully populated.
+build	安装构建依赖	2026-11-05T16:21:34.9825181Z Updating Mono key store
+build	安装构建依赖	2026-11-05T16:21:35.0099389Z Mono Certificate Store Sync - version 6.12.0.200
+build	安装构建依赖	2026-11-05T16:21:35.0100129Z Populate Mono certificate store from a concatenated list of certificates.
+build	安装构建依赖	2026-11-05T16:21:35.0100664Z Copyright 2002, 2003 Motus Technologies. Copyright 2004-2008 Novell. BSD licensed.
+build	安装构建依赖	2026-11-05T16:21:35.0100921Z 
+build	安装构建依赖	2026-11-05T16:21:35.0428816Z Importing into legacy system store:
+build	安装构建依赖	2026-11-05T16:21:35.2982995Z I already trust 120, your new list has 120
+build	安装构建依赖	2026-11-05T16:21:35.3031608Z Import process completed.
+build	安装构建依赖	2026-11-05T16:21:35.3044351Z 
+build	安装构建依赖	2026-11-05T16:21:35.3044574Z Importing into BTLS system store:
+build	安装构建依赖	2026-11-05T16:21:35.6360912Z I already trust 120, your new list has 120
+build	安装构建依赖	2026-11-05T16:21:35.6399413Z Import process completed.
+build	安装构建依赖	2026-11-05T16:21:35.6444506Z Done
+build	安装构建依赖	2026-11-05T16:21:35.6447048Z done.
+build	安装构建依赖	2026-11-05T16:21:36.1759000Z 
+build	安装构建依赖	2026-11-05T16:21:36.1759612Z Running kernel seems to be up-to-date.
+build	安装构建依赖	2026-11-05T16:21:36.1760057Z 
+build	安装构建依赖	2026-11-05T16:21:36.1760416Z No services need to be restarted.
+build	安装构建依赖	2026-11-05T16:21:36.1760945Z 
+build	安装构建依赖	2026-11-05T16:21:36.1761039Z No containers need to be restarted.
+build	安装构建依赖	2026-11-05T16:21:36.1761344Z 
+build	安装构建依赖	2026-11-05T16:21:36.1761449Z No user sessions are running outdated binaries.
+build	安装构建依赖	2026-11-05T16:21:36.1761617Z 
+build	安装构建依赖	2026-11-05T16:21:36.1770620Z No VM guests are running outdated hypervisor (qemu) binaries on this host.
+build	安装构建依赖	2026-11-05T16:21:37.6583378Z Reading package lists...
+build	安装构建依赖	2026-11-05T16:21:37.9488335Z Building dependency tree...
+build	安装构建依赖	2026-11-05T16:21:37.9498171Z Reading state information...
+build	安装构建依赖	2026-11-05T16:21:38.1168360Z The following additional packages will be installed:
+build	安装构建依赖	2026-11-05T16:21:38.1168963Z   binutils-aarch64-linux-gnu cpp-10-aarch64-linux-gnu
+build	安装构建依赖	2026-11-05T16:21:38.1169498Z   gcc-10-aarch64-linux-gnu-base gcc-10-cross-base gcc-11-cross-base
+build	安装构建依赖	2026-11-05T16:21:38.1170267Z   gcc-12-cross-base libasan6-arm64-cross libatomic1-arm64-cross
+build	安装构建依赖	2026-11-05T16:21:38.1170836Z   libc6-arm64-cross libgcc-10-dev-arm64-cross libgcc-s1-arm64-cross
+build	安装构建依赖	2026-11-05T16:21:38.1172548Z   libgomp1-arm64-cross libitm1-arm64-cross liblsan0-arm64-cross
+build	安装构建依赖	2026-11-05T16:21:38.1178517Z   libstdc++6-arm64-cross libtsan0-arm64-cross libubsan1-arm64-cross
+build	安装构建依赖	2026-11-05T16:21:38.1184412Z Suggested packages:
+build	安装构建依赖	2026-11-05T16:21:38.1184677Z   binutils-doc gcc-10-locales gcc-10-doc
+build	安装构建依赖	2026-11-05T16:21:38.1184971Z Recommended packages:
+build	安装构建依赖	2026-11-05T16:21:38.1185227Z   libc6-dev-arm64-cross
+build	安装构建依赖	2026-11-05T16:21:38.1761363Z The following NEW packages will be installed:
+build	安装构建依赖	2026-11-05T16:21:38.1762011Z   binutils-aarch64-linux-gnu cpp-10-aarch64-linux-gnu gcc-10-aarch64-linux-gnu
+build	安装构建依赖	2026-11-05T16:21:38.1762631Z   gcc-10-aarch64-linux-gnu-base gcc-10-cross-base gcc-11-cross-base
+build	安装构建依赖	2026-11-05T16:21:38.1763183Z   gcc-12-cross-base libasan6-arm64-cross libatomic1-arm64-cross
+build	安装构建依赖	2026-11-05T16:21:38.1763698Z   libc6-arm64-cross libgcc-10-dev-arm64-cross libgcc-s1-arm64-cross
+build	安装构建依赖	2026-11-05T16:21:38.1765927Z   libgomp1-arm64-cross libitm1-arm64-cross liblsan0-arm64-cross
+build	安装构建依赖	2026-11-05T16:21:38.1771543Z   libstdc++6-arm64-cross libtsan0-arm64-cross libubsan1-arm64-cross
+build	安装构建依赖	2026-11-05T16:21:38.1934247Z 0 upgraded, 18 newly installed, 0 to remove and 30 not upgraded.
+build	安装构建依赖	2026-11-05T16:21:38.1934791Z Need to get 128 MB of archives.
+build	安装构建依赖	2026-11-05T16:21:38.1935166Z After this operation, 507 MB of additional disk space will be used.
+build	安装构建依赖	2026-11-05T16:21:38.1935499Z Get:1 file:/etc/apt/apt-mirrors.txt Mirrorlist [144 B]
+build	安装构建依赖	2026-11-05T16:21:38.5643555Z Get:2 http://azure.archive.ubuntu.com/ubuntu jammy-updates/universe amd64 gcc-10-aarch64-linux-gnu-base amd64 10.5.0-1ubuntu1~22.04.3cross1 [213 kB]
+build	安装构建依赖	2026-11-05T16:21:42.8562636Z Get:3 http://azure.archive.ubuntu.com/ubuntu jammy-updates/universe amd64 cpp-10-aarch64-linux-gnu amd64 10.5.0-1ubuntu1~22.04.3cross1 [53.2 MB]
+build	安装构建依赖	2026-11-05T16:24:36.2164386Z Ign:3 http://azure.archive.ubuntu.com/ubuntu jammy-updates/universe amd64 cpp-10-aarch64-linux-gnu amd64 10.5.0-1ubuntu1~22.04.3cross1
+build	安装构建依赖	2026-11-05T16:24:38.8122714Z Get:4 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 binutils-aarch64-linux-gnu amd64 2.38-4ubuntu2.12 [3624 kB]
+build	安装构建依赖	2026-11-05T16:26:14.3048780Z Get:5 http://azure.archive.ubuntu.com/ubuntu jammy-updates/universe amd64 gcc-10-cross-base all 10.5.0-1ubuntu1~22.04.3cross1 [207 kB]
+build	安装构建依赖	2026-11-05T16:26:20.3999195Z Get:6 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 gcc-12-cross-base all 12.3.0-1ubuntu1~22.04.3cross1 [211 kB]
+build	安装构建依赖	2026-11-05T16:26:26.7562692Z Get:7 http://azure.archive.ubuntu.com/ubuntu jammy/main amd64 libc6-arm64-cross all 2.35-0ubuntu1cross3 [1147 kB]
+build	安装构建依赖	2026-11-05T16:26:57.7071757Z Get:8 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libgcc-s1-arm64-cross all 12.3.0-1ubuntu1~22.04.3cross1 [39.8 kB]
+build	安装构建依赖	2026-11-05T16:26:59.4734139Z Get:9 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libgomp1-arm64-cross all 12.3.0-1ubuntu1~22.04.3cross1 [122 kB]
+build	安装构建依赖	2026-11-05T16:27:03.6466219Z Get:10 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libitm1-arm64-cross all 12.3.0-1ubuntu1~22.04.3cross1 [28.1 kB]
+build	安装构建依赖	2026-11-05T16:27:05.3305216Z Get:11 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libatomic1-arm64-cross all 12.3.0-1ubuntu1~22.04.3cross1 [10.6 kB]
+build	安装构建依赖	2026-11-05T16:27:06.5032084Z Get:12 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 gcc-11-cross-base all 11.4.0-1ubuntu1~22.04.3cross1 [211 kB]
+build	安装构建依赖	2026-11-05T16:27:12.8084636Z Get:13 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libasan6-arm64-cross all 11.4.0-1ubuntu1~22.04.3cross1 [2226 kB]
+build	安装构建依赖	2026-11-05T16:28:11.0108421Z Get:14 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 liblsan0-arm64-cross all 12.3.0-1ubuntu1~22.04.3cross1 [1037 kB]
+build	安装构建依赖	2026-11-05T16:28:38.7669203Z Get:15 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libtsan0-arm64-cross all 11.4.0-1ubuntu1~22.04.3cross1 [2232 kB]
+build	安装构建依赖	2026-11-05T16:29:34.6077137Z Get:16 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libstdc++6-arm64-cross all 12.3.0-1ubuntu1~22.04.3cross1 [616 kB]
+build	安装构建依赖	2026-11-05T16:29:51.2520022Z Get:17 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libubsan1-arm64-cross all 12.3.0-1ubuntu1~22.04.3cross1 [966 kB]
+build	安装构建依赖	2026-11-05T16:30:14.9105851Z Get:18 http://azure.archive.ubuntu.com/ubuntu jammy-updates/universe amd64 libgcc-10-dev-arm64-cross all 10.5.0-1ubuntu1~22.04.3cross1 [1070 kB]
+build	安装构建依赖	2026-11-05T16:30:39.8046950Z Get:19 http://azure.archive.ubuntu.com/ubuntu jammy-updates/universe amd64 gcc-10-aarch64-linux-gnu amd64 10.5.0-1ubuntu1~22.04.3cross1 [60.6 MB]
+build	安装构建依赖	2026-11-05T16:34:30.0215477Z Ign:19 http://azure.archive.ubuntu.com/ubuntu jammy-updates/universe amd64 gcc-10-aarch64-linux-gnu amd64 10.5.0-1ubuntu1~22.04.3cross1
+build	安装构建依赖	2026-11-05T16:34:30.6774177Z Get:3 http://azure.archive.ubuntu.com/ubuntu jammy-updates/universe amd64 cpp-10-aarch64-linux-gnu amd64 10.5.0-1ubuntu1~22.04.3cross1 [53.2 MB]
+build	安装构建依赖	2026-11-05T16:36:06.6760380Z ##[error]The operation was canceled.
+build	上传产物	﻿2026-11-05T16:36:06.6862536Z ##[group]Run actions/upload-artifact@v4
+build	上传产物	2026-11-05T16:36:06.6862776Z with:
+build	上传产物	2026-11-05T16:36:06.6862941Z   name: kernel-419-image
+build	上传产物	2026-11-05T16:36:06.6863474Z   path: ksrc/arch/arm64/boot/Image
+build	上传产物	ksrc/Module.symvers
+build	上传产物	ksrc/.config
+build	上传产物	ksrc/include/config/kernel.release
+build	上传产物	ksrc/include/generated/autoconf.h
+build	上传产物	build.log
+build	上传产物	smoke.log
+build	上传产物	prepare.log
+build	上传产物	
+build	上传产物	2026-11-05T16:36:06.6864042Z   if-no-files-found: warn
+build	上传产物	2026-11-05T16:36:06.6864236Z   include-hidden-files: true
+build	上传产物	2026-11-05T16:36:06.6864439Z   compression-level: 6
+build	上传产物	2026-11-05T16:36:06.6864622Z   overwrite: false
+build	上传产物	2026-11-05T16:36:06.6864787Z env:
+build	上传产物	2026-11-05T16:36:06.6864939Z   ARCH: arm64
+build	上传产物	2026-11-05T16:36:06.6865099Z   SUBARCH: arm64
+build	上传产物	2026-11-05T16:36:06.6865255Z   JOBS: 4
+build	上传产物	2026-11-05T16:36:06.6865416Z   CCACHE_DIR: /home/runner/.ccache
+build	上传产物	2026-11-05T16:36:06.6865625Z   CCACHE_MAXSIZE: 4G
+build	上传产物	2026-11-05T16:36:06.6865804Z   CCACHE_COMPILERCHECK: content
+build	上传产物	2026-11-05T16:36:06.6865996Z ##[endgroup]
+build	上传产物	2026-11-05T16:36:06.8314526Z (node:7312) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+build	上传产物	2026-11-05T16:36:06.8316421Z (Use `node --trace-deprecation ...` to show where the warning was created)
+build	上传产物	2026-11-05T16:36:06.8393647Z Multiple search paths detected. Calculating the least common ancestor of all paths
+build	上传产物	2026-11-05T16:36:06.8400612Z The least common ancestor is /home/runner/work/nl-k419/nl-k419. This will be the root directory of the artifact
+build	上传产物	2026-11-05T16:36:06.8417628Z ##[warning]No files were found with the provided path: ksrc/arch/arm64/boot/Image
+build	上传产物	ksrc/Module.symvers
+build	上传产物	ksrc/.config
+build	上传产物	ksrc/include/config/kernel.release
+build	上传产物	ksrc/include/generated/autoconf.h
+build	上传产物	build.log
+build	上传产物	smoke.log
+build	上传产物	prepare.log. No artifacts will be uploaded.
+build	保存 ccache	﻿2026-11-05T16:36:06.8538491Z ##[group]Run actions/cache/save@v4
+build	保存 ccache	2026-11-05T16:36:06.8538728Z with:
+build	保存 ccache	2026-11-05T16:36:06.8538902Z   path: /home/runner/.ccache
+build	保存 ccache	2026-11-05T16:36:06.8539244Z   key: ccache-oppo/sm7250_s_12.1_reno4_5g-e088a002dd54b46236e6b98c7063761614059146-42063227740
+build	保存 ccache	2026-11-05T16:36:06.8539608Z   enableCrossOsArchive: false
+build	保存 ccache	2026-11-05T16:36:06.8540002Z env:
+build	保存 ccache	2026-11-05T16:36:06.8540178Z   ARCH: arm64
+build	保存 ccache	2026-11-05T16:36:06.8540335Z   SUBARCH: arm64
+build	保存 ccache	2026-11-05T16:36:06.8540494Z   JOBS: 4
+build	保存 ccache	2026-11-05T16:36:06.8540657Z   CCACHE_DIR: /home/runner/.ccache
+build	保存 ccache	2026-11-05T16:36:06.8541088Z   CCACHE_MAXSIZE: 4G
+build	保存 ccache	2026-11-05T16:36:06.8541272Z   CCACHE_COMPILERCHECK: content
+build	保存 ccache	2026-11-05T16:36:06.8541477Z ##[endgroup]
+build	保存 ccache	2026-11-05T16:36:06.9547895Z (node:7326) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+build	保存 ccache	2026-11-05T16:36:06.9548909Z (Use `node --trace-deprecation ...` to show where the warning was created)
+build	保存 ccache	2026-11-05T16:36:06.9644865Z [warning]Path Validation Error: Path(s) specified in the action for caching do(es) not exist, hence no cache is being saved.
+build	保存 ccache	2026-11-05T16:36:06.9646725Z ##[warning]Cache save failed.
+build	Post 检出本仓库	﻿2026-11-05T16:36:06.9847568Z Post job cleanup.
+build	Post 检出本仓库	2026-11-05T16:36:07.0622759Z [command]/usr/bin/git version
+build	Post 检出本仓库	2026-11-05T16:36:07.0658669Z git version 2.56.0
+build	Post 检出本仓库	2026-11-05T16:36:07.0687710Z Temporarily overriding HOME='/home/runner/work/_temp/dcd8d749-79bb-4d70-b29c-4ad05cff3d35' before making global git config changes
+build	Post 检出本仓库	2026-11-05T16:36:07.0688854Z Adding repository directory to the temporary git global config as a safe directory
+build	Post 检出本仓库	2026-11-05T16:36:07.0691674Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/nl-k419/nl-k419
+build	Post 检出本仓库	2026-11-05T16:36:07.0724904Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+build	Post 检出本仓库	2026-11-05T16:36:07.0756238Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+build	Post 检出本仓库	2026-11-05T16:36:07.1001077Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+build	Post 检出本仓库	2026-11-05T16:36:07.1027645Z http.https://github.com/.extraheader
+build	Post 检出本仓库	2026-11-05T16:36:07.1036335Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+build	Post 检出本仓库	2026-11-05T16:36:07.1101319Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+build	Post 检出本仓库	2026-11-05T16:36:07.1324806Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+build	Post 检出本仓库	2026-11-05T16:36:07.1383954Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+build	Complete job	﻿2026-11-05T16:36:07.1740785Z Cleaning up orphan processes
+build	Complete job	2026-11-05T16:36:07.2033429Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/cache/save@v4, actions/checkout@v4, actions/upload-artifact@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

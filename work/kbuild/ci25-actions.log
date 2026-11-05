@@ -1,0 +1,1257 @@
+build	Set up job	﻿2026-11-05T17:14:56.2461883Z Current runner version: '2.338.2'
+build	Set up job	2026-11-05T17:14:56.2504565Z ##[group]Runner Image Provisioner
+build	Set up job	2026-11-05T17:14:56.2506081Z Hosted Compute Agent
+build	Set up job	2026-11-05T17:14:56.2507136Z Version: 20261028.624
+build	Set up job	2026-11-05T17:14:56.2508255Z Commit: 54898b74c23fde5556c9b3c3a2290865feef0dfe
+build	Set up job	2026-11-05T17:14:56.2510218Z Build Date: 2026-10-28T21:51:42Z
+build	Set up job	2026-11-05T17:14:56.2511461Z Worker ID: {06fe89a1-e87d-4a1d-bbeb-40b0824b5743}
+build	Set up job	2026-11-05T17:14:56.2512860Z Region: eastus
+build	Set up job	2026-11-05T17:14:56.2514114Z Cloud: Azure
+build	Set up job	2026-11-05T17:14:56.2515099Z ##[endgroup]
+build	Set up job	2026-11-05T17:14:56.2518417Z ##[group]Operating System
+build	Set up job	2026-11-05T17:14:56.2519778Z Ubuntu
+build	Set up job	2026-11-05T17:14:56.2520797Z 22.04.5
+build	Set up job	2026-11-05T17:14:56.2521702Z LTS
+build	Set up job	2026-11-05T17:14:56.2522533Z ##[endgroup]
+build	Set up job	2026-11-05T17:14:56.2524087Z ##[group]Runner Image
+build	Set up job	2026-11-05T17:14:56.2525099Z Image: ubuntu-22.04
+build	Set up job	2026-11-05T17:14:56.2526276Z Version: 20261101.347.1
+build	Set up job	2026-11-05T17:14:56.2528237Z Included Software: https://github.com/actions/runner-images/blob/ubuntu22/20261101.347/images/ubuntu/Ubuntu2204-Readme.md
+build	Set up job	2026-11-05T17:14:56.2531619Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu22%2F20261101.347
+build	Set up job	2026-11-05T17:14:56.2533806Z ##[endgroup]
+build	Set up job	2026-11-05T17:14:56.2535994Z ##[group]GITHUB_TOKEN Permissions
+build	Set up job	2026-11-05T17:14:56.2539208Z Contents: read
+build	Set up job	2026-11-05T17:14:56.2540242Z Metadata: read
+build	Set up job	2026-11-05T17:14:56.2541157Z Packages: read
+build	Set up job	2026-11-05T17:14:56.2542262Z ##[endgroup]
+build	Set up job	2026-11-05T17:14:56.2545631Z Secret source: Actions
+build	Set up job	2026-11-05T17:14:56.2547478Z Cache mode: write
+build	Set up job	2026-11-05T17:14:56.2549366Z Prepare workflow directory
+build	Set up job	2026-11-05T17:14:56.3378630Z Prepare all required actions
+build	Set up job	2026-11-05T17:14:56.3461382Z Getting action download info
+build	Set up job	2026-11-05T17:14:56.5266885Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+build	Set up job	2026-11-05T17:14:56.7413488Z Download action repository 'actions/cache@v4' (SHA:0057852bfaa89a56745cba8c7296529d2fc39830)
+build	Set up job	2026-11-05T17:14:56.9173971Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+build	Set up job	2026-11-05T17:14:57.1888104Z Complete job name: build
+build	检出本仓库	﻿2026-11-05T17:14:57.2895948Z ##[group]Run actions/checkout@v4
+build	检出本仓库	2026-11-05T17:14:57.2896915Z with:
+build	检出本仓库	2026-11-05T17:14:57.2897377Z   repository: Hi-prof/nl-k419
+build	检出本仓库	2026-11-05T17:14:57.2901371Z   token: ***
+build	检出本仓库	2026-11-05T17:14:57.2901824Z   ssh-strict: true
+build	检出本仓库	2026-11-05T17:14:57.2902262Z   ssh-user: git
+build	检出本仓库	2026-11-05T17:14:57.2902712Z   persist-credentials: true
+build	检出本仓库	2026-11-05T17:14:57.2903714Z   clean: true
+build	检出本仓库	2026-11-05T17:14:57.2904204Z   sparse-checkout-cone-mode: true
+build	检出本仓库	2026-11-05T17:14:57.2904748Z   fetch-depth: 1
+build	检出本仓库	2026-11-05T17:14:57.2905178Z   fetch-tags: false
+build	检出本仓库	2026-11-05T17:14:57.2905616Z   show-progress: true
+build	检出本仓库	2026-11-05T17:14:57.2906091Z   lfs: false
+build	检出本仓库	2026-11-05T17:14:57.2906505Z   submodules: false
+build	检出本仓库	2026-11-05T17:14:57.2907008Z   set-safe-directory: true
+build	检出本仓库	2026-11-05T17:14:57.2907535Z   allow-unsafe-pr-checkout: false
+build	检出本仓库	2026-11-05T17:14:57.2908396Z env:
+build	检出本仓库	2026-11-05T17:14:57.2908805Z   ARCH: arm64
+build	检出本仓库	2026-11-05T17:14:57.2909259Z   SUBARCH: arm64
+build	检出本仓库	2026-11-05T17:14:57.2909686Z   JOBS: 4
+build	检出本仓库	2026-11-05T17:14:57.2910110Z   CCACHE_DIR: /home/runner/.ccache
+build	检出本仓库	2026-11-05T17:14:57.2910699Z   CCACHE_MAXSIZE: 4G
+build	检出本仓库	2026-11-05T17:14:57.2911165Z   CCACHE_COMPILERCHECK: content
+build	检出本仓库	2026-11-05T17:14:57.2911701Z   OPLUS_FEATURE_PROCESS_RECLAIM: yes
+build	检出本仓库	2026-11-05T17:14:57.2912267Z   OPLUS_FEATURE_MEMLEAK_DETECT: yes
+build	检出本仓库	2026-11-05T17:14:57.2912833Z   OPLUS_FEATURE_UFS_SHOW_LATENCY: yes
+build	检出本仓库	2026-11-05T17:14:57.2913679Z   OPLUS_FEATURE_PADL_STATISTICS: yes
+build	检出本仓库	2026-11-05T17:14:57.2914529Z   OPLUS_FEATURE_UFSPLUS: yes
+build	检出本仓库	2026-11-05T17:14:57.2915063Z   OPLUS_FEATURE_WIFI_ROUTERBOOST: yes
+build	检出本仓库	2026-11-05T17:14:57.2915609Z ##[endgroup]
+build	检出本仓库	2026-11-05T17:14:57.6294036Z Syncing repository: Hi-prof/nl-k419
+build	检出本仓库	2026-11-05T17:14:57.6297825Z ##[group]Getting Git version info
+build	检出本仓库	2026-11-05T17:14:57.6299674Z Working directory is '/home/runner/work/nl-k419/nl-k419'
+build	检出本仓库	2026-11-05T17:14:57.6302385Z [command]/usr/bin/git version
+build	检出本仓库	2026-11-05T17:14:57.6371514Z git version 2.56.0
+build	检出本仓库	2026-11-05T17:14:57.6395442Z ##[endgroup]
+build	检出本仓库	2026-11-05T17:14:57.6414719Z Temporarily overriding HOME='/home/runner/work/_temp/ec77c636-3486-4e6d-ad38-610f482bce2c' before making global git config changes
+build	检出本仓库	2026-11-05T17:14:57.6419936Z Adding repository directory to the temporary git global config as a safe directory
+build	检出本仓库	2026-11-05T17:14:57.6424311Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/nl-k419/nl-k419
+build	检出本仓库	2026-11-05T17:14:57.6489124Z Deleting the contents of '/home/runner/work/nl-k419/nl-k419'
+build	检出本仓库	2026-11-05T17:14:57.6493704Z ##[group]Initializing the repository
+build	检出本仓库	2026-11-05T17:14:57.6496443Z [command]/usr/bin/git init /home/runner/work/nl-k419/nl-k419
+build	检出本仓库	2026-11-05T17:14:57.6636165Z hint: Using 'master' as the name for the initial branch. This default branch name
+build	检出本仓库	2026-11-05T17:14:57.6640517Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+build	检出本仓库	2026-11-05T17:14:57.6646079Z hint: to use in all of your new repositories, which will suppress this warning,
+build	检出本仓库	2026-11-05T17:14:57.6649258Z hint: call:
+build	检出本仓库	2026-11-05T17:14:57.6651200Z hint:
+build	检出本仓库	2026-11-05T17:14:57.6653606Z hint: 	git config --global init.defaultBranch <name>
+build	检出本仓库	2026-11-05T17:14:57.6656172Z hint:
+build	检出本仓库	2026-11-05T17:14:57.6657982Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+build	检出本仓库	2026-11-05T17:14:57.6661030Z hint: 'development'. The just-created branch can be renamed via this command:
+build	检出本仓库	2026-11-05T17:14:57.6664689Z hint:
+build	检出本仓库	2026-11-05T17:14:57.6666632Z hint: 	git branch -m <name>
+build	检出本仓库	2026-11-05T17:14:57.6668814Z hint:
+build	检出本仓库	2026-11-05T17:14:57.6671611Z hint: Disable this message with "git config set advice.defaultBranchName false"
+build	检出本仓库	2026-11-05T17:14:57.6676495Z Initialized empty Git repository in /home/runner/work/nl-k419/nl-k419/.git/
+build	检出本仓库	2026-11-05T17:14:57.6684036Z [command]/usr/bin/git remote add origin https://github.com/Hi-prof/nl-k419
+build	检出本仓库	2026-11-05T17:14:57.6720336Z ##[endgroup]
+build	检出本仓库	2026-11-05T17:14:57.6723823Z ##[group]Disabling automatic garbage collection
+build	检出本仓库	2026-11-05T17:14:57.6726585Z [command]/usr/bin/git config --local gc.auto 0
+build	检出本仓库	2026-11-05T17:14:57.6767513Z ##[endgroup]
+build	检出本仓库	2026-11-05T17:14:57.6770463Z ##[group]Setting up auth
+build	检出本仓库	2026-11-05T17:14:57.6776555Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+build	检出本仓库	2026-11-05T17:14:57.6828850Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+build	检出本仓库	2026-11-05T17:14:57.7271205Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+build	检出本仓库	2026-11-05T17:14:57.7316816Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+build	检出本仓库	2026-11-05T17:14:57.7591431Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+build	检出本仓库	2026-11-05T17:14:57.7637633Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+build	检出本仓库	2026-11-05T17:14:57.7919018Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+build	检出本仓库	2026-11-05T17:14:57.7969560Z ##[endgroup]
+build	检出本仓库	2026-11-05T17:14:57.7971393Z ##[group]Fetching the repository
+build	检出本仓库	2026-11-05T17:14:57.7981091Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +d4aae133f2392c80b115cbc08f688db4dd4589d0:refs/remotes/origin/main
+build	检出本仓库	2026-11-05T17:14:58.0177179Z From https://github.com/Hi-prof/nl-k419
+build	检出本仓库	2026-11-05T17:14:58.0180623Z  * [new ref]         d4aae133f2392c80b115cbc08f688db4dd4589d0 -> origin/main
+build	检出本仓库	2026-11-05T17:14:58.0187667Z ##[endgroup]
+build	检出本仓库	2026-11-05T17:14:58.0190420Z ##[group]Determining the checkout info
+build	检出本仓库	2026-11-05T17:14:58.0196165Z ##[endgroup]
+build	检出本仓库	2026-11-05T17:14:58.0197959Z [command]/usr/bin/git sparse-checkout disable
+build	检出本仓库	2026-11-05T17:14:58.0258380Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+build	检出本仓库	2026-11-05T17:14:58.0325550Z ##[group]Checking out the ref
+build	检出本仓库	2026-11-05T17:14:58.0329654Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+build	检出本仓库	2026-11-05T17:14:58.0530461Z Switched to a new branch 'main'
+build	检出本仓库	2026-11-05T17:14:58.0533405Z branch 'main' set up to track 'origin/main'.
+build	检出本仓库	2026-11-05T17:14:58.0542589Z ##[endgroup]
+build	检出本仓库	2026-11-05T17:14:58.0594287Z [command]/usr/bin/git log -1 --format=%H
+build	检出本仓库	2026-11-05T17:14:58.0628569Z d4aae133f2392c80b115cbc08f688db4dd4589d0
+build	安装构建依赖	﻿2026-11-05T17:14:58.0987920Z ##[group]Run sudo apt-get update
+build	安装构建依赖	2026-11-05T17:14:58.0989296Z [36;1msudo apt-get update[0m
+build	安装构建依赖	2026-11-05T17:14:58.0990687Z [36;1msudo apt-get install -y --no-install-recommends \[0m
+build	安装构建依赖	2026-11-05T17:14:58.0992636Z [36;1m  git make bc bison flex libssl-dev libelf-dev device-tree-compiler \[0m
+build	安装构建依赖	2026-11-05T17:14:58.0994900Z [36;1m  cpio gzip xz-utils zstd python3 rsync ca-certificates ccache[0m
+build	安装构建依赖	2026-11-05T17:14:58.0996600Z [36;1m# 优先 gcc-10（对 4.19 最友好），没有就退回 gcc-11 / 默认版本[0m
+build	安装构建依赖	2026-11-05T17:14:58.0998455Z [36;1msudo apt-get install -y --no-install-recommends gcc-10-aarch64-linux-gnu \[0m
+build	安装构建依赖	2026-11-05T17:14:58.1000770Z [36;1m  || sudo apt-get install -y --no-install-recommends gcc-aarch64-linux-gnu[0m
+build	安装构建依赖	2026-11-05T17:14:58.1003221Z [36;1msudo apt-get install -y --no-install-recommends binutils-aarch64-linux-gnu[0m
+build	安装构建依赖	2026-11-05T17:14:58.1005715Z [36;1mfor c in aarch64-linux-gnu-gcc-10 aarch64-linux-gnu-gcc-11 aarch64-linux-gnu-gcc; do[0m
+build	安装构建依赖	2026-11-05T17:14:58.1007746Z [36;1m  if command -v "$c" >/dev/null 2>&1; then[0m
+build	安装构建依赖	2026-11-05T17:14:58.1009192Z [36;1m    echo "CROSS_CC=$c" >> "$GITHUB_ENV"[0m
+build	安装构建依赖	2026-11-05T17:14:58.1010446Z [36;1m    break[0m
+build	安装构建依赖	2026-11-05T17:14:58.1011344Z [36;1m  fi[0m
+build	安装构建依赖	2026-11-05T17:14:58.1012196Z [36;1mdone[0m
+build	安装构建依赖	2026-11-05T17:14:58.1013395Z [36;1mecho "选中编译器: $(command -v "$CROSS_CC" || true)"[0m
+build	安装构建依赖	2026-11-05T17:14:58.1014796Z [36;1m"$CROSS_CC" --version | head -1[0m
+build	安装构建依赖	2026-11-05T17:14:58.1016034Z [36;1mccache --version | head -1[0m
+build	安装构建依赖	2026-11-05T17:14:58.1102279Z shell: /usr/bin/bash -e {0}
+build	安装构建依赖	2026-11-05T17:14:58.1103649Z env:
+build	安装构建依赖	2026-11-05T17:14:58.1104479Z   ARCH: arm64
+build	安装构建依赖	2026-11-05T17:14:58.1105382Z   SUBARCH: arm64
+build	安装构建依赖	2026-11-05T17:14:58.1106266Z   JOBS: 4
+build	安装构建依赖	2026-11-05T17:14:58.1107143Z   CCACHE_DIR: /home/runner/.ccache
+build	安装构建依赖	2026-11-05T17:14:58.1108280Z   CCACHE_MAXSIZE: 4G
+build	安装构建依赖	2026-11-05T17:14:58.1109266Z   CCACHE_COMPILERCHECK: content
+build	安装构建依赖	2026-11-05T17:14:58.1110404Z   OPLUS_FEATURE_PROCESS_RECLAIM: yes
+build	安装构建依赖	2026-11-05T17:14:58.1111614Z   OPLUS_FEATURE_MEMLEAK_DETECT: yes
+build	安装构建依赖	2026-11-05T17:14:58.1112804Z   OPLUS_FEATURE_UFS_SHOW_LATENCY: yes
+build	安装构建依赖	2026-11-05T17:14:58.1114199Z   OPLUS_FEATURE_PADL_STATISTICS: yes
+build	安装构建依赖	2026-11-05T17:14:58.1115371Z   OPLUS_FEATURE_UFSPLUS: yes
+build	安装构建依赖	2026-11-05T17:14:58.1116479Z   OPLUS_FEATURE_WIFI_ROUTERBOOST: yes
+build	安装构建依赖	2026-11-05T17:14:58.1117639Z ##[endgroup]
+build	安装构建依赖	2026-11-05T17:14:58.2391821Z Get:1 file:/etc/apt/apt-mirrors.txt Mirrorlist [144 B]
+build	安装构建依赖	2026-11-05T17:14:58.2940297Z Hit:2 http://azure.archive.ubuntu.com/ubuntu jammy InRelease
+build	安装构建依赖	2026-11-05T17:14:58.2978109Z Get:6 https://packages.microsoft.com/ubuntu/22.04/prod jammy InRelease [3632 B]
+build	安装构建依赖	2026-11-05T17:14:58.2986044Z Get:3 http://azure.archive.ubuntu.com/ubuntu jammy-updates InRelease [128 kB]
+build	安装构建依赖	2026-11-05T17:14:58.3047320Z Get:4 http://azure.archive.ubuntu.com/ubuntu jammy-backports InRelease [127 kB]
+build	安装构建依赖	2026-11-05T17:14:58.3161007Z Get:5 http://azure.archive.ubuntu.com/ubuntu jammy-security InRelease [129 kB]
+build	安装构建依赖	2026-11-05T17:14:58.4923338Z Get:7 https://packages.microsoft.com/ubuntu/22.04/prod jammy/main arm64 Packages [756 kB]
+build	安装构建依赖	2026-11-05T17:14:58.5094121Z Get:8 https://packages.microsoft.com/ubuntu/22.04/prod jammy/main amd64 Packages [1027 kB]
+build	安装构建依赖	2026-11-05T17:14:58.5828242Z Get:9 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 Packages [3941 kB]
+build	安装构建依赖	2026-11-05T17:14:58.6029863Z Get:10 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main Translation-en [580 kB]
+build	安装构建依赖	2026-11-05T17:14:58.6104587Z Get:11 http://azure.archive.ubuntu.com/ubuntu jammy-updates/universe amd64 Packages [1291 kB]
+build	安装构建依赖	2026-11-05T17:14:58.6181752Z Get:12 http://azure.archive.ubuntu.com/ubuntu jammy-updates/universe Translation-en [327 kB]
+build	安装构建依赖	2026-11-05T17:14:58.8186898Z Get:13 http://azure.archive.ubuntu.com/ubuntu jammy-security/main amd64 Packages [3675 kB]
+build	安装构建依赖	2026-11-05T17:14:58.8417408Z Get:14 http://azure.archive.ubuntu.com/ubuntu jammy-security/main Translation-en [513 kB]
+build	安装构建依赖	2026-11-05T17:14:58.8528021Z Get:15 http://azure.archive.ubuntu.com/ubuntu jammy-security/restricted Translation-en [1261 kB]
+build	安装构建依赖	2026-11-05T17:14:58.8597146Z Get:16 http://azure.archive.ubuntu.com/ubuntu jammy-security/universe amd64 Packages [1057 kB]
+build	安装构建依赖	2026-11-05T17:14:58.8656390Z Get:17 http://azure.archive.ubuntu.com/ubuntu jammy-security/universe Translation-en [238 kB]
+build	安装构建依赖	2026-11-05T17:15:04.3267673Z Fetched 15.1 MB in 2s (7980 kB/s)
+build	安装构建依赖	2026-11-05T17:15:06.0557505Z Reading package lists...
+build	安装构建依赖	2026-11-05T17:15:06.1319582Z Reading package lists...
+build	安装构建依赖	2026-11-05T17:15:06.4748979Z Building dependency tree...
+build	安装构建依赖	2026-11-05T17:15:06.4761926Z Reading state information...
+build	安装构建依赖	2026-11-05T17:15:06.7172376Z bc is already the newest version (1.07.1-3build1).
+build	安装构建依赖	2026-11-05T17:15:06.7173777Z bc set to manually installed.
+build	安装构建依赖	2026-11-05T17:15:06.7174290Z flex is already the newest version (2.6.4-8build2).
+build	安装构建依赖	2026-11-05T17:15:06.7174827Z make is already the newest version (4.3-4.1build1).
+build	安装构建依赖	2026-11-05T17:15:06.7175739Z zstd is already the newest version (1.4.8+dfsg-3build1).
+build	安装构建依赖	2026-11-05T17:15:06.7176408Z zstd set to manually installed.
+build	安装构建依赖	2026-11-05T17:15:06.7176870Z bison is already the newest version (2:3.8.2+dfsg-1ubuntu0.22.04.1).
+build	安装构建依赖	2026-11-05T17:15:06.7177436Z cpio is already the newest version (2.13+dfsg-7ubuntu0.2).
+build	安装构建依赖	2026-11-05T17:15:06.7177890Z cpio set to manually installed.
+build	安装构建依赖	2026-11-05T17:15:06.7178285Z gzip is already the newest version (1.10-4ubuntu4.2).
+build	安装构建依赖	2026-11-05T17:15:06.7178822Z libssl-dev is already the newest version (3.0.2-0ubuntu1.30).
+build	安装构建依赖	2026-11-05T17:15:06.7179351Z python3 is already the newest version (3.10.6-1~22.04.1).
+build	安装构建依赖	2026-11-05T17:15:06.7179854Z rsync is already the newest version (3.2.7-0ubuntu0.22.04.7).
+build	安装构建依赖	2026-11-05T17:15:06.7180460Z xz-utils is already the newest version (5.2.5-2ubuntu1.2).
+build	安装构建依赖	2026-11-05T17:15:06.7181282Z git is already the newest version (1:2.56.0-0ppa1~ubuntu22.04.2).
+build	安装构建依赖	2026-11-05T17:15:06.7182322Z The following additional packages will be installed:
+build	安装构建依赖	2026-11-05T17:15:06.7182764Z   libfdt1 libhiredis0.14
+build	安装构建依赖	2026-11-05T17:15:06.7193446Z Suggested packages:
+build	安装构建依赖	2026-11-05T17:15:06.7193886Z   distcc | icecc
+build	安装构建依赖	2026-11-05T17:15:06.7541117Z The following NEW packages will be installed:
+build	安装构建依赖	2026-11-05T17:15:06.7553306Z   ccache device-tree-compiler libelf-dev libfdt1 libhiredis0.14
+build	安装构建依赖	2026-11-05T17:15:06.7558022Z The following packages will be upgraded:
+build	安装构建依赖	2026-11-05T17:15:06.7567718Z   ca-certificates
+build	安装构建依赖	2026-11-05T17:15:06.7773907Z 1 upgraded, 5 newly installed, 0 to remove and 30 not upgraded.
+build	安装构建依赖	2026-11-05T17:15:06.7774554Z Need to get 980 kB of archives.
+build	安装构建依赖	2026-11-05T17:15:06.7775226Z After this operation, 2329 kB of additional disk space will be used.
+build	安装构建依赖	2026-11-05T17:15:06.7776024Z Get:1 file:/etc/apt/apt-mirrors.txt Mirrorlist [144 B]
+build	安装构建依赖	2026-11-05T17:15:06.8169947Z Get:2 http://azure.archive.ubuntu.com/ubuntu jammy-security/main amd64 ca-certificates all 20260816ubuntu0.22.04.2 [140 kB]
+build	安装构建依赖	2026-11-05T17:15:06.8404250Z Get:3 http://azure.archive.ubuntu.com/ubuntu jammy/universe amd64 libhiredis0.14 amd64 0.14.1-2 [32.8 kB]
+build	安装构建依赖	2026-11-05T17:15:06.8581230Z Get:4 http://azure.archive.ubuntu.com/ubuntu jammy/universe amd64 ccache amd64 4.5.1-1 [495 kB]
+build	安装构建依赖	2026-11-05T17:15:06.8997872Z Get:5 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libelf-dev amd64 0.186-1ubuntu0.1 [64.4 kB]
+build	安装构建依赖	2026-11-05T17:15:06.9169061Z Get:6 http://azure.archive.ubuntu.com/ubuntu jammy/main amd64 libfdt1 amd64 1.6.1-1 [20.0 kB]
+build	安装构建依赖	2026-11-05T17:15:06.9322500Z Get:7 http://azure.archive.ubuntu.com/ubuntu jammy/main amd64 device-tree-compiler amd64 1.6.1-1 [228 kB]
+build	安装构建依赖	2026-11-05T17:15:07.2561114Z Preconfiguring packages ...
+build	安装构建依赖	2026-11-05T17:15:07.8056489Z Fetched 980 kB in 0s (5416 kB/s)
+build	安装构建依赖	2026-11-05T17:15:07.8767809Z (Reading database ... 
+build	安装构建依赖	2026-11-05T17:15:07.8768207Z (Reading database ... 5%
+build	安装构建依赖	2026-11-05T17:15:07.8768546Z (Reading database ... 10%
+build	安装构建依赖	2026-11-05T17:15:07.8769040Z (Reading database ... 15%
+build	安装构建依赖	2026-11-05T17:15:07.8769750Z (Reading database ... 20%
+build	安装构建依赖	2026-11-05T17:15:07.8770118Z (Reading database ... 25%
+build	安装构建依赖	2026-11-05T17:15:07.8770656Z (Reading database ... 30%
+build	安装构建依赖	2026-11-05T17:15:07.8771479Z (Reading database ... 35%
+build	安装构建依赖	2026-11-05T17:15:07.8771894Z (Reading database ... 40%
+build	安装构建依赖	2026-11-05T17:15:07.8772343Z (Reading database ... 45%
+build	安装构建依赖	2026-11-05T17:15:07.8772726Z (Reading database ... 50%
+build	安装构建依赖	2026-11-05T17:15:07.9636644Z (Reading database ... 55%
+build	安装构建依赖	2026-11-05T17:15:08.1761170Z (Reading database ... 60%
+build	安装构建依赖	2026-11-05T17:15:08.3864434Z (Reading database ... 65%
+build	安装构建依赖	2026-11-05T17:15:08.5726197Z (Reading database ... 70%
+build	安装构建依赖	2026-11-05T17:15:08.7675814Z (Reading database ... 75%
+build	安装构建依赖	2026-11-05T17:15:08.9688177Z (Reading database ... 80%
+build	安装构建依赖	2026-11-05T17:15:09.2168842Z (Reading database ... 85%
+build	安装构建依赖	2026-11-05T17:15:09.4674736Z (Reading database ... 90%
+build	安装构建依赖	2026-11-05T17:15:09.6744904Z (Reading database ... 95%
+build	安装构建依赖	2026-11-05T17:15:09.6745378Z (Reading database ... 100%
+build	安装构建依赖	2026-11-05T17:15:09.6745921Z (Reading database ... 263778 files and directories currently installed.)
+build	安装构建依赖	2026-11-05T17:15:09.6803682Z Preparing to unpack .../0-ca-certificates_20260816ubuntu0.22.04.2_all.deb ...
+build	安装构建依赖	2026-11-05T17:15:09.6961051Z Unpacking ca-certificates (20260816ubuntu0.22.04.2) over (20260816ubuntu0.22.04.1) ...
+build	安装构建依赖	2026-11-05T17:15:09.7777904Z Selecting previously unselected package libhiredis0.14:amd64.
+build	安装构建依赖	2026-11-05T17:15:09.7993654Z Preparing to unpack .../1-libhiredis0.14_0.14.1-2_amd64.deb ...
+build	安装构建依赖	2026-11-05T17:15:09.8015097Z Unpacking libhiredis0.14:amd64 (0.14.1-2) ...
+build	安装构建依赖	2026-11-05T17:15:09.8267840Z Selecting previously unselected package ccache.
+build	安装构建依赖	2026-11-05T17:15:09.8480259Z Preparing to unpack .../2-ccache_4.5.1-1_amd64.deb ...
+build	安装构建依赖	2026-11-05T17:15:09.8491475Z Unpacking ccache (4.5.1-1) ...
+build	安装构建依赖	2026-11-05T17:15:09.8888310Z Selecting previously unselected package libelf-dev:amd64.
+build	安装构建依赖	2026-11-05T17:15:09.9100695Z Preparing to unpack .../3-libelf-dev_0.186-1ubuntu0.1_amd64.deb ...
+build	安装构建依赖	2026-11-05T17:15:09.9109982Z Unpacking libelf-dev:amd64 (0.186-1ubuntu0.1) ...
+build	安装构建依赖	2026-11-05T17:15:09.9474505Z Selecting previously unselected package libfdt1:amd64.
+build	安装构建依赖	2026-11-05T17:15:09.9689605Z Preparing to unpack .../4-libfdt1_1.6.1-1_amd64.deb ...
+build	安装构建依赖	2026-11-05T17:15:09.9701568Z Unpacking libfdt1:amd64 (1.6.1-1) ...
+build	安装构建依赖	2026-11-05T17:15:09.9960095Z Selecting previously unselected package device-tree-compiler.
+build	安装构建依赖	2026-11-05T17:15:10.0174426Z Preparing to unpack .../5-device-tree-compiler_1.6.1-1_amd64.deb ...
+build	安装构建依赖	2026-11-05T17:15:10.0182276Z Unpacking device-tree-compiler (1.6.1-1) ...
+build	安装构建依赖	2026-11-05T17:15:10.0811065Z Setting up libfdt1:amd64 (1.6.1-1) ...
+build	安装构建依赖	2026-11-05T17:15:10.0837388Z Setting up ca-certificates (20260816ubuntu0.22.04.2) ...
+build	安装构建依赖	2026-11-05T17:15:11.9918410Z Setting up libelf-dev:amd64 (0.186-1ubuntu0.1) ...
+build	安装构建依赖	2026-11-05T17:15:11.9943958Z Setting up device-tree-compiler (1.6.1-1) ...
+build	安装构建依赖	2026-11-05T17:15:11.9968990Z Setting up libhiredis0.14:amd64 (0.14.1-2) ...
+build	安装构建依赖	2026-11-05T17:15:11.9995527Z Setting up ccache (4.5.1-1) ...
+build	安装构建依赖	2026-11-05T17:15:12.0021680Z Updating symlinks in /usr/lib/ccache ...
+build	安装构建依赖	2026-11-05T17:15:12.0332134Z Processing triggers for libc-bin (2.35-0ubuntu3.15) ...
+build	安装构建依赖	2026-11-05T17:15:12.0761389Z Processing triggers for man-db (2.10.2-1) ...
+build	安装构建依赖	2026-11-05T17:15:12.0785795Z Not building database; man-db/auto-update is not 'true'.
+build	安装构建依赖	2026-11-05T17:15:12.0803559Z Processing triggers for ca-certificates (20260816ubuntu0.22.04.2) ...
+build	安装构建依赖	2026-11-05T17:15:12.0850782Z Updating certificates in /etc/ssl/certs...
+build	安装构建依赖	2026-11-05T17:15:12.6425684Z 0 added, 0 removed; done.
+build	安装构建依赖	2026-11-05T17:15:12.6426185Z Running hooks in /etc/ca-certificates/update.d...
+build	安装构建依赖	2026-11-05T17:15:12.7839708Z /etc/ssl/certs/adoptium/cacerts successfully populated.
+build	安装构建依赖	2026-11-05T17:15:12.7981247Z Updating Mono key store
+build	安装构建依赖	2026-11-05T17:15:12.8342232Z Mono Certificate Store Sync - version 6.12.0.200
+build	安装构建依赖	2026-11-05T17:15:12.8342767Z Populate Mono certificate store from a concatenated list of certificates.
+build	安装构建依赖	2026-11-05T17:15:12.8343659Z Copyright 2002, 2003 Motus Technologies. Copyright 2004-2008 Novell. BSD licensed.
+build	安装构建依赖	2026-11-05T17:15:12.8344028Z 
+build	安装构建依赖	2026-11-05T17:15:12.8901823Z Importing into legacy system store:
+build	安装构建依赖	2026-11-05T17:15:13.1792715Z I already trust 120, your new list has 120
+build	安装构建依赖	2026-11-05T17:15:13.1852387Z Import process completed.
+build	安装构建依赖	2026-11-05T17:15:13.1869295Z 
+build	安装构建依赖	2026-11-05T17:15:13.1869656Z Importing into BTLS system store:
+build	安装构建依赖	2026-11-05T17:15:13.4635302Z I already trust 120, your new list has 120
+build	安装构建依赖	2026-11-05T17:15:13.4683382Z Import process completed.
+build	安装构建依赖	2026-11-05T17:15:13.4946331Z Done
+build	安装构建依赖	2026-11-05T17:15:13.4948622Z done.
+build	安装构建依赖	2026-11-05T17:15:14.1719008Z 
+build	安装构建依赖	2026-11-05T17:15:14.1719573Z Running kernel seems to be up-to-date.
+build	安装构建依赖	2026-11-05T17:15:14.1720212Z 
+build	安装构建依赖	2026-11-05T17:15:14.1720566Z No services need to be restarted.
+build	安装构建依赖	2026-11-05T17:15:14.1720899Z 
+build	安装构建依赖	2026-11-05T17:15:14.1721066Z No containers need to be restarted.
+build	安装构建依赖	2026-11-05T17:15:14.1721368Z 
+build	安装构建依赖	2026-11-05T17:15:14.1721570Z No user sessions are running outdated binaries.
+build	安装构建依赖	2026-11-05T17:15:14.1721923Z 
+build	安装构建依赖	2026-11-05T17:15:14.1722434Z No VM guests are running outdated hypervisor (qemu) binaries on this host.
+build	安装构建依赖	2026-11-05T17:15:16.1322383Z Reading package lists...
+build	安装构建依赖	2026-11-05T17:15:16.4756488Z Building dependency tree...
+build	安装构建依赖	2026-11-05T17:15:16.4769076Z Reading state information...
+build	安装构建依赖	2026-11-05T17:15:16.7367417Z The following additional packages will be installed:
+build	安装构建依赖	2026-11-05T17:15:16.7368163Z   binutils-aarch64-linux-gnu cpp-10-aarch64-linux-gnu
+build	安装构建依赖	2026-11-05T17:15:16.7368877Z   gcc-10-aarch64-linux-gnu-base gcc-10-cross-base gcc-11-cross-base
+build	安装构建依赖	2026-11-05T17:15:16.7369676Z   gcc-12-cross-base libasan6-arm64-cross libatomic1-arm64-cross
+build	安装构建依赖	2026-11-05T17:15:16.7370498Z   libc6-arm64-cross libgcc-10-dev-arm64-cross libgcc-s1-arm64-cross
+build	安装构建依赖	2026-11-05T17:15:16.7372197Z   libgomp1-arm64-cross libitm1-arm64-cross liblsan0-arm64-cross
+build	安装构建依赖	2026-11-05T17:15:16.7378161Z   libstdc++6-arm64-cross libtsan0-arm64-cross libubsan1-arm64-cross
+build	安装构建依赖	2026-11-05T17:15:16.7387046Z Suggested packages:
+build	安装构建依赖	2026-11-05T17:15:16.7387441Z   binutils-doc gcc-10-locales gcc-10-doc
+build	安装构建依赖	2026-11-05T17:15:16.7387894Z Recommended packages:
+build	安装构建依赖	2026-11-05T17:15:16.7388257Z   libc6-dev-arm64-cross
+build	安装构建依赖	2026-11-05T17:15:16.7756554Z The following NEW packages will be installed:
+build	安装构建依赖	2026-11-05T17:15:16.7757414Z   binutils-aarch64-linux-gnu cpp-10-aarch64-linux-gnu gcc-10-aarch64-linux-gnu
+build	安装构建依赖	2026-11-05T17:15:16.7758280Z   gcc-10-aarch64-linux-gnu-base gcc-10-cross-base gcc-11-cross-base
+build	安装构建依赖	2026-11-05T17:15:16.7759062Z   gcc-12-cross-base libasan6-arm64-cross libatomic1-arm64-cross
+build	安装构建依赖	2026-11-05T17:15:16.7759804Z   libc6-arm64-cross libgcc-10-dev-arm64-cross libgcc-s1-arm64-cross
+build	安装构建依赖	2026-11-05T17:15:16.7762031Z   libgomp1-arm64-cross libitm1-arm64-cross liblsan0-arm64-cross
+build	安装构建依赖	2026-11-05T17:15:16.7769157Z   libstdc++6-arm64-cross libtsan0-arm64-cross libubsan1-arm64-cross
+build	安装构建依赖	2026-11-05T17:15:16.7982558Z 0 upgraded, 18 newly installed, 0 to remove and 30 not upgraded.
+build	安装构建依赖	2026-11-05T17:15:16.7983636Z Need to get 128 MB of archives.
+build	安装构建依赖	2026-11-05T17:15:16.7984393Z After this operation, 507 MB of additional disk space will be used.
+build	安装构建依赖	2026-11-05T17:15:16.7985366Z Get:1 file:/etc/apt/apt-mirrors.txt Mirrorlist [144 B]
+build	安装构建依赖	2026-11-05T17:15:16.8339292Z Get:2 http://azure.archive.ubuntu.com/ubuntu jammy-updates/universe amd64 gcc-10-aarch64-linux-gnu-base amd64 10.5.0-1ubuntu1~22.04.3cross1 [213 kB]
+build	安装构建依赖	2026-11-05T17:15:16.8512373Z Get:3 http://azure.archive.ubuntu.com/ubuntu jammy-updates/universe amd64 cpp-10-aarch64-linux-gnu amd64 10.5.0-1ubuntu1~22.04.3cross1 [53.2 MB]
+build	安装构建依赖	2026-11-05T17:15:17.1728643Z Get:4 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 binutils-aarch64-linux-gnu amd64 2.38-4ubuntu2.12 [3624 kB]
+build	安装构建依赖	2026-11-05T17:15:17.2087224Z Get:5 http://azure.archive.ubuntu.com/ubuntu jammy-updates/universe amd64 gcc-10-cross-base all 10.5.0-1ubuntu1~22.04.3cross1 [207 kB]
+build	安装构建依赖	2026-11-05T17:15:17.2242037Z Get:6 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 gcc-12-cross-base all 12.3.0-1ubuntu1~22.04.3cross1 [211 kB]
+build	安装构建依赖	2026-11-05T17:15:17.2398410Z Get:7 http://azure.archive.ubuntu.com/ubuntu jammy/main amd64 libc6-arm64-cross all 2.35-0ubuntu1cross3 [1147 kB]
+build	安装构建依赖	2026-11-05T17:15:17.2604837Z Get:8 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libgcc-s1-arm64-cross all 12.3.0-1ubuntu1~22.04.3cross1 [39.8 kB]
+build	安装构建依赖	2026-11-05T17:15:17.2749442Z Get:9 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libgomp1-arm64-cross all 12.3.0-1ubuntu1~22.04.3cross1 [122 kB]
+build	安装构建依赖	2026-11-05T17:15:17.2898100Z Get:10 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libitm1-arm64-cross all 12.3.0-1ubuntu1~22.04.3cross1 [28.1 kB]
+build	安装构建依赖	2026-11-05T17:15:17.3040812Z Get:11 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libatomic1-arm64-cross all 12.3.0-1ubuntu1~22.04.3cross1 [10.6 kB]
+build	安装构建依赖	2026-11-05T17:15:17.3244307Z Get:12 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 gcc-11-cross-base all 11.4.0-1ubuntu1~22.04.3cross1 [211 kB]
+build	安装构建依赖	2026-11-05T17:15:17.3399808Z Get:13 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libasan6-arm64-cross all 11.4.0-1ubuntu1~22.04.3cross1 [2226 kB]
+build	安装构建依赖	2026-11-05T17:15:17.3707591Z Get:14 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 liblsan0-arm64-cross all 12.3.0-1ubuntu1~22.04.3cross1 [1037 kB]
+build	安装构建依赖	2026-11-05T17:15:17.3909378Z Get:15 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libtsan0-arm64-cross all 11.4.0-1ubuntu1~22.04.3cross1 [2232 kB]
+build	安装构建依赖	2026-11-05T17:15:17.4180292Z Get:16 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libstdc++6-arm64-cross all 12.3.0-1ubuntu1~22.04.3cross1 [616 kB]
+build	安装构建依赖	2026-11-05T17:15:17.4362277Z Get:17 http://azure.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libubsan1-arm64-cross all 12.3.0-1ubuntu1~22.04.3cross1 [966 kB]
+build	安装构建依赖	2026-11-05T17:15:17.4991157Z Get:18 http://azure.archive.ubuntu.com/ubuntu jammy-updates/universe amd64 libgcc-10-dev-arm64-cross all 10.5.0-1ubuntu1~22.04.3cross1 [1070 kB]
+build	安装构建依赖	2026-11-05T17:15:17.5192738Z Get:19 http://azure.archive.ubuntu.com/ubuntu jammy-updates/universe amd64 gcc-10-aarch64-linux-gnu amd64 10.5.0-1ubuntu1~22.04.3cross1 [60.6 MB]
+build	安装构建依赖	2026-11-05T17:15:18.2140724Z Fetched 128 MB in 1s (119 MB/s)
+build	安装构建依赖	2026-11-05T17:15:18.2394416Z Selecting previously unselected package gcc-10-aarch64-linux-gnu-base:amd64.
+build	安装构建依赖	2026-11-05T17:15:18.2509257Z (Reading database ... 
+build	安装构建依赖	2026-11-05T17:15:18.2510082Z (Reading database ... 5%
+build	安装构建依赖	2026-11-05T17:15:18.2510812Z (Reading database ... 10%
+build	安装构建依赖	2026-11-05T17:15:18.2511294Z (Reading database ... 15%
+build	安装构建依赖	2026-11-05T17:15:18.2511757Z (Reading database ... 20%
+build	安装构建依赖	2026-11-05T17:15:18.2512209Z (Reading database ... 25%
+build	安装构建依赖	2026-11-05T17:15:18.2512660Z (Reading database ... 30%
+build	安装构建依赖	2026-11-05T17:15:18.2513330Z (Reading database ... 35%
+build	安装构建依赖	2026-11-05T17:15:18.2513823Z (Reading database ... 40%
+build	安装构建依赖	2026-11-05T17:15:18.2514278Z (Reading database ... 45%
+build	安装构建依赖	2026-11-05T17:15:18.2514723Z (Reading database ... 50%
+build	安装构建依赖	2026-11-05T17:15:18.2565574Z (Reading database ... 55%
+build	安装构建依赖	2026-11-05T17:15:18.2604660Z (Reading database ... 60%
+build	安装构建依赖	2026-11-05T17:15:18.2764912Z (Reading database ... 65%
+build	安装构建依赖	2026-11-05T17:15:18.2805434Z (Reading database ... 70%
+build	安装构建依赖	2026-11-05T17:15:18.2885055Z (Reading database ... 75%
+build	安装构建依赖	2026-11-05T17:15:18.2918559Z (Reading database ... 80%
+build	安装构建依赖	2026-11-05T17:15:18.3119409Z (Reading database ... 85%
+build	安装构建依赖	2026-11-05T17:15:18.3361463Z (Reading database ... 90%
+build	安装构建依赖	2026-11-05T17:15:18.3697940Z (Reading database ... 95%
+build	安装构建依赖	2026-11-05T17:15:18.3698419Z (Reading database ... 100%
+build	安装构建依赖	2026-11-05T17:15:18.3698977Z (Reading database ... 263843 files and directories currently installed.)
+build	安装构建依赖	2026-11-05T17:15:18.3753836Z Preparing to unpack .../00-gcc-10-aarch64-linux-gnu-base_10.5.0-1ubuntu1~22.04.3cross1_amd64.deb ...
+build	安装构建依赖	2026-11-05T17:15:18.3764826Z Unpacking gcc-10-aarch64-linux-gnu-base:amd64 (10.5.0-1ubuntu1~22.04.3cross1) ...
+build	安装构建依赖	2026-11-05T17:15:18.4040056Z Selecting previously unselected package cpp-10-aarch64-linux-gnu.
+build	安装构建依赖	2026-11-05T17:15:18.4249227Z Preparing to unpack .../01-cpp-10-aarch64-linux-gnu_10.5.0-1ubuntu1~22.04.3cross1_amd64.deb ...
+build	安装构建依赖	2026-11-05T17:15:18.4292212Z Unpacking cpp-10-aarch64-linux-gnu (10.5.0-1ubuntu1~22.04.3cross1) ...
+build	安装构建依赖	2026-11-05T17:15:19.3835613Z Selecting previously unselected package binutils-aarch64-linux-gnu.
+build	安装构建依赖	2026-11-05T17:15:19.4047503Z Preparing to unpack .../02-binutils-aarch64-linux-gnu_2.38-4ubuntu2.12_amd64.deb ...
+build	安装构建依赖	2026-11-05T17:15:19.4065278Z Unpacking binutils-aarch64-linux-gnu (2.38-4ubuntu2.12) ...
+build	安装构建依赖	2026-11-05T17:15:19.5572878Z Selecting previously unselected package gcc-10-cross-base.
+build	安装构建依赖	2026-11-05T17:15:19.5784852Z Preparing to unpack .../03-gcc-10-cross-base_10.5.0-1ubuntu1~22.04.3cross1_all.deb ...
+build	安装构建依赖	2026-11-05T17:15:19.5794612Z Unpacking gcc-10-cross-base (10.5.0-1ubuntu1~22.04.3cross1) ...
+build	安装构建依赖	2026-11-05T17:15:19.6046498Z Selecting previously unselected package gcc-12-cross-base.
+build	安装构建依赖	2026-11-05T17:15:19.6259908Z Preparing to unpack .../04-gcc-12-cross-base_12.3.0-1ubuntu1~22.04.3cross1_all.deb ...
+build	安装构建依赖	2026-11-05T17:15:19.6269904Z Unpacking gcc-12-cross-base (12.3.0-1ubuntu1~22.04.3cross1) ...
+build	安装构建依赖	2026-11-05T17:15:19.6527025Z Selecting previously unselected package libc6-arm64-cross.
+build	安装构建依赖	2026-11-05T17:15:19.6737842Z Preparing to unpack .../05-libc6-arm64-cross_2.35-0ubuntu1cross3_all.deb ...
+build	安装构建依赖	2026-11-05T17:15:19.6746506Z Unpacking libc6-arm64-cross (2.35-0ubuntu1cross3) ...
+build	安装构建依赖	2026-11-05T17:15:19.7155473Z Selecting previously unselected package libgcc-s1-arm64-cross.
+build	安装构建依赖	2026-11-05T17:15:19.7366307Z Preparing to unpack .../06-libgcc-s1-arm64-cross_12.3.0-1ubuntu1~22.04.3cross1_all.deb ...
+build	安装构建依赖	2026-11-05T17:15:19.7375322Z Unpacking libgcc-s1-arm64-cross (12.3.0-1ubuntu1~22.04.3cross1) ...
+build	安装构建依赖	2026-11-05T17:15:19.7624445Z Selecting previously unselected package libgomp1-arm64-cross.
+build	安装构建依赖	2026-11-05T17:15:19.7837096Z Preparing to unpack .../07-libgomp1-arm64-cross_12.3.0-1ubuntu1~22.04.3cross1_all.deb ...
+build	安装构建依赖	2026-11-05T17:15:19.7846226Z Unpacking libgomp1-arm64-cross (12.3.0-1ubuntu1~22.04.3cross1) ...
+build	安装构建依赖	2026-11-05T17:15:19.8109924Z Selecting previously unselected package libitm1-arm64-cross.
+build	安装构建依赖	2026-11-05T17:15:19.8328750Z Preparing to unpack .../08-libitm1-arm64-cross_12.3.0-1ubuntu1~22.04.3cross1_all.deb ...
+build	安装构建依赖	2026-11-05T17:15:19.8337428Z Unpacking libitm1-arm64-cross (12.3.0-1ubuntu1~22.04.3cross1) ...
+build	安装构建依赖	2026-11-05T17:15:19.8585959Z Selecting previously unselected package libatomic1-arm64-cross.
+build	安装构建依赖	2026-11-05T17:15:19.8800158Z Preparing to unpack .../09-libatomic1-arm64-cross_12.3.0-1ubuntu1~22.04.3cross1_all.deb ...
+build	安装构建依赖	2026-11-05T17:15:19.8808768Z Unpacking libatomic1-arm64-cross (12.3.0-1ubuntu1~22.04.3cross1) ...
+build	安装构建依赖	2026-11-05T17:15:19.9048449Z Selecting previously unselected package gcc-11-cross-base.
+build	安装构建依赖	2026-11-05T17:15:19.9263415Z Preparing to unpack .../10-gcc-11-cross-base_11.4.0-1ubuntu1~22.04.3cross1_all.deb ...
+build	安装构建依赖	2026-11-05T17:15:19.9272009Z Unpacking gcc-11-cross-base (11.4.0-1ubuntu1~22.04.3cross1) ...
+build	安装构建依赖	2026-11-05T17:15:19.9528928Z Selecting previously unselected package libasan6-arm64-cross.
+build	安装构建依赖	2026-11-05T17:15:19.9741503Z Preparing to unpack .../11-libasan6-arm64-cross_11.4.0-1ubuntu1~22.04.3cross1_all.deb ...
+build	安装构建依赖	2026-11-05T17:15:19.9750411Z Unpacking libasan6-arm64-cross (11.4.0-1ubuntu1~22.04.3cross1) ...
+build	安装构建依赖	2026-11-05T17:15:20.0326612Z Selecting previously unselected package liblsan0-arm64-cross.
+build	安装构建依赖	2026-11-05T17:15:20.0540002Z Preparing to unpack .../12-liblsan0-arm64-cross_12.3.0-1ubuntu1~22.04.3cross1_all.deb ...
+build	安装构建依赖	2026-11-05T17:15:20.0549996Z Unpacking liblsan0-arm64-cross (12.3.0-1ubuntu1~22.04.3cross1) ...
+build	安装构建依赖	2026-11-05T17:15:20.0938782Z Selecting previously unselected package libtsan0-arm64-cross.
+build	安装构建依赖	2026-11-05T17:15:20.1148596Z Preparing to unpack .../13-libtsan0-arm64-cross_11.4.0-1ubuntu1~22.04.3cross1_all.deb ...
+build	安装构建依赖	2026-11-05T17:15:20.1157410Z Unpacking libtsan0-arm64-cross (11.4.0-1ubuntu1~22.04.3cross1) ...
+build	安装构建依赖	2026-11-05T17:15:20.1780520Z Selecting previously unselected package libstdc++6-arm64-cross.
+build	安装构建依赖	2026-11-05T17:15:20.1996910Z Preparing to unpack .../14-libstdc++6-arm64-cross_12.3.0-1ubuntu1~22.04.3cross1_all.deb ...
+build	安装构建依赖	2026-11-05T17:15:20.2005845Z Unpacking libstdc++6-arm64-cross (12.3.0-1ubuntu1~22.04.3cross1) ...
+build	安装构建依赖	2026-11-05T17:15:20.2367193Z Selecting previously unselected package libubsan1-arm64-cross.
+build	安装构建依赖	2026-11-05T17:15:20.2584611Z Preparing to unpack .../15-libubsan1-arm64-cross_12.3.0-1ubuntu1~22.04.3cross1_all.deb ...
+build	安装构建依赖	2026-11-05T17:15:20.2593667Z Unpacking libubsan1-arm64-cross (12.3.0-1ubuntu1~22.04.3cross1) ...
+build	安装构建依赖	2026-11-05T17:15:20.2960706Z Selecting previously unselected package libgcc-10-dev-arm64-cross.
+build	安装构建依赖	2026-11-05T17:15:20.3170351Z Preparing to unpack .../16-libgcc-10-dev-arm64-cross_10.5.0-1ubuntu1~22.04.3cross1_all.deb ...
+build	安装构建依赖	2026-11-05T17:15:20.3180786Z Unpacking libgcc-10-dev-arm64-cross (10.5.0-1ubuntu1~22.04.3cross1) ...
+build	安装构建依赖	2026-11-05T17:15:20.3835298Z Selecting previously unselected package gcc-10-aarch64-linux-gnu.
+build	安装构建依赖	2026-11-05T17:15:20.4044771Z Preparing to unpack .../17-gcc-10-aarch64-linux-gnu_10.5.0-1ubuntu1~22.04.3cross1_amd64.deb ...
+build	安装构建依赖	2026-11-05T17:15:20.4085019Z Unpacking gcc-10-aarch64-linux-gnu (10.5.0-1ubuntu1~22.04.3cross1) ...
+build	安装构建依赖	2026-11-05T17:15:21.4722705Z Setting up gcc-12-cross-base (12.3.0-1ubuntu1~22.04.3cross1) ...
+build	安装构建依赖	2026-11-05T17:15:21.4747599Z Setting up binutils-aarch64-linux-gnu (2.38-4ubuntu2.12) ...
+build	安装构建依赖	2026-11-05T17:15:21.4769754Z Setting up libc6-arm64-cross (2.35-0ubuntu1cross3) ...
+build	安装构建依赖	2026-11-05T17:15:21.4790055Z Setting up libitm1-arm64-cross (12.3.0-1ubuntu1~22.04.3cross1) ...
+build	安装构建依赖	2026-11-05T17:15:21.4814193Z Setting up gcc-10-cross-base (10.5.0-1ubuntu1~22.04.3cross1) ...
+build	安装构建依赖	2026-11-05T17:15:21.4834734Z Setting up gcc-11-cross-base (11.4.0-1ubuntu1~22.04.3cross1) ...
+build	安装构建依赖	2026-11-05T17:15:21.4855301Z Setting up libgcc-s1-arm64-cross (12.3.0-1ubuntu1~22.04.3cross1) ...
+build	安装构建依赖	2026-11-05T17:15:21.4876219Z Setting up gcc-10-aarch64-linux-gnu-base:amd64 (10.5.0-1ubuntu1~22.04.3cross1) ...
+build	安装构建依赖	2026-11-05T17:15:21.4897459Z Setting up libatomic1-arm64-cross (12.3.0-1ubuntu1~22.04.3cross1) ...
+build	安装构建依赖	2026-11-05T17:15:21.4919834Z Setting up liblsan0-arm64-cross (12.3.0-1ubuntu1~22.04.3cross1) ...
+build	安装构建依赖	2026-11-05T17:15:21.4942003Z Setting up libgomp1-arm64-cross (12.3.0-1ubuntu1~22.04.3cross1) ...
+build	安装构建依赖	2026-11-05T17:15:21.4987066Z Setting up libasan6-arm64-cross (11.4.0-1ubuntu1~22.04.3cross1) ...
+build	安装构建依赖	2026-11-05T17:15:21.5010862Z Setting up libtsan0-arm64-cross (11.4.0-1ubuntu1~22.04.3cross1) ...
+build	安装构建依赖	2026-11-05T17:15:21.5031628Z Setting up libstdc++6-arm64-cross (12.3.0-1ubuntu1~22.04.3cross1) ...
+build	安装构建依赖	2026-11-05T17:15:21.5053338Z Setting up cpp-10-aarch64-linux-gnu (10.5.0-1ubuntu1~22.04.3cross1) ...
+build	安装构建依赖	2026-11-05T17:15:21.5075081Z Setting up libubsan1-arm64-cross (12.3.0-1ubuntu1~22.04.3cross1) ...
+build	安装构建依赖	2026-11-05T17:15:21.5096808Z Setting up libgcc-10-dev-arm64-cross (10.5.0-1ubuntu1~22.04.3cross1) ...
+build	安装构建依赖	2026-11-05T17:15:21.5123930Z Setting up gcc-10-aarch64-linux-gnu (10.5.0-1ubuntu1~22.04.3cross1) ...
+build	安装构建依赖	2026-11-05T17:15:21.5151480Z Processing triggers for ccache (4.5.1-1) ...
+build	安装构建依赖	2026-11-05T17:15:21.5171360Z Updating symlinks in /usr/lib/ccache ...
+build	安装构建依赖	2026-11-05T17:15:21.5261837Z Processing triggers for man-db (2.10.2-1) ...
+build	安装构建依赖	2026-11-05T17:15:21.5282235Z Not building database; man-db/auto-update is not 'true'.
+build	安装构建依赖	2026-11-05T17:15:21.5298673Z Processing triggers for libc-bin (2.35-0ubuntu3.15) ...
+build	安装构建依赖	2026-11-05T17:15:22.1000455Z 
+build	安装构建依赖	2026-11-05T17:15:22.1001288Z Running kernel seems to be up-to-date.
+build	安装构建依赖	2026-11-05T17:15:22.1001842Z 
+build	安装构建依赖	2026-11-05T17:15:22.1002107Z No services need to be restarted.
+build	安装构建依赖	2026-11-05T17:15:22.1002552Z 
+build	安装构建依赖	2026-11-05T17:15:22.1002803Z No containers need to be restarted.
+build	安装构建依赖	2026-11-05T17:15:22.1003560Z 
+build	安装构建依赖	2026-11-05T17:15:22.1003864Z No user sessions are running outdated binaries.
+build	安装构建依赖	2026-11-05T17:15:22.1004251Z 
+build	安装构建依赖	2026-11-05T17:15:22.1004513Z No VM guests are running outdated hypervisor (qemu) binaries on this host.
+build	安装构建依赖	2026-11-05T17:15:24.0464033Z Reading package lists...
+build	安装构建依赖	2026-11-05T17:15:24.3887369Z Building dependency tree...
+build	安装构建依赖	2026-11-05T17:15:24.3900167Z Reading state information...
+build	安装构建依赖	2026-11-05T17:15:24.6398092Z binutils-aarch64-linux-gnu is already the newest version (2.38-4ubuntu2.12).
+build	安装构建依赖	2026-11-05T17:15:24.6398779Z binutils-aarch64-linux-gnu set to manually installed.
+build	安装构建依赖	2026-11-05T17:15:24.6399331Z 0 upgraded, 0 newly installed, 0 to remove and 30 not upgraded.
+build	安装构建依赖	2026-11-05T17:15:24.6426597Z 选中编译器: 
+build	安装构建依赖	2026-11-05T17:15:24.6430843Z /home/runner/work/_temp/3fab9479-4cbb-459a-b6ac-c38a2f35ce3f.sh: line 16: : command not found
+build	安装构建依赖	2026-11-05T17:15:24.6466088Z ccache version 4.5.1
+build	恢复 ccache	﻿2026-11-05T17:15:24.6569678Z ##[group]Run actions/cache@v4
+build	恢复 ccache	2026-11-05T17:15:24.6569962Z with:
+build	恢复 ccache	2026-11-05T17:15:24.6570174Z   path: /home/runner/.ccache
+build	恢复 ccache	2026-11-05T17:15:24.6570594Z   key: ccache-oppo/sm7250_s_12.1_reno4_5g-d4aae133f2392c80b115cbc08f688db4dd4589d0-42072720765
+build	恢复 ccache	2026-11-05T17:15:24.6571543Z   restore-keys: ccache-oppo/sm7250_s_12.1_reno4_5g-d4aae133f2392c80b115cbc08f688db4dd4589d0-
+build	恢复 ccache	ccache-oppo/sm7250_s_12.1_reno4_5g-
+build	恢复 ccache	
+build	恢复 ccache	2026-11-05T17:15:24.6572124Z   enableCrossOsArchive: false
+build	恢复 ccache	2026-11-05T17:15:24.6572371Z   fail-on-cache-miss: false
+build	恢复 ccache	2026-11-05T17:15:24.6572598Z   lookup-only: false
+build	恢复 ccache	2026-11-05T17:15:24.6572798Z   save-always: false
+build	恢复 ccache	2026-11-05T17:15:24.6573305Z env:
+build	恢复 ccache	2026-11-05T17:15:24.6573547Z   ARCH: arm64
+build	恢复 ccache	2026-11-05T17:15:24.6573741Z   SUBARCH: arm64
+build	恢复 ccache	2026-11-05T17:15:24.6573932Z   JOBS: 4
+build	恢复 ccache	2026-11-05T17:15:24.6574122Z   CCACHE_DIR: /home/runner/.ccache
+build	恢复 ccache	2026-11-05T17:15:24.6574364Z   CCACHE_MAXSIZE: 4G
+build	恢复 ccache	2026-11-05T17:15:24.6574577Z   CCACHE_COMPILERCHECK: content
+build	恢复 ccache	2026-11-05T17:15:24.6574840Z   OPLUS_FEATURE_PROCESS_RECLAIM: yes
+build	恢复 ccache	2026-11-05T17:15:24.6575148Z   OPLUS_FEATURE_MEMLEAK_DETECT: yes
+build	恢复 ccache	2026-11-05T17:15:24.6575410Z   OPLUS_FEATURE_UFS_SHOW_LATENCY: yes
+build	恢复 ccache	2026-11-05T17:15:24.6575671Z   OPLUS_FEATURE_PADL_STATISTICS: yes
+build	恢复 ccache	2026-11-05T17:15:24.6575942Z   OPLUS_FEATURE_UFSPLUS: yes
+build	恢复 ccache	2026-11-05T17:15:24.6576184Z   OPLUS_FEATURE_WIFI_ROUTERBOOST: yes
+build	恢复 ccache	2026-11-05T17:15:24.6576443Z   CROSS_CC: aarch64-linux-gnu-gcc-10
+build	恢复 ccache	2026-11-05T17:15:24.6576692Z ##[endgroup]
+build	恢复 ccache	2026-11-05T17:15:24.7708205Z (node:7556) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+build	恢复 ccache	2026-11-05T17:15:24.7709433Z (Use `node --trace-deprecation ...` to show where the warning was created)
+build	恢复 ccache	2026-11-05T17:15:24.8585836Z Cache hit for restore-key: ccache-oppo/sm7250_s_12.1_reno4_5g-95d9fc038d99922dcb597d236411ea5230d5c909-42072109893
+build	恢复 ccache	2026-11-05T17:15:24.8743690Z (node:7556) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+build	恢复 ccache	2026-11-05T17:15:25.9074365Z Received 167772160 of 207264381 (80.9%), 159.4 MBs/sec
+build	恢复 ccache	2026-11-05T17:15:26.0479562Z Received 207264381 of 207264381 (100.0%), 172.0 MBs/sec
+build	恢复 ccache	2026-11-05T17:15:26.0484106Z Cache Size: ~198 MB (207264381 B)
+build	恢复 ccache	2026-11-05T17:15:26.0532506Z [command]/usr/bin/tar -xf /home/runner/work/_temp/dd9b8918-06c3-4ad7-b9a9-9703da5a8edd/cache.tzst -P -C /home/runner/work/nl-k419/nl-k419 --use-compress-program unzstd
+build	恢复 ccache	2026-11-05T17:15:26.8899782Z Cache restored successfully
+build	恢复 ccache	2026-11-05T17:15:26.9584005Z Cache restored from key: ccache-oppo/sm7250_s_12.1_reno4_5g-95d9fc038d99922dcb597d236411ea5230d5c909-42072109893
+build	拉取内核源码	﻿2026-11-05T17:15:26.9885683Z ##[group]Run git clone --depth 1 --single-branch \
+build	拉取内核源码	2026-11-05T17:15:26.9886159Z [36;1mgit clone --depth 1 --single-branch \[0m
+build	拉取内核源码	2026-11-05T17:15:26.9886518Z [36;1m  --branch "oppo/sm7250_s_12.1_reno4_5g" \[0m
+build	拉取内核源码	2026-11-05T17:15:26.9886965Z [36;1m  "https://github.com/oppo-source/android_kernel_oppo_sm7250.git" ksrc[0m
+build	拉取内核源码	2026-11-05T17:15:26.9887399Z [36;1mgit clone --depth 1 --single-branch \[0m
+build	拉取内核源码	2026-11-05T17:15:26.9887737Z [36;1m  --branch "oppo/sm7250_s_12.1_reno4_5g" \[0m
+build	拉取内核源码	2026-11-05T17:15:26.9888256Z [36;1m  https://github.com/oppo-source/android_kernel_modules_and_devicetree_oppo_sm7250.git source[0m
+build	拉取内核源码	2026-11-05T17:15:26.9888791Z [36;1m# 两个上游仓库共同组成 kernel/msm-4.19 + vendor 的源码布局。[0m
+build	拉取内核源码	2026-11-05T17:15:26.9889194Z [36;1mrsync -a --ignore-existing source/kernel/msm-4.19/ ksrc/[0m
+build	拉取内核源码	2026-11-05T17:15:26.9889631Z [36;1mmv source/kernel/msm-4.19 source/kernel/vendor-overlay[0m
+build	拉取内核源码	2026-11-05T17:15:26.9889986Z [36;1mmv ksrc source/kernel/msm-4.19[0m
+build	拉取内核源码	2026-11-05T17:15:26.9890277Z [36;1mln -s source/kernel/msm-4.19 ksrc[0m
+build	拉取内核源码	2026-11-05T17:15:26.9890858Z [36;1mln -sfn "$GITHUB_WORKSPACE/source/vendor/oplus/kernel/wakelock_profiler" ksrc/drivers/soc/oplus/owakelock[0m
+build	拉取内核源码	2026-11-05T17:15:26.9891772Z [36;1mln -sfn "$GITHUB_WORKSPACE/source/vendor/oplus/kernel/wakelock_profiler/oplus_wakelock_profiler.h" ksrc/include/soc/oplus/oplus_wakelock_profiler.h[0m
+build	拉取内核源码	2026-11-05T17:15:26.9892509Z [36;1mecho "vendor HEAD: $(git -C source rev-parse HEAD)"[0m
+build	拉取内核源码	2026-11-05T17:15:26.9893194Z [36;1mtest -f ksrc/drivers/input/touchscreen/oplus_touchscreen/Kconfig[0m
+build	拉取内核源码	2026-11-05T17:15:26.9917150Z [36;1mtest -f ksrc/kernel/sched_assist/Makefile[0m
+build	拉取内核源码	2026-11-05T17:15:26.9917661Z [36;1mtest -f ksrc/include/soc/oplus/system/boot_mode.h[0m
+build	拉取内核源码	2026-11-05T17:15:26.9918217Z [36;1mgit -C source -c core.autocrlf=true apply "$GITHUB_WORKSPACE/compat/vendor-guards.patch"[0m
+build	拉取内核源码	2026-11-05T17:15:26.9918693Z [36;1mcd ksrc[0m
+build	拉取内核源码	2026-11-05T17:15:26.9918924Z [36;1mecho "HEAD: $(git rev-parse HEAD)"[0m
+build	拉取内核源码	2026-11-05T17:15:26.9919206Z [36;1mdu -sh .git .[0m
+build	拉取内核源码	2026-11-05T17:15:26.9919443Z [36;1mdf -h /[0m
+build	拉取内核源码	2026-11-05T17:15:26.9982866Z shell: /usr/bin/bash -e {0}
+build	拉取内核源码	2026-11-05T17:15:26.9983285Z env:
+build	拉取内核源码	2026-11-05T17:15:26.9983479Z   ARCH: arm64
+build	拉取内核源码	2026-11-05T17:15:26.9983680Z   SUBARCH: arm64
+build	拉取内核源码	2026-11-05T17:15:26.9983881Z   JOBS: 4
+build	拉取内核源码	2026-11-05T17:15:26.9984088Z   CCACHE_DIR: /home/runner/.ccache
+build	拉取内核源码	2026-11-05T17:15:26.9984354Z   CCACHE_MAXSIZE: 4G
+build	拉取内核源码	2026-11-05T17:15:26.9984587Z   CCACHE_COMPILERCHECK: content
+build	拉取内核源码	2026-11-05T17:15:26.9984850Z   OPLUS_FEATURE_PROCESS_RECLAIM: yes
+build	拉取内核源码	2026-11-05T17:15:26.9985150Z   OPLUS_FEATURE_MEMLEAK_DETECT: yes
+build	拉取内核源码	2026-11-05T17:15:26.9985422Z   OPLUS_FEATURE_UFS_SHOW_LATENCY: yes
+build	拉取内核源码	2026-11-05T17:15:26.9985692Z   OPLUS_FEATURE_PADL_STATISTICS: yes
+build	拉取内核源码	2026-11-05T17:15:26.9985962Z   OPLUS_FEATURE_UFSPLUS: yes
+build	拉取内核源码	2026-11-05T17:15:26.9986233Z   OPLUS_FEATURE_WIFI_ROUTERBOOST: yes
+build	拉取内核源码	2026-11-05T17:15:26.9986523Z   CROSS_CC: aarch64-linux-gnu-gcc-10
+build	拉取内核源码	2026-11-05T17:15:26.9986786Z ##[endgroup]
+build	拉取内核源码	2026-11-05T17:15:27.0092139Z Cloning into 'ksrc'...
+build	拉取内核源码	2026-11-05T17:16:01.8391972Z Updating files:  24% (14987/61196)
+build	拉取内核源码	2026-11-05T17:16:01.8724518Z Updating files:  25% (15299/61196)
+build	拉取内核源码	2026-11-05T17:16:01.9107988Z Updating files:  26% (15911/61196)
+build	拉取内核源码	2026-11-05T17:16:01.9484240Z Updating files:  27% (16523/61196)
+build	拉取内核源码	2026-11-05T17:16:01.9904467Z Updating files:  28% (17135/61196)
+build	拉取内核源码	2026-11-05T17:16:02.0346423Z Updating files:  29% (17747/61196)
+build	拉取内核源码	2026-11-05T17:16:02.0887586Z Updating files:  30% (18359/61196)
+build	拉取内核源码	2026-11-05T17:16:02.1563883Z Updating files:  31% (18971/61196)
+build	拉取内核源码	2026-11-05T17:16:02.2079034Z Updating files:  32% (19583/61196)
+build	拉取内核源码	2026-11-05T17:16:02.2589317Z Updating files:  33% (20195/61196)
+build	拉取内核源码	2026-11-05T17:16:02.3120366Z Updating files:  34% (20807/61196)
+build	拉取内核源码	2026-11-05T17:16:02.3688514Z Updating files:  35% (21419/61196)
+build	拉取内核源码	2026-11-05T17:16:02.4301710Z Updating files:  36% (22031/61196)
+build	拉取内核源码	2026-11-05T17:16:02.6956491Z Updating files:  37% (22643/61196)
+build	拉取内核源码	2026-11-05T17:16:02.7598905Z Updating files:  38% (23255/61196)
+build	拉取内核源码	2026-11-05T17:16:02.7982589Z Updating files:  39% (23867/61196)
+build	拉取内核源码	2026-11-05T17:16:02.8188148Z Updating files:  40% (24479/61196)
+build	拉取内核源码	2026-11-05T17:16:02.8334498Z Updating files:  40% (24822/61196)
+build	拉取内核源码	2026-11-05T17:16:02.8931683Z Updating files:  41% (25091/61196)
+build	拉取内核源码	2026-11-05T17:16:02.9497274Z Updating files:  42% (25703/61196)
+build	拉取内核源码	2026-11-05T17:16:03.0089166Z Updating files:  43% (26315/61196)
+build	拉取内核源码	2026-11-05T17:16:03.0667907Z Updating files:  44% (26927/61196)
+build	拉取内核源码	2026-11-05T17:16:03.1298045Z Updating files:  45% (27539/61196)
+build	拉取内核源码	2026-11-05T17:16:03.1917594Z Updating files:  46% (28151/61196)
+build	拉取内核源码	2026-11-05T17:16:03.2500169Z Updating files:  47% (28763/61196)
+build	拉取内核源码	2026-11-05T17:16:03.3185965Z Updating files:  48% (29375/61196)
+build	拉取内核源码	2026-11-05T17:16:03.3737002Z Updating files:  49% (29987/61196)
+build	拉取内核源码	2026-11-05T17:16:03.4334098Z Updating files:  50% (30598/61196)
+build	拉取内核源码	2026-11-05T17:16:03.4823802Z Updating files:  51% (31210/61196)
+build	拉取内核源码	2026-11-05T17:16:03.5420059Z Updating files:  52% (31822/61196)
+build	拉取内核源码	2026-11-05T17:16:03.6000407Z Updating files:  53% (32434/61196)
+build	拉取内核源码	2026-11-05T17:16:03.6672337Z Updating files:  54% (33046/61196)
+build	拉取内核源码	2026-11-05T17:16:03.7502698Z Updating files:  55% (33658/61196)
+build	拉取内核源码	2026-11-05T17:16:03.8190612Z Updating files:  56% (34270/61196)
+build	拉取内核源码	2026-11-05T17:16:03.8296554Z Updating files:  56% (34776/61196)
+build	拉取内核源码	2026-11-05T17:16:03.9092240Z Updating files:  57% (34882/61196)
+build	拉取内核源码	2026-11-05T17:16:03.9833707Z Updating files:  58% (35494/61196)
+build	拉取内核源码	2026-11-05T17:16:04.0597824Z Updating files:  59% (36106/61196)
+build	拉取内核源码	2026-11-05T17:16:04.1191743Z Updating files:  60% (36718/61196)
+build	拉取内核源码	2026-11-05T17:16:04.1754191Z Updating files:  61% (37330/61196)
+build	拉取内核源码	2026-11-05T17:16:04.2476488Z Updating files:  62% (37942/61196)
+build	拉取内核源码	2026-11-05T17:16:04.3127027Z Updating files:  63% (38554/61196)
+build	拉取内核源码	2026-11-05T17:16:04.3749990Z Updating files:  64% (39166/61196)
+build	拉取内核源码	2026-11-05T17:16:04.4722064Z Updating files:  65% (39778/61196)
+build	拉取内核源码	2026-11-05T17:16:04.5297569Z Updating files:  66% (40390/61196)
+build	拉取内核源码	2026-11-05T17:16:04.5823770Z Updating files:  67% (41002/61196)
+build	拉取内核源码	2026-11-05T17:16:04.6377246Z Updating files:  68% (41614/61196)
+build	拉取内核源码	2026-11-05T17:16:04.6918211Z Updating files:  69% (42226/61196)
+build	拉取内核源码	2026-11-05T17:16:04.7562566Z Updating files:  70% (42838/61196)
+build	拉取内核源码	2026-11-05T17:16:04.8191031Z Updating files:  71% (43450/61196)
+build	拉取内核源码	2026-11-05T17:16:04.8266721Z Updating files:  71% (43983/61196)
+build	拉取内核源码	2026-11-05T17:16:04.8882773Z Updating files:  72% (44062/61196)
+build	拉取内核源码	2026-11-05T17:16:04.9488882Z Updating files:  73% (44674/61196)
+build	拉取内核源码	2026-11-05T17:16:05.0173702Z Updating files:  74% (45286/61196)
+build	拉取内核源码	2026-11-05T17:16:05.0811650Z Updating files:  75% (45897/61196)
+build	拉取内核源码	2026-11-05T17:16:05.1520411Z Updating files:  76% (46509/61196)
+build	拉取内核源码	2026-11-05T17:16:05.1942222Z Updating files:  77% (47121/61196)
+build	拉取内核源码	2026-11-05T17:16:05.2284458Z Updating files:  78% (47733/61196)
+build	拉取内核源码	2026-11-05T17:16:05.2706494Z Updating files:  79% (48345/61196)
+build	拉取内核源码	2026-11-05T17:16:05.3182820Z Updating files:  80% (48957/61196)
+build	拉取内核源码	2026-11-05T17:16:05.3548022Z Updating files:  81% (49569/61196)
+build	拉取内核源码	2026-11-05T17:16:05.3976965Z Updating files:  82% (50181/61196)
+build	拉取内核源码	2026-11-05T17:16:05.4383394Z Updating files:  83% (50793/61196)
+build	拉取内核源码	2026-11-05T17:16:05.4781507Z Updating files:  84% (51405/61196)
+build	拉取内核源码	2026-11-05T17:16:05.5194667Z Updating files:  85% (52017/61196)
+build	拉取内核源码	2026-11-05T17:16:05.5866373Z Updating files:  86% (52629/61196)
+build	拉取内核源码	2026-11-05T17:16:05.6483628Z Updating files:  87% (53241/61196)
+build	拉取内核源码	2026-11-05T17:16:05.7089275Z Updating files:  88% (53853/61196)
+build	拉取内核源码	2026-11-05T17:16:05.7640850Z Updating files:  89% (54465/61196)
+build	拉取内核源码	2026-11-05T17:16:05.8168244Z Updating files:  90% (55077/61196)
+build	拉取内核源码	2026-11-05T17:16:05.8187193Z Updating files:  91% (55689/61196)
+build	拉取内核源码	2026-11-05T17:16:05.8615736Z Updating files:  91% (55727/61196)
+build	拉取内核源码	2026-11-05T17:16:05.9186997Z Updating files:  92% (56301/61196)
+build	拉取内核源码	2026-11-05T17:16:05.9898503Z Updating files:  93% (56913/61196)
+build	拉取内核源码	2026-11-05T17:16:06.0406367Z Updating files:  94% (57525/61196)
+build	拉取内核源码	2026-11-05T17:16:06.0807285Z Updating files:  95% (58137/61196)
+build	拉取内核源码	2026-11-05T17:16:06.1253815Z Updating files:  96% (58749/61196)
+build	拉取内核源码	2026-11-05T17:16:06.1705177Z Updating files:  97% (59361/61196)
+build	拉取内核源码	2026-11-05T17:16:06.2083687Z Updating files:  98% (59973/61196)
+build	拉取内核源码	2026-11-05T17:16:06.2432510Z Updating files:  99% (60585/61196)
+build	拉取内核源码	2026-11-05T17:16:06.2433515Z Updating files: 100% (61196/61196)
+build	拉取内核源码	2026-11-05T17:16:06.2434334Z Updating files: 100% (61196/61196), done.
+build	拉取内核源码	2026-11-05T17:16:06.3130825Z Cloning into 'source'...
+build	拉取内核源码	2026-11-05T17:16:12.1004976Z Updating files:  45% (10078/22011)
+build	拉取内核源码	2026-11-05T17:16:12.1114165Z Updating files:  46% (10126/22011)
+build	拉取内核源码	2026-11-05T17:16:12.1228552Z Updating files:  47% (10346/22011)
+build	拉取内核源码	2026-11-05T17:16:12.1334484Z Updating files:  48% (10566/22011)
+build	拉取内核源码	2026-11-05T17:16:12.1447432Z Updating files:  49% (10786/22011)
+build	拉取内核源码	2026-11-05T17:16:12.1556996Z Updating files:  50% (11006/22011)
+build	拉取内核源码	2026-11-05T17:16:12.1670838Z Updating files:  51% (11226/22011)
+build	拉取内核源码	2026-11-05T17:16:12.1790728Z Updating files:  52% (11446/22011)
+build	拉取内核源码	2026-11-05T17:16:12.1907475Z Updating files:  53% (11666/22011)
+build	拉取内核源码	2026-11-05T17:16:12.2014359Z Updating files:  54% (11886/22011)
+build	拉取内核源码	2026-11-05T17:16:12.2135067Z Updating files:  55% (12107/22011)
+build	拉取内核源码	2026-11-05T17:16:12.2246570Z Updating files:  56% (12327/22011)
+build	拉取内核源码	2026-11-05T17:16:12.2365776Z Updating files:  57% (12547/22011)
+build	拉取内核源码	2026-11-05T17:16:12.2472911Z Updating files:  58% (12767/22011)
+build	拉取内核源码	2026-11-05T17:16:12.2590304Z Updating files:  59% (12987/22011)
+build	拉取内核源码	2026-11-05T17:16:12.2701077Z Updating files:  60% (13207/22011)
+build	拉取内核源码	2026-11-05T17:16:12.2827892Z Updating files:  61% (13427/22011)
+build	拉取内核源码	2026-11-05T17:16:12.2944223Z Updating files:  62% (13647/22011)
+build	拉取内核源码	2026-11-05T17:16:12.3063659Z Updating files:  63% (13867/22011)
+build	拉取内核源码	2026-11-05T17:16:12.3176063Z Updating files:  64% (14088/22011)
+build	拉取内核源码	2026-11-05T17:16:12.3290650Z Updating files:  65% (14308/22011)
+build	拉取内核源码	2026-11-05T17:16:12.3403808Z Updating files:  66% (14528/22011)
+build	拉取内核源码	2026-11-05T17:16:12.3516503Z Updating files:  67% (14748/22011)
+build	拉取内核源码	2026-11-05T17:16:12.3630435Z Updating files:  68% (14968/22011)
+build	拉取内核源码	2026-11-05T17:16:12.3740995Z Updating files:  69% (15188/22011)
+build	拉取内核源码	2026-11-05T17:16:12.3859017Z Updating files:  70% (15408/22011)
+build	拉取内核源码	2026-11-05T17:16:12.3966206Z Updating files:  71% (15628/22011)
+build	拉取内核源码	2026-11-05T17:16:12.4083716Z Updating files:  72% (15848/22011)
+build	拉取内核源码	2026-11-05T17:16:12.4197005Z Updating files:  73% (16069/22011)
+build	拉取内核源码	2026-11-05T17:16:12.4314943Z Updating files:  74% (16289/22011)
+build	拉取内核源码	2026-11-05T17:16:12.4430120Z Updating files:  75% (16509/22011)
+build	拉取内核源码	2026-11-05T17:16:12.4536451Z Updating files:  76% (16729/22011)
+build	拉取内核源码	2026-11-05T17:16:12.4655913Z Updating files:  77% (16949/22011)
+build	拉取内核源码	2026-11-05T17:16:12.4764186Z Updating files:  78% (17169/22011)
+build	拉取内核源码	2026-11-05T17:16:12.4885682Z Updating files:  79% (17389/22011)
+build	拉取内核源码	2026-11-05T17:16:12.4995530Z Updating files:  80% (17609/22011)
+build	拉取内核源码	2026-11-05T17:16:12.5103897Z Updating files:  81% (17829/22011)
+build	拉取内核源码	2026-11-05T17:16:12.5213438Z Updating files:  82% (18050/22011)
+build	拉取内核源码	2026-11-05T17:16:12.5327821Z Updating files:  83% (18270/22011)
+build	拉取内核源码	2026-11-05T17:16:12.5428254Z Updating files:  84% (18490/22011)
+build	拉取内核源码	2026-11-05T17:16:12.5535238Z Updating files:  85% (18710/22011)
+build	拉取内核源码	2026-11-05T17:16:12.5640079Z Updating files:  86% (18930/22011)
+build	拉取内核源码	2026-11-05T17:16:12.5741690Z Updating files:  87% (19150/22011)
+build	拉取内核源码	2026-11-05T17:16:12.5848720Z Updating files:  88% (19370/22011)
+build	拉取内核源码	2026-11-05T17:16:12.5954001Z Updating files:  89% (19590/22011)
+build	拉取内核源码	2026-11-05T17:16:12.6063692Z Updating files:  90% (19810/22011)
+build	拉取内核源码	2026-11-05T17:16:12.6179338Z Updating files:  91% (20031/22011)
+build	拉取内核源码	2026-11-05T17:16:12.6292147Z Updating files:  92% (20251/22011)
+build	拉取内核源码	2026-11-05T17:16:12.6397770Z Updating files:  93% (20471/22011)
+build	拉取内核源码	2026-11-05T17:16:12.6505633Z Updating files:  94% (20691/22011)
+build	拉取内核源码	2026-11-05T17:16:12.6610787Z Updating files:  95% (20911/22011)
+build	拉取内核源码	2026-11-05T17:16:12.6726020Z Updating files:  96% (21131/22011)
+build	拉取内核源码	2026-11-05T17:16:12.6857894Z Updating files:  97% (21351/22011)
+build	拉取内核源码	2026-11-05T17:16:12.6971524Z Updating files:  98% (21571/22011)
+build	拉取内核源码	2026-11-05T17:16:12.7089982Z Updating files:  99% (21791/22011)
+build	拉取内核源码	2026-11-05T17:16:12.7090537Z Updating files: 100% (22011/22011)
+build	拉取内核源码	2026-11-05T17:16:12.7090988Z Updating files: 100% (22011/22011), done.
+build	拉取内核源码	2026-11-05T17:16:12.8790692Z vendor HEAD: ee75bb30c9cf3b297c778093511c596dfff71136
+build	拉取内核源码	2026-11-05T17:16:12.8863951Z HEAD: 554371aca734463e121f040efa9e5d2001603ed9
+build	拉取内核源码	2026-11-05T17:16:12.8888672Z 194M	.git
+build	拉取内核源码	2026-11-05T17:16:13.1080391Z 975M	.
+build	拉取内核源码	2026-11-05T17:16:13.1109836Z Filesystem      Size  Used Avail Use% Mounted on
+build	拉取内核源码	2026-11-05T17:16:13.1110776Z /dev/root       146G   61G   85G  42% /
+build	修补公开源码缺失项	﻿2026-11-05T17:16:13.1147348Z ##[group]Run chmod +x compat/*.sh
+build	修补公开源码缺失项	2026-11-05T17:16:13.1147729Z [36;1mchmod +x compat/*.sh[0m
+build	修补公开源码缺失项	2026-11-05T17:16:13.1147993Z [36;1m./compat/prep_source.sh ksrc[0m
+build	修补公开源码缺失项	2026-11-05T17:16:13.1209471Z shell: /usr/bin/bash -e {0}
+build	修补公开源码缺失项	2026-11-05T17:16:13.1209741Z env:
+build	修补公开源码缺失项	2026-11-05T17:16:13.1209937Z   ARCH: arm64
+build	修补公开源码缺失项	2026-11-05T17:16:13.1210152Z   SUBARCH: arm64
+build	修补公开源码缺失项	2026-11-05T17:16:13.1210358Z   JOBS: 4
+build	修补公开源码缺失项	2026-11-05T17:16:13.1210582Z   CCACHE_DIR: /home/runner/.ccache
+build	修补公开源码缺失项	2026-11-05T17:16:13.1210854Z   CCACHE_MAXSIZE: 4G
+build	修补公开源码缺失项	2026-11-05T17:16:13.1211094Z   CCACHE_COMPILERCHECK: content
+build	修补公开源码缺失项	2026-11-05T17:16:13.1211372Z   OPLUS_FEATURE_PROCESS_RECLAIM: yes
+build	修补公开源码缺失项	2026-11-05T17:16:13.1211662Z   OPLUS_FEATURE_MEMLEAK_DETECT: yes
+build	修补公开源码缺失项	2026-11-05T17:16:13.1211947Z   OPLUS_FEATURE_UFS_SHOW_LATENCY: yes
+build	修补公开源码缺失项	2026-11-05T17:16:13.1212237Z   OPLUS_FEATURE_PADL_STATISTICS: yes
+build	修补公开源码缺失项	2026-11-05T17:16:13.1212523Z   OPLUS_FEATURE_UFSPLUS: yes
+build	修补公开源码缺失项	2026-11-05T17:16:13.1212785Z   OPLUS_FEATURE_WIFI_ROUTERBOOST: yes
+build	修补公开源码缺失项	2026-11-05T17:16:13.1213680Z   CROSS_CC: aarch64-linux-gnu-gcc-10
+build	修补公开源码缺失项	2026-11-05T17:16:13.1214006Z ##[endgroup]
+build	修补公开源码缺失项	2026-11-05T17:16:13.6814364Z == 被注释掉的缺失引用 (1 处) ==
+build	修补公开源码缺失项	2026-11-05T17:16:13.6814815Z    - net/oplus_modules/Kconfig
+build	修补公开源码缺失项	2026-11-05T17:16:13.6815295Z == 被修改的 Kconfig 文件 (1 个) ==
+build	修补公开源码缺失项	2026-11-05T17:16:13.6815594Z    * net/Kconfig
+build	修补公开源码缺失项	2026-11-05T17:16:13.7034239Z gcc-wrapper.py: print 语法已转 python3
+build	修补公开源码缺失项	2026-11-05T17:16:14.6533954Z == 被注释掉的缺失头文件 (2 处) ==
+build	修补公开源码缺失项	2026-11-05T17:16:14.6535142Z    - linux/pagewalk.h
+build	修补公开源码缺失项	2026-11-05T17:16:14.6535740Z    - soc/oplus/oppo_healthinfo.h
+build	修补公开源码缺失项	2026-11-05T17:16:14.6536478Z == 被修改的头文件 (2 个) ==
+build	修补公开源码缺失项	2026-11-05T17:16:14.6537040Z    * include/linux/process_mm_reclaim.h
+build	修补公开源码缺失项	2026-11-05T17:16:14.6537738Z    * include/linux/resmap_account.h
+build	修补公开源码缺失项	2026-11-05T17:16:14.6710223Z == 配套厂商源码已就绪，保留 OPLUS 功能宏 ==
+build	修补公开源码缺失项	2026-11-05T17:16:14.9384529Z == obj-* 指向缺失目录已注释 3 处 ==
+build	修补公开源码缺失项	2026-11-05T17:16:25.9480052Z == .c 里被注释的缺失 include: 12 处 ==
+build	修补公开源码缺失项	2026-11-05T17:16:25.9481093Z    - ../../../extcon/extcon.h
+build	修补公开源码缺失项	2026-11-05T17:16:25.9481779Z    - ../fts_fw.h
+build	修补公开源码缺失项	2026-11-05T17:16:25.9482166Z    - ../fts_limits.h
+build	修补公开源码缺失项	2026-11-05T17:16:25.9482517Z    - ../sched/sched.h
+build	修补公开源码缺失项	2026-11-05T17:16:25.9482896Z    - ../sd.h
+build	修补公开源码缺失项	2026-11-05T17:16:25.9483457Z    - pcmcia/k_compat.h
+build	修补公开源码缺失项	2026-11-05T17:16:25.9483900Z    - soc/qcom/ocmem.h
+build	修补公开源码缺失项	2026-11-05T17:16:25.9484266Z    - soc/qcom/smd.h
+build	修补公开源码缺失项	2026-11-05T17:16:25.9484645Z    - trace/events/gasket_interrupt.h
+build	修补公开源码缺失项	2026-11-05T17:16:25.9485110Z    - trace/events/gasket_ioctl.h
+build	修补公开源码缺失项	2026-11-05T17:16:25.9485569Z    - trace/events/gasket_mmap.h
+build	修补公开源码缺失项	2026-11-05T17:16:26.7736332Z == obj-* 指向缺失源文件已注释 17 处 ==
+build	修补公开源码缺失项	2026-11-05T17:16:26.7832074Z == 校验 block/Kconfig 引用 ==
+build	修补公开源码缺失项	2026-11-05T17:16:26.7845332Z 251:source block/uxio_first/Kconfig
+build	打厂商符号补丁	﻿2026-11-05T17:16:26.7893372Z ##[group]Run ./compat/apply_compat.sh ksrc
+build	打厂商符号补丁	2026-11-05T17:16:26.7893785Z [36;1m./compat/apply_compat.sh ksrc[0m
+build	打厂商符号补丁	2026-11-05T17:16:26.7957170Z shell: /usr/bin/bash -e {0}
+build	打厂商符号补丁	2026-11-05T17:16:26.7957478Z env:
+build	打厂商符号补丁	2026-11-05T17:16:26.7957699Z   ARCH: arm64
+build	打厂商符号补丁	2026-11-05T17:16:26.7957936Z   SUBARCH: arm64
+build	打厂商符号补丁	2026-11-05T17:16:26.7958172Z   JOBS: 4
+build	打厂商符号补丁	2026-11-05T17:16:26.7958410Z   CCACHE_DIR: /home/runner/.ccache
+build	打厂商符号补丁	2026-11-05T17:16:26.7958713Z   CCACHE_MAXSIZE: 4G
+build	打厂商符号补丁	2026-11-05T17:16:26.7958980Z   CCACHE_COMPILERCHECK: content
+build	打厂商符号补丁	2026-11-05T17:16:26.7959295Z   OPLUS_FEATURE_PROCESS_RECLAIM: yes
+build	打厂商符号补丁	2026-11-05T17:16:26.7959629Z   OPLUS_FEATURE_MEMLEAK_DETECT: yes
+build	打厂商符号补丁	2026-11-05T17:16:26.7959951Z   OPLUS_FEATURE_UFS_SHOW_LATENCY: yes
+build	打厂商符号补丁	2026-11-05T17:16:26.7960275Z   OPLUS_FEATURE_PADL_STATISTICS: yes
+build	打厂商符号补丁	2026-11-05T17:16:26.7960587Z   OPLUS_FEATURE_UFSPLUS: yes
+build	打厂商符号补丁	2026-11-05T17:16:26.7960914Z   OPLUS_FEATURE_WIFI_ROUTERBOOST: yes
+build	打厂商符号补丁	2026-11-05T17:16:26.7961237Z   CROSS_CC: aarch64-linux-gnu-gcc-10
+build	打厂商符号补丁	2026-11-05T17:16:26.7961537Z ##[endgroup]
+build	打厂商符号补丁	2026-11-05T17:16:26.8094442Z == 使用配套厂商源码中的 kmalloc_debug_* 实现 ==
+build	以设备真实配置为基线生成 .config	﻿2026-11-05T17:16:26.8130852Z ##[group]Run cd ksrc
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:26.8131175Z [36;1mcd ksrc[0m
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:26.8131457Z [36;1mcp "$GITHUB_WORKSPACE/config/device.config" .config[0m
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:26.8131861Z [36;1mscripts/config --file .config -d MODULE_SIG_FORCE[0m
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:26.8132243Z [36;1mscripts/config --file .config -d MODULE_SIG_ALL[0m
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:26.8132601Z [36;1mscripts/config --file .config -d MODVERSIONS[0m
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:26.8132944Z [36;1mscripts/config --file .config -d DEBUG_INFO[0m
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:26.8133702Z [36;1mscripts/config --file .config --set-str LOCALVERSION "-perf"[0m
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:26.8134130Z [36;1mscripts/config --file .config -e MODULES[0m
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:26.8134476Z [36;1mif [ ! -f kernel/sched_assist/Makefile ]; then[0m
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:26.8134909Z [36;1m  scripts/config --file .config -d OPLUS_FEATURE_SCHED_ASSIST[0m
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:26.8135269Z [36;1mfi[0m
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:26.8135535Z [36;1mscripts/config --file .config -d OPLUS_SECURE_GUARD[0m
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:26.8135968Z [36;1mmake ARCH=arm64 CC="$CROSS_CC" HOSTCC=gcc olddefconfig[0m
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:26.8136305Z [36;1mecho "==== 关键项 ===="[0m
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:26.8136947Z [36;1mgrep -E '^CONFIG_MODULE_SIG|^# CONFIG_MODULE_SIG|MODVERSIONS|^CONFIG_LOCALVERSION=|^CONFIG_MODULES=|^CONFIG_64BIT|^CONFIG_ARM64=|^CONFIG_DEBUG_INFO' .config[0m
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:26.8137647Z [36;1mecho "==== 断言：这三项没了就不用往下跑了 ===="[0m
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:26.8138278Z [36;1mfor k in CONFIG_64BIT CONFIG_ARM64 CONFIG_MODULES CONFIG_TOUCHPANEL_OPLUS CONFIG_DRM_MSM CONFIG_SCSI_UFS_QCOM CONFIG_WLAN CONFIG_CNSS_UTILS; do[0m
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:26.8139007Z [36;1m  grep -q "^${k}=y" .config || { echo "::error::${k} 未生效，配置基线有问题"; exit 1; }[0m
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:26.8139596Z [36;1mdone[0m
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:26.8139788Z [36;1mecho "OK"[0m
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:26.8202482Z shell: /usr/bin/bash -e {0}
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:26.8202766Z env:
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:26.8203286Z   ARCH: arm64
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:26.8203543Z   SUBARCH: arm64
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:26.8203739Z   JOBS: 4
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:26.8203972Z   CCACHE_DIR: /home/runner/.ccache
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:26.8204229Z   CCACHE_MAXSIZE: 4G
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:26.8204462Z   CCACHE_COMPILERCHECK: content
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:26.8204716Z   OPLUS_FEATURE_PROCESS_RECLAIM: yes
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:26.8204983Z   OPLUS_FEATURE_MEMLEAK_DETECT: yes
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:26.8205252Z   OPLUS_FEATURE_UFS_SHOW_LATENCY: yes
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:26.8205526Z   OPLUS_FEATURE_PADL_STATISTICS: yes
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:26.8205781Z   OPLUS_FEATURE_UFSPLUS: yes
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:26.8206036Z   OPLUS_FEATURE_WIFI_ROUTERBOOST: yes
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:26.8206306Z   CROSS_CC: aarch64-linux-gnu-gcc-10
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:26.8206558Z ##[endgroup]
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:26.9420289Z OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_FG_IO_OPT to be a macro here
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:26.9421312Z OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_SPECIALOPT to be a macro here
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:26.9422031Z OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_PERFORMANCE to be a macro here
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:26.9422779Z OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_STORAGE_TOOL to be a macro here
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:26.9423993Z OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_UFS_DRIVER to be a macro here
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:26.9424744Z OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_UFS_SHOW_LATENCY to be a macro here
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:26.9425589Z OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_UFSPLUS to be a macro here
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:26.9426757Z OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_PADL_STATISTICS to be a macro here
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:26.9427982Z OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_EMMC_SDCARD_OPTIMIZE to be a macro here
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:26.9429188Z OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_EMMC_DRIVER to be a macro here
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:26.9430334Z OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_HEALTHINFO to be a macro here
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:26.9431089Z OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_TASK_CPUSTATS to be a macro here
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:26.9431823Z OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_HANS_FREEZE to be a macro here
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:26.9432836Z OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_SCHED_ASSIST to be a macro here
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:26.9433936Z OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_IOMONITOR to be a macro here
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:26.9434637Z OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_TP_BSPFWUPDATE to be a macro here
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:26.9435350Z OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_LOWMEM_DBG to be a macro here
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:26.9435943Z OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_QCOM_PMICWD to be a macro here
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:26.9436469Z OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_CHG_BASIC to be a macro here
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:26.9436973Z OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_NWPOWER to be a macro here
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:26.9437489Z OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_WIFI_BDF to be a macro here
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:26.9437992Z OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_CONNFCSOFT to be a macro here
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:26.9438503Z OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_AGINGTEST to be a macro here
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:26.9439011Z OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_SENSOR_SMEM to be a macro here
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:26.9439521Z OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_SSR to be a macro here
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:26.9440017Z OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_TP_BASIC to be a macro here
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:26.9440535Z OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_EDTASK_IMPROVE to be a macro here
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:26.9441218Z OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_WIFI_SLA to be a macro here
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:26.9441776Z OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_WIFI_ROUTERBOOST to be a macro here
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:26.9442536Z OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_IPV6_OPTIMIZE to be a macro here
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:26.9443480Z OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_DATA_EVAL to be a macro here
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:26.9443992Z OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_DHCP to be a macro here
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:26.9444494Z OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_PHOENIX to be a macro here
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:26.9445001Z OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_DUMPDEVICE to be a macro here
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:26.9445869Z OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_SAUPWK to be a macro here
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:26.9446819Z OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_MEMORY_ISOLATE to be a macro here
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:26.9447422Z OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_MULTI_KSWAPD to be a macro here
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:26.9447950Z OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_WIFI_MTUDETECT to be a macro here
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:26.9448503Z OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_XTOWNER_INPUT to be a macro here
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:26.9449060Z OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_SELINUX_CONTROL_LOG to be a macro here
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:26.9449608Z OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_PXLW_IRIS5 to be a macro here
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:26.9450142Z OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_MULTI_FREEAREA to be a macro here
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:26.9451244Z OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_VIRTUAL_RESERVE_MEMORY to be a macro here
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:26.9452178Z OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_GPU_MINIDUMP to be a macro here
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:26.9453367Z OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_PROCESS_RECLAIM to be a macro here
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:26.9454288Z OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_ZRAM_OPT to be a macro here
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:26.9455088Z OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_AUDIO_FTM to be a macro here
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:26.9455617Z OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_SPEAKER_MUTE to be a macro here
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:26.9456151Z OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_MM_FEEDBACK to be a macro here
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:26.9456670Z OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_MI2S_SLAVE to be a macro here
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:26.9457163Z OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_KTV to be a macro here
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:26.9457909Z OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_QCOM_WATCHDOG to be a macro here
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:26.9458435Z OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_MEMLEAK_DETECT to be a macro here
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:26.9458970Z OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_EXFAT_SUPPORT to be a macro here
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:26.9459506Z OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_SDCARDFS_SUPPORT to be a macro here
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:26.9460033Z OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_CAMERA_OIS to be a macro here
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:26.9460540Z OplusKernelEnvConfig.mk:136: make OPLUS_BUG_COMPATIBILITY to be a macro here
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:26.9461043Z OplusKernelEnvConfig.mk:136: make OPLUS_BUG_STABILITY to be a macro here
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:26.9461542Z OplusKernelEnvConfig.mk:136: make OPLUS_BUG_DEBUG to be a macro here
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:26.9462021Z OplusKernelEnvConfig.mk:136: make OPLUS_ARCH_INJECT to be a macro here
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:26.9462505Z OplusKernelEnvConfig.mk:136: make OPLUS_ARCH_EXTENDS to be a macro here
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:26.9463417Z OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_AUDIODETECT to be a macro here
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:26.9463987Z OplusKernelEnvConfig.mk:136: make COLOROS_EDIT to be a macro here
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:26.9464461Z OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_DC to be a macro here
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:26.9465320Z OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_POWERINFO_STANDBY to be a macro here
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:26.9466315Z OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_POWERINFO_RPMH to be a macro here
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:26.9467283Z OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_CAMERA_COMMON to be a macro here
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:26.9468475Z OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_ADSP_RECOVERY to be a macro here
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:26.9469416Z OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_SMARTPA_PM to be a macro here
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:26.9470369Z OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_IMPEDANCE_MATCH to be a macro here
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:26.9471416Z OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_MODEM_MINIDUMP to be a macro here
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:26.9472344Z OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_THEIA to be a macro here
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:26.9473295Z OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_POWER_CPUFREQ to be a macro here
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:26.9473830Z OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_MIDAS to be a macro here
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:26.9474339Z OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_WIFI_OPLUSWFD to be a macro here
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:26.9474904Z OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_WIFI_DUALSTA_AP_BLACKLIST to be a macro here
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:26.9475498Z OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_WIFI_DCS_SWITCH to be a macro here
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:26.9476008Z OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_IM to be a macro here
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:26.9476478Z OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_TPD to be a macro here
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:26.9476977Z OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_APP_MONITOR to be a macro here
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:26.9477497Z OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_RT_INFO to be a macro here
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:26.9478036Z OplusKernelEnvConfig.mk:136: make OPLUS_FEATURE_MIC_VA_MIC_CLK_SWITCH to be a macro here
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:26.9478768Z awk: cmd. line:1: (FILENAME=- FNR=1) fatal: attempt to access field -1
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:26.9480399Z OplusKernelEnvConfig.mk:185: "ln the wakelock_profiler_h fail, mkis /home/runner/work/nl-k419/nl-k419/source/kernel/msm-4.19, dir is , wakelock_dir is "
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:27.1489422Z   HOSTCC  scripts/basic/fixdep
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:27.3860091Z   HOSTCC  scripts/kconfig/conf.o
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:27.5444668Z   YACC    scripts/kconfig/zconf.tab.c
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:27.8204372Z   LEX     scripts/kconfig/zconf.lex.c
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:27.8662497Z   HOSTCC  scripts/kconfig/zconf.tab.o
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:29.3257556Z   HOSTLD  scripts/kconfig/conf
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:29.3471415Z scripts/kconfig/conf  --olddefconfig Kconfig
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:29.5804111Z drivers/misc/aw8697_haptic/Kconfig:1:warning: ignoring unsupported character '
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:29.5804739Z '
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:29.5805160Z drivers/misc/aw8697_haptic/Kconfig:2:warning: ignoring unsupported character '
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:29.5805694Z '
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:29.5806109Z drivers/misc/aw8697_haptic/Kconfig:3:warning: ignoring unsupported character '
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:29.5806634Z '
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:29.5807030Z drivers/misc/aw8697_haptic/Kconfig:4:warning: ignoring unsupported character '
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:29.5807537Z '
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:29.5986562Z drivers/power/oplus/Kconfig:14:warning: ignoring type redefinition of 'OPLUS_SHORT_C_BATT_CHECK' from 'tristate' to 'bool'
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:29.5988168Z drivers/power/oplus/Kconfig:24:warning: ignoring type redefinition of 'OPLUS_SHORT_IC_CHECK' from 'tristate' to 'bool'
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:29.5989614Z drivers/power/oplus/Kconfig:29:warning: ignoring type redefinition of 'OPLUS_SHORT_HW_CHECK' from 'tristate' to 'bool'
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:29.6308646Z drivers/soc/oplus/system/oplus_saupwk/Kconfig:4:warning: ignoring unsupported character '
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:29.6309880Z '
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:29.6310693Z drivers/soc/oplus/system/oplus_saupwk/Kconfig:5:warning: ignoring unsupported character '
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:29.6311420Z '
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:29.6311986Z drivers/soc/oplus/system/oplus_saupwk/Kconfig:6:warning: ignoring unsupported character '
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:29.6312701Z '
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:29.6313739Z drivers/soc/oplus/system/oplus_saupwk/Kconfig:7:warning: ignoring unsupported character '
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:29.6314451Z '
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:29.6315034Z drivers/soc/oplus/system/cmdline_parser/Kconfig:3:warning: ignoring unsupported character '
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:29.6316119Z '
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:29.6316634Z drivers/soc/oplus/system/cmdline_parser/Kconfig:4:warning: ignoring unsupported character '
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:29.6317268Z '
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:29.6317779Z drivers/soc/oplus/system/cmdline_parser/Kconfig:5:warning: ignoring unsupported character '
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:29.6318703Z '
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:29.6319218Z drivers/soc/oplus/system/cmdline_parser/Kconfig:6:warning: ignoring unsupported character '
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:29.6319844Z '
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:29.6320353Z drivers/soc/oplus/system/cmdline_parser/Kconfig:8:warning: ignoring unsupported character '
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:29.6320974Z '
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:29.6321472Z drivers/soc/oplus/system/cmdline_parser/Kconfig:9:warning: ignoring unsupported character '
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:29.6322098Z '
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:29.6322617Z drivers/soc/oplus/system/cmdline_parser/Kconfig:10:warning: ignoring unsupported character '
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:29.6323587Z '
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:29.6324152Z drivers/soc/oplus/system/cmdline_parser/Kconfig:11:warning: ignoring unsupported character '
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:29.6324824Z '
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:29.6325333Z drivers/soc/oplus/system/cmdline_parser/Kconfig:12:warning: ignoring unsupported character '
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:29.6325982Z '
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:29.6326372Z drivers/soc/oplus/system/cmdline_parser/Kconfig:14:warning: ignoring unsupported character '
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:29.6326843Z '
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:29.6327204Z drivers/soc/oplus/system/cmdline_parser/Kconfig:15:warning: ignoring unsupported character '
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:29.6327661Z '
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:29.6328014Z drivers/soc/oplus/system/cmdline_parser/Kconfig:16:warning: ignoring unsupported character '
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:29.6328456Z '
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:29.6328810Z drivers/soc/oplus/system/cmdline_parser/Kconfig:17:warning: ignoring unsupported character '
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:29.6329243Z '
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:29.6329591Z drivers/soc/oplus/system/cmdline_parser/Kconfig:18:warning: ignoring unsupported character '
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:29.6330026Z '
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:29.6330378Z drivers/soc/oplus/system/cmdline_parser/Kconfig:20:warning: ignoring unsupported character '
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:29.6330820Z '
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:29.6331168Z drivers/soc/oplus/system/cmdline_parser/Kconfig:21:warning: ignoring unsupported character '
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:29.6331607Z '
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:29.6331964Z drivers/soc/oplus/system/cmdline_parser/Kconfig:22:warning: ignoring unsupported character '
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:29.6332621Z '
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:29.6333166Z drivers/soc/oplus/system/cmdline_parser/Kconfig:23:warning: ignoring unsupported character '
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:29.6333610Z '
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:29.6333966Z drivers/soc/oplus/system/cmdline_parser/Kconfig:24:warning: ignoring unsupported character '
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:29.6334400Z '
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:29.6334758Z drivers/soc/oplus/system/cmdline_parser/Kconfig:26:warning: ignoring unsupported character '
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:29.6335200Z '
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:29.6335559Z drivers/soc/oplus/system/cmdline_parser/Kconfig:27:warning: ignoring unsupported character '
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:29.6335994Z '
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:29.6336346Z drivers/soc/oplus/system/cmdline_parser/Kconfig:28:warning: ignoring unsupported character '
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:29.6336770Z '
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:29.6337120Z drivers/soc/oplus/system/cmdline_parser/Kconfig:29:warning: ignoring unsupported character '
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:29.6337552Z '
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:29.6337891Z drivers/soc/oplus/system/cmdline_parser/Kconfig:30:warning: ignoring unsupported character '
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:29.6338319Z '
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:29.6338665Z drivers/soc/oplus/system/cmdline_parser/Kconfig:32:warning: ignoring unsupported character '
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:29.6339085Z '
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:29.6339418Z drivers/soc/oplus/system/cmdline_parser/Kconfig:33:warning: ignoring unsupported character '
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:29.6339839Z '
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:29.6340181Z drivers/soc/oplus/system/cmdline_parser/Kconfig:34:warning: ignoring unsupported character '
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:29.6340600Z '
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:29.6340935Z drivers/soc/oplus/system/cmdline_parser/Kconfig:35:warning: ignoring unsupported character '
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:29.6341532Z '
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:29.6341870Z drivers/soc/oplus/system/cmdline_parser/Kconfig:36:warning: ignoring unsupported character '
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:29.6342297Z '
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:29.6342637Z drivers/soc/oplus/system/cmdline_parser/Kconfig:38:warning: ignoring unsupported character '
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:29.6343195Z '
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:29.6343537Z drivers/soc/oplus/system/cmdline_parser/Kconfig:39:warning: ignoring unsupported character '
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:29.6343963Z '
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:29.6344295Z drivers/soc/oplus/system/cmdline_parser/Kconfig:40:warning: ignoring unsupported character '
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:29.6344720Z '
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:29.6345053Z drivers/soc/oplus/system/cmdline_parser/Kconfig:41:warning: ignoring unsupported character '
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:29.6345476Z '
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:29.6345814Z drivers/soc/oplus/system/cmdline_parser/Kconfig:42:warning: ignoring unsupported character '
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:29.6346235Z '
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:29.8387131Z #
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:29.8387659Z # configuration written to .config
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:29.8388167Z #
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:29.8410527Z ==== 关键项 ====
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:29.8434349Z CONFIG_LOCALVERSION="-perf"
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:29.8434879Z CONFIG_ARM64=y
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:29.8435253Z CONFIG_64BIT=y
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:29.8435634Z CONFIG_MODULES=y
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:29.8436080Z # CONFIG_MODVERSIONS is not set
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:29.8436595Z CONFIG_MODULE_SIG=y
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:29.8437005Z # CONFIG_MODULE_SIG_FORCE is not set
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:29.8437539Z # CONFIG_MODULE_SIG_ALL is not set
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:29.8438042Z # CONFIG_MODULE_SIG_SHA1 is not set
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:29.8438550Z # CONFIG_MODULE_SIG_SHA224 is not set
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:29.8438988Z # CONFIG_MODULE_SIG_SHA256 is not set
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:29.8439308Z # CONFIG_MODULE_SIG_SHA384 is not set
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:29.8439625Z CONFIG_MODULE_SIG_SHA512=y
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:29.8439915Z CONFIG_MODULE_SIG_HASH="sha512"
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:29.8440251Z CONFIG_MODULE_SIG_KEY="certs/signing_key.pem"
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:29.8440766Z ==== 断言：这三项没了就不用往下跑了 ====
+build	以设备真实配置为基线生成 .config	2026-11-05T17:16:29.8561352Z OK
+build	生成头文件并冒烟编译 bounds.s	﻿2026-11-05T17:16:29.8619438Z ##[group]Run set -o pipefail
+build	生成头文件并冒烟编译 bounds.s	2026-11-05T17:16:29.8620015Z [36;1mset -o pipefail[0m
+build	生成头文件并冒烟编译 bounds.s	2026-11-05T17:16:29.8620437Z [36;1mcd ksrc[0m
+build	生成头文件并冒烟编译 bounds.s	2026-11-05T17:16:29.8620953Z [36;1mecho "==== 诊断：-k 跑完全部 prepare，把所有缺失头文件一次性收齐 ===="[0m
+build	生成头文件并冒烟编译 bounds.s	2026-11-05T17:16:29.8621709Z [36;1mmake -k -j"$JOBS" ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- \[0m
+build	生成头文件并冒烟编译 bounds.s	2026-11-05T17:16:29.8622847Z [36;1m     CC="ccache $CROSS_CC" HOSTCC=gcc KCFLAGS="-Wno-error -Wno-error=strict-prototypes -Wno-error=implicit-int" \[0m
+build	生成头文件并冒烟编译 bounds.s	2026-11-05T17:16:29.8624199Z [36;1m     prepare > "$GITHUB_WORKSPACE/prepare.log" 2>&1 || true[0m
+build	生成头文件并冒烟编译 bounds.s	2026-11-05T17:16:29.8625306Z [36;1mgrep -oE 'fatal error: [^:]+: No such file' "$GITHUB_WORKSPACE/prepare.log" | sed 's/fatal error: //' | sort -u || true[0m
+build	生成头文件并冒烟编译 bounds.s	2026-11-05T17:16:29.8626327Z [36;1mecho "==== autoconf.h 里的 64BIT ===="[0m
+build	生成头文件并冒烟编译 bounds.s	2026-11-05T17:16:29.8627212Z [36;1mgrep -E 'CONFIG_64BIT' include/generated/autoconf.h || echo "!! autoconf.h 里没有 CONFIG_64BIT"[0m
+build	生成头文件并冒烟编译 bounds.s	2026-11-05T17:16:29.8628093Z [36;1mecho "==== kernel.release ===="[0m
+build	生成头文件并冒烟编译 bounds.s	2026-11-05T17:16:29.8628688Z [36;1mcat include/config/kernel.release || true[0m
+build	生成头文件并冒烟编译 bounds.s	2026-11-05T17:16:29.8629339Z [36;1mecho "==== 冒烟：单独编 kernel/bounds.s（10 分钟内必须过）===="[0m
+build	生成头文件并冒烟编译 bounds.s	2026-11-05T17:16:29.8630122Z [36;1mtimeout 600 make -j"$JOBS" ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- \[0m
+build	生成头文件并冒烟编译 bounds.s	2026-11-05T17:16:29.8631301Z [36;1m     CC="ccache $CROSS_CC" HOSTCC=gcc KCFLAGS="-Wno-error -Wno-error=strict-prototypes -Wno-error=implicit-int" \[0m
+build	生成头文件并冒烟编译 bounds.s	2026-11-05T17:16:29.8632458Z [36;1m     kernel/bounds.s 2>&1 | tee "$GITHUB_WORKSPACE/smoke.log" | tail -30[0m
+build	生成头文件并冒烟编译 bounds.s	2026-11-05T17:16:29.8633399Z [36;1mecho "冒烟通过"[0m
+build	生成头文件并冒烟编译 bounds.s	2026-11-05T17:16:29.8715357Z shell: /usr/bin/bash -e {0}
+build	生成头文件并冒烟编译 bounds.s	2026-11-05T17:16:29.8715661Z env:
+build	生成头文件并冒烟编译 bounds.s	2026-11-05T17:16:29.8715881Z   ARCH: arm64
+build	生成头文件并冒烟编译 bounds.s	2026-11-05T17:16:29.8716101Z   SUBARCH: arm64
+build	生成头文件并冒烟编译 bounds.s	2026-11-05T17:16:29.8716320Z   JOBS: 4
+build	生成头文件并冒烟编译 bounds.s	2026-11-05T17:16:29.8716539Z   CCACHE_DIR: /home/runner/.ccache
+build	生成头文件并冒烟编译 bounds.s	2026-11-05T17:16:29.8716824Z   CCACHE_MAXSIZE: 4G
+build	生成头文件并冒烟编译 bounds.s	2026-11-05T17:16:29.8717304Z   CCACHE_COMPILERCHECK: content
+build	生成头文件并冒烟编译 bounds.s	2026-11-05T17:16:29.8717604Z   OPLUS_FEATURE_PROCESS_RECLAIM: yes
+build	生成头文件并冒烟编译 bounds.s	2026-11-05T17:16:29.8717912Z   OPLUS_FEATURE_MEMLEAK_DETECT: yes
+build	生成头文件并冒烟编译 bounds.s	2026-11-05T17:16:29.8718216Z   OPLUS_FEATURE_UFS_SHOW_LATENCY: yes
+build	生成头文件并冒烟编译 bounds.s	2026-11-05T17:16:29.8718523Z   OPLUS_FEATURE_PADL_STATISTICS: yes
+build	生成头文件并冒烟编译 bounds.s	2026-11-05T17:16:29.8718821Z   OPLUS_FEATURE_UFSPLUS: yes
+build	生成头文件并冒烟编译 bounds.s	2026-11-05T17:16:29.8719111Z   OPLUS_FEATURE_WIFI_ROUTERBOOST: yes
+build	生成头文件并冒烟编译 bounds.s	2026-11-05T17:16:29.8719415Z   CROSS_CC: aarch64-linux-gnu-gcc-10
+build	生成头文件并冒烟编译 bounds.s	2026-11-05T17:16:29.8719706Z ##[endgroup]
+build	生成头文件并冒烟编译 bounds.s	2026-11-05T17:16:29.8805170Z ==== 诊断：-k 跑完全部 prepare，把所有缺失头文件一次性收齐 ====
+build	生成头文件并冒烟编译 bounds.s	2026-11-05T17:16:32.6762000Z ==== autoconf.h 里的 64BIT ====
+build	生成头文件并冒烟编译 bounds.s	2026-11-05T17:16:32.6776109Z #define CONFIG_64BIT 1
+build	生成头文件并冒烟编译 bounds.s	2026-11-05T17:16:32.6778214Z ==== kernel.release ====
+build	生成头文件并冒烟编译 bounds.s	2026-11-05T17:16:32.6789270Z 4.19.157-perf+
+build	生成头文件并冒烟编译 bounds.s	2026-11-05T17:16:32.6791605Z ==== 冒烟：单独编 kernel/bounds.s（10 分钟内必须过）====
+build	生成头文件并冒烟编译 bounds.s	2026-11-05T17:16:35.1979797Z /usr/include/openssl/engine.h:336:31: note: declared here
+build	生成头文件并冒烟编译 bounds.s	2026-11-05T17:16:35.1981086Z   336 | OSSL_DEPRECATEDIN_3_0 ENGINE *ENGINE_by_id(const char *id);
+build	生成头文件并冒烟编译 bounds.s	2026-11-05T17:16:35.1982490Z       |                               ^~~~~~~~~~~~
+build	生成头文件并冒烟编译 bounds.s	2026-11-05T17:16:35.1984950Z scripts/extract-cert.c:128:17: warning: ‘ENGINE_init’ is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+build	生成头文件并冒烟编译 bounds.s	2026-11-05T17:16:35.1986358Z   128 |                 if (ENGINE_init(e))
+build	生成头文件并冒烟编译 bounds.s	2026-11-05T17:16:35.1987022Z       |                 ^~
+build	生成头文件并冒烟编译 bounds.s	2026-11-05T17:16:35.1987634Z In file included from scripts/extract-cert.c:24:
+build	生成头文件并冒烟编译 bounds.s	2026-11-05T17:16:35.1988487Z /usr/include/openssl/engine.h:620:27: note: declared here
+build	生成头文件并冒烟编译 bounds.s	2026-11-05T17:16:35.1989366Z   620 | OSSL_DEPRECATEDIN_3_0 int ENGINE_init(ENGINE *e);
+build	生成头文件并冒烟编译 bounds.s	2026-11-05T17:16:35.1990108Z       |                           ^~~~~~~~~~~
+build	生成头文件并冒烟编译 bounds.s	2026-11-05T17:16:35.1991710Z scripts/extract-cert.c:133:25: warning: ‘ENGINE_ctrl_cmd_string’ is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+build	生成头文件并冒烟编译 bounds.s	2026-11-05T17:16:35.1992544Z   133 |                         ERR(!ENGINE_ctrl_cmd_string(e, "PIN", key_pass, 0), "Set PKCS#11 PIN");
+build	生成头文件并冒烟编译 bounds.s	2026-11-05T17:16:35.1993271Z       |                         ^~~
+build	生成头文件并冒烟编译 bounds.s	2026-11-05T17:16:35.1993884Z In file included from scripts/extract-cert.c:24:
+build	生成头文件并冒烟编译 bounds.s	2026-11-05T17:16:35.1994267Z /usr/include/openssl/engine.h:479:5: note: declared here
+build	生成头文件并冒烟编译 bounds.s	2026-11-05T17:16:35.1994734Z   479 | int ENGINE_ctrl_cmd_string(ENGINE *e, const char *cmd_name, const char *arg,
+build	生成头文件并冒烟编译 bounds.s	2026-11-05T17:16:35.1995153Z       |     ^~~~~~~~~~~~~~~~~~~~~~
+build	生成头文件并冒烟编译 bounds.s	2026-11-05T17:16:35.1995812Z scripts/extract-cert.c:134:17: warning: ‘ENGINE_ctrl_cmd’ is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+build	生成头文件并冒烟编译 bounds.s	2026-11-05T17:16:35.1996470Z   134 |                 ENGINE_ctrl_cmd(e, "LOAD_CERT_CTRL", 0, &parms, NULL, 1);
+build	生成头文件并冒烟编译 bounds.s	2026-11-05T17:16:35.1996832Z       |                 ^~~~~~~~~~~~~~~
+build	生成头文件并冒烟编译 bounds.s	2026-11-05T17:16:35.1997131Z In file included from scripts/extract-cert.c:24:
+build	生成头文件并冒烟编译 bounds.s	2026-11-05T17:16:35.1997493Z /usr/include/openssl/engine.h:450:27: note: declared here
+build	生成头文件并冒烟编译 bounds.s	2026-11-05T17:16:35.1997956Z   450 | OSSL_DEPRECATEDIN_3_0 int ENGINE_ctrl_cmd(ENGINE *e, const char *cmd_name,
+build	生成头文件并冒烟编译 bounds.s	2026-11-05T17:16:35.1998374Z       |                           ^~~~~~~~~~~~~~~
+build	生成头文件并冒烟编译 bounds.s	2026-11-05T17:16:35.1998675Z   YACC    scripts/dtc/dtc-parser.tab.h
+build	生成头文件并冒烟编译 bounds.s	2026-11-05T17:16:35.1998962Z   YACC    scripts/dtc/dtc-parser.tab.c
+build	生成头文件并冒烟编译 bounds.s	2026-11-05T17:16:35.1999257Z   HOSTCC  scripts/dtc/dtc-lexer.lex.o
+build	生成头文件并冒烟编译 bounds.s	2026-11-05T17:16:35.1999533Z   HOSTCC  scripts/dtc/dtc-parser.tab.o
+build	生成头文件并冒烟编译 bounds.s	2026-11-05T17:16:35.1999805Z   HOSTLD  scripts/dtc/dtc
+build	生成头文件并冒烟编译 bounds.s	2026-11-05T17:16:35.2000047Z   CALL    scripts/checksyscalls.sh
+build	生成头文件并冒烟编译 bounds.s	2026-11-05T17:16:35.2000337Z 冒烟通过
+build	编译 Image	﻿2026-11-05T17:16:35.2030639Z ##[group]Run set -o pipefail
+build	编译 Image	2026-11-05T17:16:35.2030974Z [36;1mset -o pipefail[0m
+build	编译 Image	2026-11-05T17:16:35.2031204Z [36;1mcd ksrc[0m
+build	编译 Image	2026-11-05T17:16:35.2031558Z [36;1mexport CCACHE_SLOPPINESS=time_macros,include_file_mtime,include_file_ctime[0m
+build	编译 Image	2026-11-05T17:16:35.2032119Z [36;1mtimeout 19500 make -k -j"$JOBS" ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- \[0m
+build	编译 Image	2026-11-05T17:16:35.2032821Z [36;1m     CC="ccache $CROSS_CC" HOSTCC="ccache gcc" KCFLAGS="-Wno-error -Wno-error=strict-prototypes -Wno-error=implicit-int" \[0m
+build	编译 Image	2026-11-05T17:16:35.2034101Z [36;1m     --output-sync=target Image 2>&1 | tee "$GITHUB_WORKSPACE/build.log" | tail -5[0m
+build	编译 Image	2026-11-05T17:16:35.2034539Z [36;1mls -l arch/arm64/boot/Image[0m
+build	编译 Image	2026-11-05T17:16:35.2034803Z [36;1mccache -s | head -12[0m
+build	编译 Image	2026-11-05T17:16:35.2098142Z shell: /usr/bin/bash -e {0}
+build	编译 Image	2026-11-05T17:16:35.2098420Z env:
+build	编译 Image	2026-11-05T17:16:35.2098621Z   ARCH: arm64
+build	编译 Image	2026-11-05T17:16:35.2098817Z   SUBARCH: arm64
+build	编译 Image	2026-11-05T17:16:35.2099014Z   JOBS: 4
+build	编译 Image	2026-11-05T17:16:35.2099287Z   CCACHE_DIR: /home/runner/.ccache
+build	编译 Image	2026-11-05T17:16:35.2099541Z   CCACHE_MAXSIZE: 4G
+build	编译 Image	2026-11-05T17:16:35.2099764Z   CCACHE_COMPILERCHECK: content
+build	编译 Image	2026-11-05T17:16:35.2100024Z   OPLUS_FEATURE_PROCESS_RECLAIM: yes
+build	编译 Image	2026-11-05T17:16:35.2100296Z   OPLUS_FEATURE_MEMLEAK_DETECT: yes
+build	编译 Image	2026-11-05T17:16:35.2100568Z   OPLUS_FEATURE_UFS_SHOW_LATENCY: yes
+build	编译 Image	2026-11-05T17:16:35.2100835Z   OPLUS_FEATURE_PADL_STATISTICS: yes
+build	编译 Image	2026-11-05T17:16:35.2101113Z   OPLUS_FEATURE_UFSPLUS: yes
+build	编译 Image	2026-11-05T17:16:35.2101383Z   OPLUS_FEATURE_WIFI_ROUTERBOOST: yes
+build	编译 Image	2026-11-05T17:16:35.2101660Z   CROSS_CC: aarch64-linux-gnu-gcc-10
+build	编译 Image	2026-11-05T17:16:35.2101915Z ##[endgroup]
+build	编译 Image	2026-11-05T17:17:25.4387999Z   LD      vmlinux
+build	编译 Image	2026-11-05T17:17:25.4388653Z aarch64-linux-gnu-ld: warning: -z norelro ignored
+build	编译 Image	2026-11-05T17:17:25.4389308Z   SORTEX  vmlinux
+build	编译 Image	2026-11-05T17:17:25.4389794Z   SYSMAP  System.map
+build	编译 Image	2026-11-05T17:17:25.4390302Z   OBJCOPY arch/arm64/boot/Image
+build	编译 Image	2026-11-05T17:17:25.4407786Z -rw-r--r-- 1 runner runner 40062984 Nov  5 17:17 arch/arm64/boot/Image
+build	编译 Image	2026-11-05T17:17:25.4467777Z Summary:
+build	编译 Image	2026-11-05T17:17:25.4468211Z   Hits:            17694 / 24408 (72.49 %)
+build	编译 Image	2026-11-05T17:17:25.4468669Z     Direct:        16807 / 25447 (66.05 %)
+build	编译 Image	2026-11-05T17:17:25.4469014Z     Preprocessed:    887 /  7879 (11.26 %)
+build	编译 Image	2026-11-05T17:17:25.4469344Z   Misses:           6714
+build	编译 Image	2026-11-05T17:17:25.4469608Z     Direct:         8640
+build	编译 Image	2026-11-05T17:17:25.4469877Z     Preprocessed:   6992
+build	编译 Image	2026-11-05T17:17:25.4470143Z   Uncacheable:      3355
+build	编译 Image	2026-11-05T17:17:25.4470428Z Primary storage:
+build	编译 Image	2026-11-05T17:17:25.4470698Z   Hits:            35308 / 50133 (70.43 %)
+build	编译 Image	2026-11-05T17:17:25.4471020Z   Misses:          14825
+build	编译 Image	2026-11-05T17:17:25.4471294Z   Cache size (GB):  0.24 /  4.00 (6.00 %)
+build	核对符号与 vermagic	﻿2026-11-05T17:17:25.4509422Z ##[group]Run cd ksrc
+build	核对符号与 vermagic	2026-11-05T17:17:25.4509758Z [36;1mcd ksrc[0m
+build	核对符号与 vermagic	2026-11-05T17:17:25.4509979Z [36;1mecho "== 厂商符号是否导出（必须两行）=="[0m
+build	核对符号与 vermagic	2026-11-05T17:17:25.4510346Z [36;1mgrep -E 'kmalloc_debug_(enable|caches)' Module.symvers || {[0m
+build	核对符号与 vermagic	2026-11-05T17:17:25.4510774Z [36;1m  echo "::error::厂商符号未导出，模块会 Unknown symbol"; exit 1; }[0m
+build	核对符号与 vermagic	2026-11-05T17:17:25.4511102Z [36;1mecho "== vmlinux 里是否真的存在 =="[0m
+build	核对符号与 vermagic	2026-11-05T17:17:25.4511499Z [36;1maarch64-linux-gnu-nm vmlinux | grep -E 'kmalloc_debug_(enable|caches)'[0m
+build	核对符号与 vermagic	2026-11-05T17:17:25.4511921Z [36;1mecho "== kernel release =="[0m
+build	核对符号与 vermagic	2026-11-05T17:17:25.4512202Z [36;1mcat include/config/kernel.release[0m
+build	核对符号与 vermagic	2026-11-05T17:17:25.4512482Z [36;1mecho "== 预期 vermagic =="[0m
+build	核对符号与 vermagic	2026-11-05T17:17:25.4512864Z [36;1mecho "$(cat include/config/kernel.release) SMP preempt mod_unload aarch64"[0m
+build	核对符号与 vermagic	2026-11-05T17:17:25.4513673Z [36;1mecho "== Image 头 =="[0m
+build	核对符号与 vermagic	2026-11-05T17:17:25.4514083Z [36;1mpython3 -c "d=open('arch/arm64/boot/Image','rb').read(); print(len(d), d[0x38:0x3c])"[0m
+build	核对符号与 vermagic	2026-11-05T17:17:25.4514549Z [36;1mpython3 - <<'PY'[0m
+build	核对符号与 vermagic	2026-11-05T17:17:25.4514791Z [36;1mfrom pathlib import Path[0m
+build	核对符号与 vermagic	2026-11-05T17:17:25.4515108Z [36;1mconfig = Path('.config').read_text().splitlines()[0m
+build	核对符号与 vermagic	2026-11-05T17:17:25.4515591Z [36;1mfor line in ('# CONFIG_MODULE_SIG_FORCE is not set', '# CONFIG_MODVERSIONS is not set',[0m
+build	核对符号与 vermagic	2026-11-05T17:17:25.4516103Z [36;1m             'CONFIG_MODULE_SIG=y', 'CONFIG_LOCALVERSION="-perf"'):[0m
+build	核对符号与 vermagic	2026-11-05T17:17:25.4516469Z [36;1m    assert line in config, line[0m
+build	核对符号与 vermagic	2026-11-05T17:17:25.4516908Z [36;1massert Path('include/config/kernel.release').read_text().strip() == '4.19.157-perf+'[0m
+build	核对符号与 vermagic	2026-11-05T17:17:25.4517505Z [36;1mexports = {line.split()[1] for line in Path('Module.symvers').read_text().splitlines()}[0m
+build	核对符号与 vermagic	2026-11-05T17:17:25.4518275Z [36;1massert {'kmalloc_debug_enable', 'kmalloc_debug_caches'} <= exports[0m
+build	核对符号与 vermagic	2026-11-05T17:17:25.4518825Z [36;1msymbols = {parts[2]: int(parts[0], 16) for line in Path('System.map').read_text().splitlines()[0m
+build	核对符号与 vermagic	2026-11-05T17:17:25.4519312Z [36;1m           if len(parts := line.split()) == 3}[0m
+build	核对符号与 vermagic	2026-11-05T17:17:25.4519814Z [36;1massert symbols['__bss_start'] <= symbols['selinux_state'] < symbols['__bss_stop'] <= symbols['_end'][0m
+build	核对符号与 vermagic	2026-11-05T17:17:25.4520344Z [36;1mimage = Path('arch/arm64/boot/Image').read_bytes()[0m
+build	核对符号与 vermagic	2026-11-05T17:17:25.4520696Z [36;1massert image[0x38:0x3c] == b'ARM\x64'[0m
+build	核对符号与 vermagic	2026-11-05T17:17:25.4521166Z [36;1mprint('PASS: release, module configuration, exports, Image header and SELinux BSS layout')[0m
+build	核对符号与 vermagic	2026-11-05T17:17:25.4521667Z [36;1mPY[0m
+build	核对符号与 vermagic	2026-11-05T17:17:25.4586645Z shell: /usr/bin/bash -e {0}
+build	核对符号与 vermagic	2026-11-05T17:17:25.4586933Z env:
+build	核对符号与 vermagic	2026-11-05T17:17:25.4587137Z   ARCH: arm64
+build	核对符号与 vermagic	2026-11-05T17:17:25.4587341Z   SUBARCH: arm64
+build	核对符号与 vermagic	2026-11-05T17:17:25.4587545Z   JOBS: 4
+build	核对符号与 vermagic	2026-11-05T17:17:25.4587762Z   CCACHE_DIR: /home/runner/.ccache
+build	核对符号与 vermagic	2026-11-05T17:17:25.4588026Z   CCACHE_MAXSIZE: 4G
+build	核对符号与 vermagic	2026-11-05T17:17:25.4588255Z   CCACHE_COMPILERCHECK: content
+build	核对符号与 vermagic	2026-11-05T17:17:25.4588513Z   OPLUS_FEATURE_PROCESS_RECLAIM: yes
+build	核对符号与 vermagic	2026-11-05T17:17:25.4588799Z   OPLUS_FEATURE_MEMLEAK_DETECT: yes
+build	核对符号与 vermagic	2026-11-05T17:17:25.4589073Z   OPLUS_FEATURE_UFS_SHOW_LATENCY: yes
+build	核对符号与 vermagic	2026-11-05T17:17:25.4589339Z   OPLUS_FEATURE_PADL_STATISTICS: yes
+build	核对符号与 vermagic	2026-11-05T17:17:25.4589593Z   OPLUS_FEATURE_UFSPLUS: yes
+build	核对符号与 vermagic	2026-11-05T17:17:25.4589837Z   OPLUS_FEATURE_WIFI_ROUTERBOOST: yes
+build	核对符号与 vermagic	2026-11-05T17:17:25.4590102Z   CROSS_CC: aarch64-linux-gnu-gcc-10
+build	核对符号与 vermagic	2026-11-05T17:17:25.4590348Z ##[endgroup]
+build	核对符号与 vermagic	2026-11-05T17:17:25.4680718Z == 厂商符号是否导出（必须两行）==
+build	核对符号与 vermagic	2026-11-05T17:17:25.4701220Z 0x00000000	kmalloc_debug_caches	vmlinux	EXPORT_SYMBOL
+build	核对符号与 vermagic	2026-11-05T17:17:25.4701918Z 0x00000000	kmalloc_debug_enable	vmlinux	EXPORT_SYMBOL
+build	核对符号与 vermagic	2026-11-05T17:17:25.4708346Z == vmlinux 里是否真的存在 ==
+build	核对符号与 vermagic	2026-11-05T17:17:25.6543447Z ffffff8009f6b642 r __kstrtab_kmalloc_debug_caches
+build	核对符号与 vermagic	2026-11-05T17:17:25.6543972Z ffffff8009f6b62d r __kstrtab_kmalloc_debug_enable
+build	核对符号与 vermagic	2026-11-05T17:17:25.6544351Z ffffff8009f53a40 r __ksymtab_kmalloc_debug_caches
+build	核对符号与 vermagic	2026-11-05T17:17:25.6544718Z ffffff8009f53a48 r __ksymtab_kmalloc_debug_enable
+build	核对符号与 vermagic	2026-11-05T17:17:25.6545496Z ffffff800a6ec5e8 B kmalloc_debug_caches
+build	核对符号与 vermagic	2026-11-05T17:17:25.6545861Z ffffff800a6ec6e4 B kmalloc_debug_enable
+build	核对符号与 vermagic	2026-11-05T17:17:25.6546428Z ffffff8009853ef8 d kmalloc_debug_enable_operations
+build	核对符号与 vermagic	2026-11-05T17:17:25.6547019Z ffffff800829d830 t kmalloc_debug_enable_read
+build	核对符号与 vermagic	2026-11-05T17:17:25.6547560Z ffffff800829d6f4 t kmalloc_debug_enable_write
+build	核对符号与 vermagic	2026-11-05T17:17:25.6547880Z == kernel release ==
+build	核对符号与 vermagic	2026-11-05T17:17:25.6560037Z 4.19.157-perf+
+build	核对符号与 vermagic	2026-11-05T17:17:25.6562381Z == 预期 vermagic ==
+build	核对符号与 vermagic	2026-11-05T17:17:25.6577300Z 4.19.157-perf+ SMP preempt mod_unload aarch64
+build	核对符号与 vermagic	2026-11-05T17:17:25.6577777Z == Image 头 ==
+build	核对符号与 vermagic	2026-11-05T17:17:25.6947899Z 40062984 b'ARMd'
+build	核对符号与 vermagic	2026-11-05T17:17:25.8808770Z PASS: release, module configuration, exports, Image header and SELinux BSS layout
+build	上传产物	﻿2026-11-05T17:17:25.9003485Z ##[group]Run actions/upload-artifact@v4
+build	上传产物	2026-11-05T17:17:25.9003844Z with:
+build	上传产物	2026-11-05T17:17:25.9004049Z   name: kernel-419-image
+build	上传产物	2026-11-05T17:17:25.9004928Z   path: ksrc/arch/arm64/boot/Image
+build	上传产物	ksrc/Module.symvers
+build	上传产物	ksrc/System.map
+build	上传产物	ksrc/arch/arm64/kernel/vmlinux.lds
+build	上传产物	ksrc/.config
+build	上传产物	ksrc/include/config/kernel.release
+build	上传产物	ksrc/include/generated/autoconf.h
+build	上传产物	build.log
+build	上传产物	smoke.log
+build	上传产物	prepare.log
+build	上传产物	
+build	上传产物	2026-11-05T17:17:25.9005842Z   if-no-files-found: warn
+build	上传产物	2026-11-05T17:17:25.9006090Z   include-hidden-files: true
+build	上传产物	2026-11-05T17:17:25.9006341Z   compression-level: 6
+build	上传产物	2026-11-05T17:17:25.9006558Z   overwrite: false
+build	上传产物	2026-11-05T17:17:25.9006751Z env:
+build	上传产物	2026-11-05T17:17:25.9006923Z   ARCH: arm64
+build	上传产物	2026-11-05T17:17:25.9007115Z   SUBARCH: arm64
+build	上传产物	2026-11-05T17:17:25.9007301Z   JOBS: 4
+build	上传产物	2026-11-05T17:17:25.9007493Z   CCACHE_DIR: /home/runner/.ccache
+build	上传产物	2026-11-05T17:17:25.9007745Z   CCACHE_MAXSIZE: 4G
+build	上传产物	2026-11-05T17:17:25.9007960Z   CCACHE_COMPILERCHECK: content
+build	上传产物	2026-11-05T17:17:25.9008220Z   OPLUS_FEATURE_PROCESS_RECLAIM: yes
+build	上传产物	2026-11-05T17:17:25.9008700Z   OPLUS_FEATURE_MEMLEAK_DETECT: yes
+build	上传产物	2026-11-05T17:17:25.9008993Z   OPLUS_FEATURE_UFS_SHOW_LATENCY: yes
+build	上传产物	2026-11-05T17:17:25.9009257Z   OPLUS_FEATURE_PADL_STATISTICS: yes
+build	上传产物	2026-11-05T17:17:25.9009510Z   OPLUS_FEATURE_UFSPLUS: yes
+build	上传产物	2026-11-05T17:17:25.9009761Z   OPLUS_FEATURE_WIFI_ROUTERBOOST: yes
+build	上传产物	2026-11-05T17:17:25.9010025Z   CROSS_CC: aarch64-linux-gnu-gcc-10
+build	上传产物	2026-11-05T17:17:25.9010271Z ##[endgroup]
+build	上传产物	2026-11-05T17:17:26.0875368Z (node:37292) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+build	上传产物	2026-11-05T17:17:26.0876558Z (Use `node --trace-deprecation ...` to show where the warning was created)
+build	上传产物	2026-11-05T17:17:26.0983505Z Multiple search paths detected. Calculating the least common ancestor of all paths
+build	上传产物	2026-11-05T17:17:26.0996255Z The least common ancestor is /home/runner/work/nl-k419/nl-k419. This will be the root directory of the artifact
+build	上传产物	2026-11-05T17:17:26.0997578Z With the provided path, there will be 10 files uploaded
+build	上传产物	2026-11-05T17:17:26.0998979Z Artifact name is valid!
+build	上传产物	2026-11-05T17:17:26.0999605Z Root directory input is valid!
+build	上传产物	2026-11-05T17:17:26.3297019Z Beginning upload of artifact content to blob storage
+build	上传产物	2026-11-05T17:17:26.8756311Z (node:37292) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+build	上传产物	2026-11-05T17:17:27.1814360Z Uploaded bytes 8388608
+build	上传产物	2026-11-05T17:17:27.6539815Z Uploaded bytes 16777216
+build	上传产物	2026-11-05T17:17:27.8104599Z Uploaded bytes 19770475
+build	上传产物	2026-11-05T17:17:27.8274836Z Finished uploading artifact content to blob storage!
+build	上传产物	2026-11-05T17:17:27.8276415Z SHA256 digest of uploaded artifact zip is 7874ac829f4674897cb6892850a57c64faa5f8fa5d4c86a1e54c68ca7a142a2b
+build	上传产物	2026-11-05T17:17:27.8278353Z Finalizing artifact upload
+build	上传产物	2026-11-05T17:17:28.2644187Z Artifact kernel-419-image.zip successfully finalized. Artifact ID 13436113140
+build	上传产物	2026-11-05T17:17:28.2646315Z Artifact kernel-419-image has been successfully uploaded! Final size is 19770475 bytes. Artifact ID is 13436113140
+build	上传产物	2026-11-05T17:17:28.2651505Z Artifact download URL: https://github.com/Hi-prof/nl-k419/actions/runs/42072720765/artifacts/13436113140
+build	保存 ccache	﻿2026-11-05T17:17:28.2873735Z ##[group]Run actions/cache/save@v4
+build	保存 ccache	2026-11-05T17:17:28.2874272Z with:
+build	保存 ccache	2026-11-05T17:17:28.2874620Z   path: /home/runner/.ccache
+build	保存 ccache	2026-11-05T17:17:28.2875391Z   key: ccache-oppo/sm7250_s_12.1_reno4_5g-d4aae133f2392c80b115cbc08f688db4dd4589d0-42072720765
+build	保存 ccache	2026-11-05T17:17:28.2876254Z   enableCrossOsArchive: false
+build	保存 ccache	2026-11-05T17:17:28.2876705Z env:
+build	保存 ccache	2026-11-05T17:17:28.2877047Z   ARCH: arm64
+build	保存 ccache	2026-11-05T17:17:28.2877411Z   SUBARCH: arm64
+build	保存 ccache	2026-11-05T17:17:28.2877771Z   JOBS: 4
+build	保存 ccache	2026-11-05T17:17:28.2878135Z   CCACHE_DIR: /home/runner/.ccache
+build	保存 ccache	2026-11-05T17:17:28.2878605Z   CCACHE_MAXSIZE: 4G
+build	保存 ccache	2026-11-05T17:17:28.2879019Z   CCACHE_COMPILERCHECK: content
+build	保存 ccache	2026-11-05T17:17:28.2879514Z   OPLUS_FEATURE_PROCESS_RECLAIM: yes
+build	保存 ccache	2026-11-05T17:17:28.2880015Z   OPLUS_FEATURE_MEMLEAK_DETECT: yes
+build	保存 ccache	2026-11-05T17:17:28.2880532Z   OPLUS_FEATURE_UFS_SHOW_LATENCY: yes
+build	保存 ccache	2026-11-05T17:17:28.2881029Z   OPLUS_FEATURE_PADL_STATISTICS: yes
+build	保存 ccache	2026-11-05T17:17:28.2881523Z   OPLUS_FEATURE_UFSPLUS: yes
+build	保存 ccache	2026-11-05T17:17:28.2881998Z   OPLUS_FEATURE_WIFI_ROUTERBOOST: yes
+build	保存 ccache	2026-11-05T17:17:28.2882539Z   CROSS_CC: aarch64-linux-gnu-gcc-10
+build	保存 ccache	2026-11-05T17:17:28.2883274Z ##[endgroup]
+build	保存 ccache	2026-11-05T17:17:28.4045339Z (node:37306) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+build	保存 ccache	2026-11-05T17:17:28.4046794Z (Use `node --trace-deprecation ...` to show where the warning was created)
+build	保存 ccache	2026-11-05T17:17:28.4216957Z [command]/usr/bin/tar --posix -cf cache.tzst --exclude cache.tzst -P -C /home/runner/work/nl-k419/nl-k419 --files-from manifest.txt --use-compress-program zstdmt
+build	保存 ccache	2026-11-05T17:17:29.1650943Z (node:37306) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+build	保存 ccache	2026-11-05T17:17:30.1506467Z Sent 0 of 210251103 (0.0%), 0.0 MBs/sec
+build	保存 ccache	2026-11-05T17:17:31.1519054Z Sent 0 of 210251103 (0.0%), 0.0 MBs/sec
+build	保存 ccache	2026-11-05T17:17:32.1531590Z Sent 0 of 210251103 (0.0%), 0.0 MBs/sec
+build	保存 ccache	2026-11-05T17:17:33.1544439Z Sent 0 of 210251103 (0.0%), 0.0 MBs/sec
+build	保存 ccache	2026-11-05T17:17:34.1539007Z Sent 0 of 210251103 (0.0%), 0.0 MBs/sec
+build	保存 ccache	2026-11-05T17:17:35.1553358Z Sent 8924511 of 210251103 (4.2%), 1.4 MBs/sec
+build	保存 ccache	2026-11-05T17:17:36.1284415Z Sent 210251103 of 210251103 (100.0%), 28.7 MBs/sec
+build	保存 ccache	2026-11-05T17:17:36.3092351Z Cache saved with key: ccache-oppo/sm7250_s_12.1_reno4_5g-d4aae133f2392c80b115cbc08f688db4dd4589d0-42072720765
+build	Post 恢复 ccache	﻿2026-11-05T17:17:36.3257604Z Post job cleanup.
+build	Post 恢复 ccache	2026-11-05T17:17:36.4527250Z (node:37327) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+build	Post 恢复 ccache	2026-11-05T17:17:36.4528554Z (Use `node --trace-deprecation ...` to show where the warning was created)
+build	Post 恢复 ccache	2026-11-05T17:17:36.4741860Z [command]/usr/bin/tar --posix -cf cache.tzst --exclude cache.tzst -P -C /home/runner/work/nl-k419/nl-k419 --files-from manifest.txt --use-compress-program zstdmt
+build	Post 恢复 ccache	2026-11-05T17:17:37.1624637Z Failed to save: Unable to reserve cache with key ccache-oppo/sm7250_s_12.1_reno4_5g-d4aae133f2392c80b115cbc08f688db4dd4589d0-42072720765, another job may be creating this cache.
+build	Post 检出本仓库	﻿2026-11-05T17:17:37.2259820Z Post job cleanup.
+build	Post 检出本仓库	2026-11-05T17:17:37.3196575Z [command]/usr/bin/git version
+build	Post 检出本仓库	2026-11-05T17:17:37.3249718Z git version 2.56.0
+build	Post 检出本仓库	2026-11-05T17:17:37.3301198Z Temporarily overriding HOME='/home/runner/work/_temp/1a6fa83e-3de2-46bf-b6e7-60d59439fdce' before making global git config changes
+build	Post 检出本仓库	2026-11-05T17:17:37.3303469Z Adding repository directory to the temporary git global config as a safe directory
+build	Post 检出本仓库	2026-11-05T17:17:37.3309320Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/nl-k419/nl-k419
+build	Post 检出本仓库	2026-11-05T17:17:37.3370270Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+build	Post 检出本仓库	2026-11-05T17:17:37.3443865Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+build	Post 检出本仓库	2026-11-05T17:17:37.3797002Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+build	Post 检出本仓库	2026-11-05T17:17:37.3830349Z http.https://github.com/.extraheader
+build	Post 检出本仓库	2026-11-05T17:17:37.3847036Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+build	Post 检出本仓库	2026-11-05T17:17:37.3889261Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+build	Post 检出本仓库	2026-11-05T17:17:37.4211687Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+build	Post 检出本仓库	2026-11-05T17:17:37.4266020Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+build	Complete job	﻿2026-11-05T17:17:37.4715981Z Cleaning up orphan processes
+build	Complete job	2026-11-05T17:17:37.5115629Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/cache/save@v4, actions/cache@v4, actions/checkout@v4, actions/upload-artifact@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

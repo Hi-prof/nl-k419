@@ -201,7 +201,10 @@ jobs:
           assert symbols['__bss_start'] <= symbols['selinux_state'] < symbols['__bss_stop'] <= symbols['_end']
           image = Path('arch/arm64/boot/Image').read_bytes()
           assert image[0x38:0x3c] == b'ARM\x64'
-          print('PASS: release, module configuration, exports, Image header and SELinux BSS layout')
+          # vermagic 必须与厂商 .ko 的字符串逐字节一致，否则 insmod 直接 -ENOEXEC
+          vm = b'4.19.157-perf+ SMP preempt mod_unload modversions aarch64'
+          assert image.count(vm) >= 1, 'VERMAGIC_STRING 里缺 modversions，厂商 .ko 装不上'
+          print('PASS: release, module configuration, exports, Image header, vermagic and SELinux BSS layout')
           PY
 
       - name: 上传产物

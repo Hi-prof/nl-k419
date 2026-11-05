@@ -1,0 +1,1609 @@
+awk: cmd. line:1: (FILENAME=- FNR=1) fatal: attempt to access field -1
+OplusKernelEnvConfig.mk:185: "ln the wakelock_profiler_h fail, mkis /home/runner/work/nl-k419/nl-k419/ksrc, dir is , wakelock_dir is "
+awk: cmd. line:1: (FILENAME=- FNR=1) fatal: attempt to access field -1
+OplusKernelEnvConfig.mk:185: "ln the wakelock_profiler_h fail, mkis /home/runner/work/nl-k419/nl-k419/ksrc, dir is , wakelock_dir is "
+  HOSTCC  scripts/basic/fixdep
+  HOSTCC  scripts/kconfig/conf.o
+  HOSTCC  scripts/kconfig/zconf.tab.o
+  HOSTLD  scripts/kconfig/conf
+scripts/kconfig/conf  --syncconfig Kconfig
+awk: cmd. line:1: (FILENAME=- FNR=1) fatal: attempt to access field -1
+OplusKernelEnvConfig.mk:185: "ln the wakelock_profiler_h fail, mkis /home/runner/work/nl-k419/nl-k419/ksrc, dir is , wakelock_dir is "
+  HOSTCC  scripts/dtc/dtc.o
+  HOSTCC  scripts/dtc/flattree.o
+  HOSTCC  scripts/dtc/fstree.o
+  HOSTCC  scripts/dtc/data.o
+  HOSTCC  scripts/bin2c
+  HOSTCC  scripts/dtc/livetree.o
+  HOSTCC  scripts/dtc/treesource.o
+  HOSTCC  scripts/mod/mk_elfconfig
+  HOSTCC  scripts/dtc/srcpos.o
+  MKELF   scripts/mod/elfconfig.h
+  HOSTCC  scripts/dtc/checks.o
+  HOSTCC  scripts/mod/modpost.o
+  HOSTCC  scripts/dtc/util.o
+  HOSTCC  scripts/dtc/dtc-lexer.lex.o
+  HOSTCC  scripts/mod/file2alias.o
+  HOSTCC  scripts/selinux/genheaders/genheaders
+  HOSTCC  scripts/dtc/dtc-parser.tab.o
+  HOSTCC  scripts/mod/sumversion.o
+  HOSTLD  scripts/mod/modpost
+  HOSTLD  scripts/dtc/dtc
+  HOSTCC  scripts/selinux/mdp/mdp
+  HOSTCC  scripts/kallsyms
+  HOSTCC  scripts/pnmtologo
+  HOSTCC  scripts/sortextable
+  HOSTCC  scripts/asn1_compiler
+  HOSTCC  scripts/extract-cert
+scripts/extract-cert.c: In function ‘display_openssl_errors’:
+scripts/extract-cert.c:46:9: warning: ‘ERR_get_error_line’ is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+   46 |         while ((e = ERR_get_error_line(&file, &line))) {
+      |         ^~~~~
+In file included from scripts/extract-cert.c:23:
+/usr/include/openssl/err.h:411:15: note: declared here
+  411 | unsigned long ERR_get_error_line(const char **file, int *line);
+      |               ^~~~~~~~~~~~~~~~~~
+scripts/extract-cert.c: In function ‘drain_openssl_errors’:
+scripts/extract-cert.c:59:9: warning: ‘ERR_get_error_line’ is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+   59 |         while (ERR_get_error_line(&file, &line)) {}
+      |         ^~~~~
+In file included from scripts/extract-cert.c:23:
+/usr/include/openssl/err.h:411:15: note: declared here
+  411 | unsigned long ERR_get_error_line(const char **file, int *line);
+      |               ^~~~~~~~~~~~~~~~~~
+scripts/extract-cert.c: In function ‘main’:
+scripts/extract-cert.c:124:17: warning: ‘ENGINE_load_builtin_engines’ is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  124 |                 ENGINE_load_builtin_engines();
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from scripts/extract-cert.c:24:
+/usr/include/openssl/engine.h:358:28: note: declared here
+  358 | OSSL_DEPRECATEDIN_3_0 void ENGINE_load_builtin_engines(void);
+      |                            ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+scripts/extract-cert.c:126:17: warning: ‘ENGINE_by_id’ is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  126 |                 e = ENGINE_by_id("pkcs11");
+      |                 ^
+In file included from scripts/extract-cert.c:24:
+/usr/include/openssl/engine.h:336:31: note: declared here
+  336 | OSSL_DEPRECATEDIN_3_0 ENGINE *ENGINE_by_id(const char *id);
+      |                               ^~~~~~~~~~~~
+scripts/extract-cert.c:128:17: warning: ‘ENGINE_init’ is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  128 |                 if (ENGINE_init(e))
+      |                 ^~
+In file included from scripts/extract-cert.c:24:
+/usr/include/openssl/engine.h:620:27: note: declared here
+  620 | OSSL_DEPRECATEDIN_3_0 int ENGINE_init(ENGINE *e);
+      |                           ^~~~~~~~~~~
+scripts/extract-cert.c:133:25: warning: ‘ENGINE_ctrl_cmd_string’ is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  133 |                         ERR(!ENGINE_ctrl_cmd_string(e, "PIN", key_pass, 0), "Set PKCS#11 PIN");
+      |                         ^~~
+In file included from scripts/extract-cert.c:24:
+/usr/include/openssl/engine.h:479:5: note: declared here
+  479 | int ENGINE_ctrl_cmd_string(ENGINE *e, const char *cmd_name, const char *arg,
+      |     ^~~~~~~~~~~~~~~~~~~~~~
+scripts/extract-cert.c:134:17: warning: ‘ENGINE_ctrl_cmd’ is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  134 |                 ENGINE_ctrl_cmd(e, "LOAD_CERT_CTRL", 0, &parms, NULL, 1);
+      |                 ^~~~~~~~~~~~~~~
+In file included from scripts/extract-cert.c:24:
+/usr/include/openssl/engine.h:450:27: note: declared here
+  450 | OSSL_DEPRECATEDIN_3_0 int ENGINE_ctrl_cmd(ENGINE *e, const char *cmd_name,
+      |                           ^~~~~~~~~~~~~~~
+  HOSTCC  scripts/sign-file
+scripts/sign-file.c: In function ‘display_openssl_errors’:
+scripts/sign-file.c:89:9: warning: ‘ERR_get_error_line’ is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+   89 |         while ((e = ERR_get_error_line(&file, &line))) {
+      |         ^~~~~
+In file included from scripts/sign-file.c:29:
+/usr/include/openssl/err.h:411:15: note: declared here
+  411 | unsigned long ERR_get_error_line(const char **file, int *line);
+      |               ^~~~~~~~~~~~~~~~~~
+scripts/sign-file.c: In function ‘drain_openssl_errors’:
+scripts/sign-file.c:102:9: warning: ‘ERR_get_error_line’ is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  102 |         while (ERR_get_error_line(&file, &line)) {}
+      |         ^~~~~
+In file included from scripts/sign-file.c:29:
+/usr/include/openssl/err.h:411:15: note: declared here
+  411 | unsigned long ERR_get_error_line(const char **file, int *line);
+      |               ^~~~~~~~~~~~~~~~~~
+scripts/sign-file.c: In function ‘read_private_key’:
+scripts/sign-file.c:142:17: warning: ‘ENGINE_load_builtin_engines’ is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  142 |                 ENGINE_load_builtin_engines();
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from scripts/sign-file.c:30:
+/usr/include/openssl/engine.h:358:28: note: declared here
+  358 | OSSL_DEPRECATEDIN_3_0 void ENGINE_load_builtin_engines(void);
+      |                            ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+scripts/sign-file.c:144:17: warning: ‘ENGINE_by_id’ is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  144 |                 e = ENGINE_by_id("pkcs11");
+      |                 ^
+In file included from scripts/sign-file.c:30:
+/usr/include/openssl/engine.h:336:31: note: declared here
+  336 | OSSL_DEPRECATEDIN_3_0 ENGINE *ENGINE_by_id(const char *id);
+      |                               ^~~~~~~~~~~~
+scripts/sign-file.c:146:17: warning: ‘ENGINE_init’ is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  146 |                 if (ENGINE_init(e))
+      |                 ^~
+In file included from scripts/sign-file.c:30:
+/usr/include/openssl/engine.h:620:27: note: declared here
+  620 | OSSL_DEPRECATEDIN_3_0 int ENGINE_init(ENGINE *e);
+      |                           ^~~~~~~~~~~
+scripts/sign-file.c:151:25: warning: ‘ENGINE_ctrl_cmd_string’ is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  151 |                         ERR(!ENGINE_ctrl_cmd_string(e, "PIN", key_pass, 0),
+      |                         ^~~
+In file included from scripts/sign-file.c:30:
+/usr/include/openssl/engine.h:479:5: note: declared here
+  479 | int ENGINE_ctrl_cmd_string(ENGINE *e, const char *cmd_name, const char *arg,
+      |     ^~~~~~~~~~~~~~~~~~~~~~
+scripts/sign-file.c:153:17: warning: ‘ENGINE_load_private_key’ is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  153 |                 private_key = ENGINE_load_private_key(e, private_key_name,
+      |                 ^~~~~~~~~~~
+In file included from scripts/sign-file.c:30:
+/usr/include/openssl/engine.h:638:11: note: declared here
+  638 | EVP_PKEY *ENGINE_load_private_key(ENGINE *e, const char *key_id,
+      |           ^~~~~~~~~~~~~~~~~~~~~~~
+  CALL    scripts/checksyscalls.sh
+  CC      init/main.o
+  CC      init/do_mounts.o
+  CC      init/do_mounts_rd.o
+  CHK     include/generated/compile.h
+  UPD     include/generated/compile.h
+  CC      arch/arm64/kernel/probes/uprobes.o
+  CC      init/do_mounts_initrd.o
+  CC      arch/arm64/kernel/probes/decode-insn.o
+  CC      arch/arm64/mm/dma-mapping.o
+  CC      arch/arm64/mm/extable.o
+  CC      arch/arm64/kernel/probes/simulate-insn.o
+  CC      init/do_mounts_dm.o
+  AR      arch/arm64/kernel/probes/built-in.a
+  OBJCOPY arch/arm64/kernel/vdso/vdso.so
+  CC      init/noinitramfs.o
+  CC      arch/arm64/mm/fault.o
+  CC      init/initramfs.o
+  CC      arch/arm64/mm/init.o
+  AS      arch/arm64/kernel/vdso/vdso.o
+  AR      arch/arm64/kernel/vdso/built-in.a
+  AS      arch/arm64/mm/cache.o
+  CC      init/calibrate.o
+  CC      arch/arm64/mm/copypage.o
+  CC      arch/arm64/kernel/debug-monitors.o
+  CC      init/init_task.o
+  HOSTCC  usr/gen_init_cpio
+  AS      arch/arm64/kernel/entry.o
+  CC      arch/arm64/mm/flush.o
+  CC      arch/arm64/kernel/irq.o
+  CC      arch/arm64/mm/ioremap.o
+  GEN     usr/initramfs_data.cpio
+  CC      arch/arm64/kernel/fpsimd.o
+  CC      arch/arm64/mm/mmap.o
+  AS      arch/arm64/kernel/entry-fpsimd.o
+  CC      arch/arm64/mm/pgd.o
+  AS      usr/initramfs_data.o
+  CC      arch/arm64/kernel/process.o
+  AR      usr/built-in.a
+  CC      arch/arm64/mm/mmu.o
+  CC      arch/arm64/kernel/ptrace.o
+  CC      arch/arm64/mm/context.o
+  CC      arch/arm64/net/bpf_jit_comp.o
+  AR      arch/arm64/net/built-in.a
+  CC      arch/arm64/kernel/setup.o
+  AS      arch/arm64/mm/proc.o
+  AR      arch/arm64/crypto/built-in.a
+  CC      arch/arm64/mm/pageattr.o
+  AR      arch/arm64/mm/built-in.a
+  CC      arch/arm64/kernel/signal.o
+  CC      arch/arm64/kernel/sys.o
+  CC      arch/arm64/kernel/stacktrace.o
+  CC      init/version.o
+  AR      init/built-in.a
+  CC      arch/arm64/kernel/time.o
+Generating X.509 key generation config
+  CC      arch/arm64/kernel/traps.o
+  CC      kernel/bpf/core.o
+  CC      kernel/cgroup/cgroup.o
+  CC      certs/system_keyring.o
+  EXTRACT_CERTS   
+  CC      arch/arm64/kernel/io.o
+  CC      kernel/cgroup/rstat.o
+  CC      kernel/bpf/syscall.o
+  CC      arch/arm64/kernel/vdso.o
+  CC      kernel/cgroup/namespace.o
+  AS      arch/arm64/kernel/hyp-stub.o
+  CC      kernel/bpf/verifier.o
+  CC      kernel/cgroup/cgroup-v1.o
+  CC      arch/arm64/kernel/psci.o
+  CC      kernel/bpf/inode.o
+  CC      kernel/cgroup/freezer.o
+  CC      arch/arm64/kernel/cpu_ops.o
+  CC      kernel/cgroup/legacy_freezer.o
+  CC      kernel/bpf/helpers.o
+  CC      arch/arm64/kernel/insn.o
+  CC      kernel/bpf/tnum.o
+  CC      kernel/cgroup/cpuset.o
+  AR      kernel/cgroup/built-in.a
+  CC      arch/arm64/kernel/return_address.o
+  CC      kernel/bpf/hashtab.o
+  CC      kernel/bpf/arraymap.o
+  CC      arch/arm64/kernel/cpuinfo.o
+  CC      kernel/bpf/percpu_freelist.o
+  CC      kernel/bpf/bpf_lru_list.o
+  CC      arch/arm64/kernel/cpu_errata.o
+  CC      kernel/dma/mapping.o
+  CC      arch/arm64/kernel/cpufeature.o
+  CC      kernel/bpf/lpm_trie.o
+  CC      kernel/dma/contiguous.o
+  CC      kernel/bpf/map_in_map.o
+  CC      arch/arm64/kernel/alternative.o
+  CC      kernel/dma/coherent.o
+  CC      arch/arm64/kernel/cacheinfo.o
+  CC      kernel/bpf/local_storage.o
+  CC      kernel/dma/removed.o
+  CC      kernel/bpf/disasm.o
+  CC      arch/arm64/kernel/smp.o
+  CC      kernel/dma/direct.o
+  CC      arch/arm64/kernel/smp_spin_table.o
+  CC      kernel/bpf/btf.o
+  CC      kernel/dma/swiotlb.o
+  AR      kernel/dma/built-in.a
+  CC      arch/arm64/kernel/topology.o
+  CC      kernel/bpf/devmap.o
+  AS      arch/arm64/kernel/smccc-call.o
+  CC      kernel/events/core.o
+  CC      kernel/bpf/cpumap.o
+  CC      arch/arm64/kernel/syscall.o
+  CC      kernel/events/ring_buffer.o
+  CC      arch/arm64/kernel/sys32.o
+  CC      kernel/bpf/offload.o
+  CC      kernel/events/callchain.o
+  CC      arch/arm64/kernel/signal32.o
+  CC      kernel/bpf/stackmap.o
+  CC      kernel/events/hw_breakpoint.o
+  CC      arch/arm64/kernel/sys_compat.o
+  CC      kernel/bpf/cgroup.o
+  AS      arch/arm64/kernel/sigreturn32.o
+  CC      kernel/events/uprobes.o
+  AS      arch/arm64/kernel/kuser32.o
+  AR      kernel/events/built-in.a
+  CC      kernel/bpf/reuseport_array.o
+  AR      kernel/bpf/built-in.a
+  CC      arch/arm64/kernel/arm64ksyms.o
+  CC      kernel/irq/irqdesc.o
+  CC      arch/arm64/kernel/module.o
+  CC      mm/filemap.o
+  CC      arch/arm64/kernel/module-plts.o
+  CC      kernel/irq/handle.o
+  CC      mm/mempool.o
+  CC      arch/arm64/kernel/perf_regs.o
+  CC      kernel/irq/manage.o
+  CC      mm/oom_kill.o
+  CC      kernel/irq/spurious.o
+  CC      arch/arm64/kernel/perf_callchain.o
+  CC      mm/fadvise.o
+  CC      kernel/irq/resend.o
+  CC      arch/arm64/kernel/perf_event.o
+  CC      mm/maccess.o
+  CC      kernel/irq/chip.o
+  CC      arch/arm64/kernel/perf_trace_counters.o
+  CC      kernel/irq/dummychip.o
+  CC      mm/page_alloc.o
+  CC      arch/arm64/kernel/perf_trace_user.o
+  CC      kernel/irq/devres.o
+  CC      mm/page-writeback.o
+  CC      arch/arm64/kernel/hw_breakpoint.o
+  CC      kernel/irq/autoprobe.o
+  AS      arch/arm64/kernel/sleep.o
+  CC      mm/readahead.o
+  CC      kernel/irq/irqdomain.o
+  CC      arch/arm64/kernel/suspend.o
+  CC      kernel/irq/proc.o
+  CC      mm/swap.o
+  CC      arch/arm64/kernel/cpuidle.o
+  CC      kernel/irq/cpuhotplug.o
+  CC      mm/truncate.o
+  CC      arch/arm64/kernel/pci.o
+  CC      kernel/irq/pm.o
+  CC      arch/arm64/kernel/armv8_deprecated.o
+  CC      kernel/irq/msi.o
+  CC      arch/arm64/kernel/kaslr.o
+  CC      kernel/irq/affinity.o
+  AR      kernel/irq/built-in.a
+  CC      arch/arm64/kernel/ssbd.o
+  AR      kernel/livepatch/built-in.a
+  AS      arch/arm64/kernel/head.o
+  CC      kernel/locking/mutex.o
+  LDS     arch/arm64/kernel/vmlinux.lds
+  AR      arch/arm64/kernel/built-in.a
+  CC      kernel/locking/semaphore.o
+  CC      kernel/locking/rwsem.o
+  CC      kernel/power/qos.o
+  CC      kernel/locking/percpu-rwsem.o
+  CC      kernel/locking/spinlock.o
+  CC      kernel/power/main.o
+  CC      kernel/locking/osq_lock.o
+  CC      kernel/power/process.o
+  CC      kernel/locking/qspinlock.o
+  CC      kernel/locking/rtmutex.o
+  CC      kernel/power/suspend.o
+  CC      kernel/locking/rwsem-xadd.o
+  CC      kernel/power/wakelock.o
+  CC      kernel/locking/qrwlock.o
+  AR      kernel/locking/built-in.a
+  CC      kernel/power/poweroff.o
+  CC      kernel/power/energy_model.o
+  CC      kernel/power/wakeup_reason.o
+  AR      kernel/power/built-in.a
+  CC      mm/shmem.o
+  CC      kernel/printk/printk.o
+  CC      kernel/printk/printk_safe.o
+  AR      kernel/printk/built-in.a
+  AR      fs/configfs/built-in.a
+  AR      fs/crypto/built-in.a
+  AR      fs/devpts/built-in.a
+  AR      fs/ecryptfs/built-in.a
+  AR      fs/exofs/built-in.a
+  AR      fs/exportfs/built-in.a
+  AR      fs/f2fs/built-in.a
+  AR      fs/fat/built-in.a
+  AR      fs/fuse/built-in.a
+  AR      fs/incfs/built-in.a
+  CC      fs/kernfs/mount.o
+  CC      mm/vmscan.o
+mm/vmscan.c: In function ‘get_scan_count’:
+mm/vmscan.c:2472:16: warning: unused variable ‘totalswap’ [-Wunused-variable]
+ 2472 |  unsigned long totalswap = total_swap_pages;
+      |                ^~~~~~~~~
+In file included from ./include/linux/printk.h:7,
+                 from ./include/linux/kernel.h:13,
+                 from ./include/asm-generic/bug.h:18,
+                 from ./arch/arm64/include/asm/bug.h:37,
+                 from ./include/linux/bug.h:5,
+                 from ./include/linux/mmdebug.h:5,
+                 from ./include/linux/mm.h:9,
+                 from mm/vmscan.c:16:
+mm/vmscan.c: In function ‘swappiness_para_write’:
+./include/linux/kern_levels.h:5:18: warning: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘size_t’ {aka ‘long unsigned int’} [-Wformat=]
+    5 | #define KERN_SOH "\001"  /* ASCII Start Of Header */
+      |                  ^~~~~~
+./include/linux/kern_levels.h:11:18: note: in expansion of macro ‘KERN_SOH’
+   11 | #define KERN_ERR KERN_SOH "3" /* error conditions */
+      |                  ^~~~~~~~
+./include/linux/printk.h:304:9: note: in expansion of macro ‘KERN_ERR’
+  304 |  printk(KERN_ERR pr_fmt(fmt), ##__VA_ARGS__)
+      |         ^~~~~~~~
+mm/vmscan.c:4654:3: note: in expansion of macro ‘pr_err’
+ 4654 |   pr_err("len %d is too long\n", len);
+      |   ^~~~~~
+  CC      fs/kernfs/inode.o
+  CC      fs/kernfs/dir.o
+  CC      fs/kernfs/file.o
+  CC      fs/kernfs/symlink.o
+  AR      fs/kernfs/built-in.a
+  CC      fs/nls/nls_base.o
+  CC      kernel/rcu/update.o
+  CC      fs/nls/nls_cp437.o
+  CC      fs/nls/nls_iso8859-1.o
+  CC      fs/nls/nls_utf8.o
+  AR      fs/nls/built-in.a
+  CC      fs/notify/dnotify/dnotify.o
+  AR      fs/notify/dnotify/built-in.a
+  AR      fs/notify/fanotify/built-in.a
+  CC      fs/notify/inotify/inotify_fsnotify.o
+  CC      fs/notify/inotify/inotify_user.o
+In file included from ./include/linux/printk.h:7,
+                 from ./include/linux/kernel.h:13,
+                 from ./include/linux/list.h:9,
+                 from ./include/linux/wait.h:7,
+                 from ./include/linux/wait_bit.h:8,
+                 from ./include/linux/fs.h:6,
+                 from fs/notify/inotify/inotify_user.c:26:
+fs/notify/inotify/inotify_user.c: In function ‘inotify_new_watch’:
+./include/linux/kern_levels.h:5:18: warning: format ‘%u’ expects argument of type ‘unsigned int’, but argument 2 has type ‘kuid_t’ [-Wformat=]
+    5 | #define KERN_SOH "\001"  /* ASCII Start Of Header */
+      |                  ^~~~~~
+./include/linux/kern_levels.h:11:18: note: in expansion of macro ‘KERN_SOH’
+   11 | #define KERN_ERR KERN_SOH "3" /* error conditions */
+      |                  ^~~~~~~~
+fs/notify/inotify/inotify_user.c:588:11: note: in expansion of macro ‘KERN_ERR’
+  588 |    printk(KERN_ERR "inotify_new_watch:return false,uid=%ul\n", current_uid());
+      |           ^~~~~~~~
+fs/notify/inotify/inotify_user.c:588:57: note: format string is defined here
+  588 |    printk(KERN_ERR "inotify_new_watch:return false,uid=%ul\n", current_uid());
+      |                                                        ~^
+      |                                                         |
+      |                                                         unsigned int
+  AR      fs/notify/inotify/built-in.a
+  CC      fs/notify/fsnotify.o
+  CC      fs/notify/notification.o
+  CC      fs/notify/group.o
+  CC      fs/notify/mark.o
+  CC      kernel/rcu/sync.o
+  CC      fs/notify/fdinfo.o
+  AR      fs/notify/built-in.a
+  AR      fs/overlayfs/built-in.a
+  AR      fs/proc/built-in.a
+  AR      fs/pstore/built-in.a
+  CC      fs/quota/dquot.o
+  CC      fs/quota/quota_v2.o
+  CC      fs/quota/quota_tree.o
+  CC      fs/quota/quota.o
+  CC      fs/quota/kqid.o
+  CC      fs/quota/netlink.o
+  AR      fs/quota/built-in.a
+  AR      fs/ramfs/built-in.a
+  CC      fs/sysfs/file.o
+  CC      fs/sysfs/dir.o
+  CC      mm/util.o
+  CC      fs/sysfs/symlink.o
+  CC      fs/sysfs/mount.o
+  CC      fs/sysfs/group.o
+  AR      fs/sysfs/built-in.a
+  AR      fs/tracefs/built-in.a
+  CC      fs/verity/enable.o
+  CC      fs/verity/hash_algs.o
+  CC      fs/verity/init.o
+  CC      fs/verity/measure.o
+  CC      fs/verity/open.o
+  CC      fs/verity/verify.o
+  CC      fs/verity/signature.o
+  AR      fs/verity/built-in.a
+  CC      fs/open.o
+  CC      kernel/rcu/srcutree.o
+  CC      fs/read_write.o
+  CC      fs/file_table.o
+  CC      fs/super.o
+  CC      mm/mmzone.o
+  CC      fs/char_dev.o
+  CC      fs/stat.o
+  CC      fs/exec.o
+  CC      fs/pipe.o
+  CC      fs/namei.o
+  CC      fs/fcntl.o
+  CC      fs/ioctl.o
+  CC      fs/readdir.o
+  CC      fs/select.o
+  CC      fs/dcache.o
+  CC      fs/inode.o
+  CC      fs/attr.o
+  CC      fs/bad_inode.o
+  CC      fs/file.o
+  CC      fs/filesystems.o
+  CC      fs/namespace.o
+  CC      fs/seq_file.o
+  CC      fs/xattr.o
+  CC      fs/libfs.o
+  CC      fs/fs-writeback.o
+  CC      fs/pnode.o
+  CC      fs/splice.o
+  CC      fs/sync.o
+  CC      fs/utimes.o
+  CC      fs/d_path.o
+  CC      fs/stack.o
+  CC      fs/fs_struct.o
+  CC      fs/statfs.o
+  CC      fs/fs_pin.o
+  CC      fs/nsfs.o
+  CC      fs/buffer.o
+  CC      fs/block_dev.o
+  CC      fs/direct-io.o
+  CC      fs/mpage.o
+  CC      fs/proc_namespace.o
+  CC      fs/eventpoll.o
+  CC      fs/anon_inodes.o
+  CC      fs/signalfd.o
+  CC      mm/vmstat.o
+  CC      fs/timerfd.o
+  CC      fs/eventfd.o
+  CC      fs/aio.o
+###
+### Now generating an X.509 key pair to be used for signing modules.
+###
+### If this takes a long time, you might wish to run rngd in the
+### background to keep the supply of entropy topped up.  It
+### needs to be run as root, and uses a hardware random
+### number generator if one is available.
+###
+...+...+..+...................+...+........+.......+.....+.+.....+......+.+........+....+...+.....+...+......+....+.........+..+.+..+...+............+.............+...+.....+.+.........+.....+......+.+........+.+.....+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*.............+..+............+...+.+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*.....+.+.....+.......+............+.........+..+....+......+........+....+..+....+.....+...............+.........+.............+...+..............+.......+...........+....+......+..+...............+.......+...........+...+.+...+..+.............+...+.....+.......+..+.+...+..+.............+.....+........................+.......+........+.+.................+.......+..+.+..............+......+....+..................+...+...+..+....+..............+.......+..+...+......................+..+.+.....+..........+............+..+...+.+..............+.+..+...+......+.+..+......+............+..........+..+......+......+.+.....+...+....+..+...................+............+...+.....+................+........+.......+...+...+........+......+......+.........+......+.......+........+...+.+...+...+........+...............+......+....+.....+.+...........+.......+..+.+...+..............+.+..............................+..+.......+......+......+.....+....+.....+.+...+..+......+..................+....+.....+..........+......+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+....+.....+.+..+..................+....+.....+...+..........+...+........+....+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*.+......+...+......+.....+...+............+...+......+....+......+..+...+......+.............+.....+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*.......+........+.......+.....+.......+...+.....+..................+....+..+.+.................+...+......................+..+...+............+.+.....+.........+.+..................+..+.............+...........+.............+...+.....+....+...+..+.+...+...........+.........+.........+...+.........+....+.....+.......+..............................+........+......+.........+.........+.+..+............+..................+...+....+.....+.+..+.......+....................+.+.....+......+.+........+.+........+.+.................+.......+......+...........+......+.......+......+..............+......+.+......+...+..............+.+......+.....+.........+....+...............+............+...+........+.............+......+...+..+.........+.........+......+....+.....+......+....+..+......+............+..........+........+...+.+...........+....+.........+.....+.........+......+.+........................+..+.............+.........+..+......+....+........+.............+...............+...+..+.........+......+.......+...............+.....+..........+..+..........+...+...+...+............+...+.................+.........+...+............+......+...+....+.......................+....+......+..+...+....+.....+.+...+...........+...+.....................+.+...+..+...............+.+............+......+...............+...............+.................+....+....................+....+...........+......+...............+.......+...+.................+......+......+.+..+.+..............+.......+..............+...............................+...+............+.........+...........+......+...+......+.+............+..+.............+........+.............+............+...+...........+.........+......+..........+........+................+..+.........+.+..+..................+....+...+...+...+..+.......+..+.+........................+...........+....+.....+.............+..+...+.+..+.........+...+.+.....+................+..............+.+......+........+...............+.+......+...+..+.........+....+......+...+..+...+......+.......+..+.+..+..........+.......................+......+.........+.+...+..+................+..+.......+...+..+....+.....+.+...........+.........+.+..+................+............+..+.......+.........+...........+.+.....+.......+.....+.+.........+...+............+..................+...+..+.........+.+........+......+....+.....+....+......+.........+....................+...+....+.....................+..+.+.....+.+...........+.........+.+...+..+......................+........+............+...+....+.....+.+.........+........+.+..+.......+...+............................................+....+.....+.........+......+.+....................+...+.......+...+...+.....+.........+.........+..........+...........+...+......+.......+............+...+..+......+.......+..+.+..+....+...+..+.........+.+....................+....+..+............+...........................+.+..+.......+......+.........+.....+.+..+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+-----
+###
+### Key pair generated.
+###
+  CC      fs/locks.o
+  EXTRACT_CERTS   certs/signing_key.pem
+  CC      fs/compat.o
+  AS      certs/system_certificates.o
+  AR      certs/built-in.a
+  CC      fs/compat_ioctl.o
+  CC      fs/binfmt_script.o
+  CC      fs/binfmt_elf.o
+  CC      fs/compat_binfmt_elf.o
+  CC      fs/posix_acl.o
+  CC      fs/coredump.o
+  CC      fs/drop_caches.o
+  CC      fs/dcookies.o
+  AR      fs/built-in.a
+  CC      kernel/rcu/rcu_segcblist.o
+  CC      mm/backing-dev.o
+  CC      kernel/rcu/tree.o
+  AR      kernel/rcu/built-in.a
+  CC      mm/mm_init.o
+  CC      kernel/time/time.o
+  AR      ipc/built-in.a
+  CC      mm/mmu_context.o
+  CC      kernel/sched/loadavg.o
+  CC      kernel/time/timer.o
+  CC      kernel/trace/trace_clock.o
+  CC      mm/percpu.o
+  CC      kernel/time/hrtimer.o
+  CC      kernel/trace/ring_buffer.o
+  CC      kernel/time/timekeeping.o
+  CC      kernel/time/ntp.o
+  CC      mm/slab_common.o
+  CC      kernel/time/clocksource.o
+  CC      kernel/time/jiffies.o
+  CC      kernel/sched/core.o
+In file included from kernel/sched/core.c:30:
+kernel/sched/walt.h: In function ‘walt_task_dump’:
+kernel/sched/walt.h:348:49: warning: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 3 has type ‘pid_t’ {aka ‘int’} [-Wformat=]
+  348 | #define SCHED_PRINT(arg)        printk_deferred("%s=%llu", #arg, arg)
+      |                                                 ^~~~~~~~~
+......
+  357 |  SCHED_PRINT(p->pid);
+      |              ~~~~~~                              
+      |               |
+      |               pid_t {aka int}
+kernel/sched/walt.h:357:2: note: in expansion of macro ‘SCHED_PRINT’
+  357 |  SCHED_PRINT(p->pid);
+      |  ^~~~~~~~~~~
+kernel/sched/walt.h:348:56: note: format string is defined here
+  348 | #define SCHED_PRINT(arg)        printk_deferred("%s=%llu", #arg, arg)
+      |                                                     ~~~^
+      |                                                        |
+      |                                                        long long unsigned int
+      |                                                     %u
+kernel/sched/walt.h:348:49: warning: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 3 has type ‘u32’ {aka ‘unsigned int’} [-Wformat=]
+  348 | #define SCHED_PRINT(arg)        printk_deferred("%s=%llu", #arg, arg)
+      |                                                 ^~~~~~~~~
+......
+  359 |  SCHED_PRINT(p->ravg.demand);
+      |              ~~~~~~~~~~~~~~                      
+      |                     |
+      |                     u32 {aka unsigned int}
+kernel/sched/walt.h:359:2: note: in expansion of macro ‘SCHED_PRINT’
+  359 |  SCHED_PRINT(p->ravg.demand);
+      |  ^~~~~~~~~~~
+kernel/sched/walt.h:348:56: note: format string is defined here
+  348 | #define SCHED_PRINT(arg)        printk_deferred("%s=%llu", #arg, arg)
+      |                                                     ~~~^
+      |                                                        |
+      |                                                        long long unsigned int
+      |                                                     %u
+kernel/sched/walt.h:348:49: warning: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 3 has type ‘u32’ {aka ‘unsigned int’} [-Wformat=]
+  348 | #define SCHED_PRINT(arg)        printk_deferred("%s=%llu", #arg, arg)
+      |                                                 ^~~~~~~~~
+......
+  360 |  SCHED_PRINT(p->ravg.coloc_demand);
+      |              ~~~~~~~~~~~~~~~~~~~~                
+      |                     |
+      |                     u32 {aka unsigned int}
+kernel/sched/walt.h:360:2: note: in expansion of macro ‘SCHED_PRINT’
+  360 |  SCHED_PRINT(p->ravg.coloc_demand);
+      |  ^~~~~~~~~~~
+kernel/sched/walt.h:348:56: note: format string is defined here
+  348 | #define SCHED_PRINT(arg)        printk_deferred("%s=%llu", #arg, arg)
+      |                                                     ~~~^
+      |                                                        |
+      |                                                        long long unsigned int
+      |                                                     %u
+kernel/sched/walt.h:348:49: warning: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 3 has type ‘unsigned int’ [-Wformat=]
+  348 | #define SCHED_PRINT(arg)        printk_deferred("%s=%llu", #arg, arg)
+      |                                                 ^~~~~~~~~
+......
+  361 |  SCHED_PRINT(sched_ravg_window);
+      |              ~~~~~~~~~~~~~~~~~                   
+      |              |
+      |              unsigned int
+kernel/sched/walt.h:361:2: note: in expansion of macro ‘SCHED_PRINT’
+  361 |  SCHED_PRINT(sched_ravg_window);
+      |  ^~~~~~~~~~~
+kernel/sched/walt.h:348:56: note: format string is defined here
+  348 | #define SCHED_PRINT(arg)        printk_deferred("%s=%llu", #arg, arg)
+      |                                                     ~~~^
+      |                                                        |
+      |                                                        long long unsigned int
+      |                                                     %u
+kernel/sched/walt.h:348:49: warning: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 3 has type ‘unsigned int’ [-Wformat=]
+  348 | #define SCHED_PRINT(arg)        printk_deferred("%s=%llu", #arg, arg)
+      |                                                 ^~~~~~~~~
+......
+  362 |  SCHED_PRINT(new_sched_ravg_window);
+      |              ~~~~~~~~~~~~~~~~~~~~~               
+      |              |
+      |              unsigned int
+kernel/sched/walt.h:362:2: note: in expansion of macro ‘SCHED_PRINT’
+  362 |  SCHED_PRINT(new_sched_ravg_window);
+      |  ^~~~~~~~~~~
+kernel/sched/walt.h:348:56: note: format string is defined here
+  348 | #define SCHED_PRINT(arg)        printk_deferred("%s=%llu", #arg, arg)
+      |                                                     ~~~^
+      |                                                        |
+      |                                                        long long unsigned int
+      |                                                     %u
+kernel/sched/walt.h:348:49: warning: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 3 has type ‘int’ [-Wformat=]
+  348 | #define SCHED_PRINT(arg)        printk_deferred("%s=%llu", #arg, arg)
+      |                                                 ^~~~~~~~~
+......
+  378 |  SCHED_PRINT(p->misfit);
+      |              ~~~~~~~~~                           
+      |               |
+      |               int
+kernel/sched/walt.h:378:2: note: in expansion of macro ‘SCHED_PRINT’
+  378 |  SCHED_PRINT(p->misfit);
+      |  ^~~~~~~~~~~
+kernel/sched/walt.h:348:56: note: format string is defined here
+  348 | #define SCHED_PRINT(arg)        printk_deferred("%s=%llu", #arg, arg)
+      |                                                     ~~~^
+      |                                                        |
+      |                                                        long long unsigned int
+      |                                                     %u
+kernel/sched/walt.h:348:49: warning: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 3 has type ‘u32’ {aka ‘unsigned int’} [-Wformat=]
+  348 | #define SCHED_PRINT(arg)        printk_deferred("%s=%llu", #arg, arg)
+      |                                                 ^~~~~~~~~
+......
+  379 |  SCHED_PRINT(p->unfilter);
+      |              ~~~~~~~~~~~                         
+      |               |
+      |               u32 {aka unsigned int}
+kernel/sched/walt.h:379:2: note: in expansion of macro ‘SCHED_PRINT’
+  379 |  SCHED_PRINT(p->unfilter);
+      |  ^~~~~~~~~~~
+kernel/sched/walt.h:348:56: note: format string is defined here
+  348 | #define SCHED_PRINT(arg)        printk_deferred("%s=%llu", #arg, arg)
+      |                                                     ~~~^
+      |                                                        |
+      |                                                        long long unsigned int
+      |                                                     %u
+kernel/sched/walt.h: In function ‘walt_rq_dump’:
+kernel/sched/walt.h:348:49: warning: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 3 has type ‘u32’ {aka ‘unsigned int’} [-Wformat=]
+  348 | #define SCHED_PRINT(arg)        printk_deferred("%s=%llu", #arg, arg)
+      |                                                 ^~~~~~~~~
+......
+  402 |  SCHED_PRINT(rq->prev_window_size);
+      |              ~~~~~~~~~~~~~~~~~~~~                
+      |                |
+      |                u32 {aka unsigned int}
+kernel/sched/walt.h:402:2: note: in expansion of macro ‘SCHED_PRINT’
+  402 |  SCHED_PRINT(rq->prev_window_size);
+      |  ^~~~~~~~~~~
+kernel/sched/walt.h:348:56: note: format string is defined here
+  348 | #define SCHED_PRINT(arg)        printk_deferred("%s=%llu", #arg, arg)
+      |                                                     ~~~^
+      |                                                        |
+      |                                                        long long unsigned int
+      |                                                     %u
+kernel/sched/walt.h:348:49: warning: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 3 has type ‘unsigned int’ [-Wformat=]
+  348 | #define SCHED_PRINT(arg)        printk_deferred("%s=%llu", #arg, arg)
+      |                                                 ^~~~~~~~~
+......
+  423 |  SCHED_PRINT(sched_capacity_margin_up[cpu]);
+      |              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~       
+      |                                      |
+      |                                      unsigned int
+kernel/sched/walt.h:423:2: note: in expansion of macro ‘SCHED_PRINT’
+  423 |  SCHED_PRINT(sched_capacity_margin_up[cpu]);
+      |  ^~~~~~~~~~~
+kernel/sched/walt.h:348:56: note: format string is defined here
+  348 | #define SCHED_PRINT(arg)        printk_deferred("%s=%llu", #arg, arg)
+      |                                                     ~~~^
+      |                                                        |
+      |                                                        long long unsigned int
+      |                                                     %u
+kernel/sched/walt.h:348:49: warning: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 3 has type ‘unsigned int’ [-Wformat=]
+  348 | #define SCHED_PRINT(arg)        printk_deferred("%s=%llu", #arg, arg)
+      |                                                 ^~~~~~~~~
+......
+  424 |  SCHED_PRINT(sched_capacity_margin_down[cpu]);
+      |              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~     
+      |                                        |
+      |                                        unsigned int
+kernel/sched/walt.h:424:2: note: in expansion of macro ‘SCHED_PRINT’
+  424 |  SCHED_PRINT(sched_capacity_margin_down[cpu]);
+      |  ^~~~~~~~~~~
+kernel/sched/walt.h:348:56: note: format string is defined here
+  348 | #define SCHED_PRINT(arg)        printk_deferred("%s=%llu", #arg, arg)
+      |                                                     ~~~^
+      |                                                        |
+      |                                                        long long unsigned int
+      |                                                     %u
+kernel/sched/walt.h: In function ‘walt_dump’:
+kernel/sched/walt.h:433:46: warning: format ‘%lu’ expects argument of type ‘long unsigned int’, but argument 2 has type ‘u64’ {aka ‘long long unsigned int’} [-Wformat=]
+  433 |  printk_deferred("Time last window changed=%lu\n",
+      |                                            ~~^
+      |                                              |
+      |                                              long unsigned int
+      |                                            %llu
+  434 |    sched_ravg_window_change_time);
+      |    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~              
+      |    |
+      |    u64 {aka long long unsigned int}
+kernel/sched/walt.h:348:49: warning: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 3 has type ‘unsigned int’ [-Wformat=]
+  348 | #define SCHED_PRINT(arg)        printk_deferred("%s=%llu", #arg, arg)
+      |                                                 ^~~~~~~~~
+......
+  438 |  SCHED_PRINT(max_possible_capacity);
+      |              ~~~~~~~~~~~~~~~~~~~~~               
+      |              |
+      |              unsigned int
+kernel/sched/walt.h:438:2: note: in expansion of macro ‘SCHED_PRINT’
+  438 |  SCHED_PRINT(max_possible_capacity);
+      |  ^~~~~~~~~~~
+kernel/sched/walt.h:348:56: note: format string is defined here
+  348 | #define SCHED_PRINT(arg)        printk_deferred("%s=%llu", #arg, arg)
+      |                                                     ~~~^
+      |                                                        |
+      |                                                        long long unsigned int
+      |                                                     %u
+kernel/sched/walt.h:348:49: warning: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 3 has type ‘unsigned int’ [-Wformat=]
+  348 | #define SCHED_PRINT(arg)        printk_deferred("%s=%llu", #arg, arg)
+      |                                                 ^~~~~~~~~
+......
+  439 |  SCHED_PRINT(min_max_possible_capacity);
+      |              ~~~~~~~~~~~~~~~~~~~~~~~~~           
+      |              |
+      |              unsigned int
+kernel/sched/walt.h:439:2: note: in expansion of macro ‘SCHED_PRINT’
+  439 |  SCHED_PRINT(min_max_possible_capacity);
+      |  ^~~~~~~~~~~
+kernel/sched/walt.h:348:56: note: format string is defined here
+  348 | #define SCHED_PRINT(arg)        printk_deferred("%s=%llu", #arg, arg)
+      |                                                     ~~~^
+      |                                                        |
+      |                                                        long long unsigned int
+      |                                                     %u
+In file included from ./include/trace/define_trace.h:96,
+                 from ./include/trace/events/sched.h:1755,
+                 from kernel/sched/core.c:33:
+./include/trace/events/sched.h: In function ‘trace_raw_output_sched_compute_energy’:
+./include/trace/events/sched.h:1295:12: warning: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 7 has type ‘long unsigned int’ [-Wformat=]
+ 1295 |  TP_printk("pid=%d comm=%s util=%lu prev_cpu=%d prev_energy=%llu eval_cpu=%d eval_energy=%llu best_energy_cpu=%d best_energy=%llu",
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./include/trace/trace_events.h:360:22: note: in definition of macro ‘DECLARE_EVENT_CLASS’
+  360 |  trace_seq_printf(s, print);     \
+      |                      ^~~~~
+./include/trace/trace_events.h:79:9: note: in expansion of macro ‘PARAMS’
+   79 |         PARAMS(print));         \
+      |         ^~~~~~
+./include/trace/events/sched.h:1260:1: note: in expansion of macro ‘TRACE_EVENT’
+ 1260 | TRACE_EVENT(sched_compute_energy,
+      | ^~~~~~~~~~~
+./include/trace/events/sched.h:1295:2: note: in expansion of macro ‘TP_printk’
+ 1295 |  TP_printk("pid=%d comm=%s util=%lu prev_cpu=%d prev_energy=%llu eval_cpu=%d eval_energy=%llu best_energy_cpu=%d best_energy=%llu",
+      |  ^~~~~~~~~
+In file included from ./include/trace/trace_events.h:394,
+                 from ./include/trace/define_trace.h:96,
+                 from ./include/trace/events/sched.h:1755,
+                 from kernel/sched/core.c:33:
+./include/trace/events/sched.h:1295:64: note: format string is defined here
+ 1295 |  TP_printk("pid=%d comm=%s util=%lu prev_cpu=%d prev_energy=%llu eval_cpu=%d eval_energy=%llu best_energy_cpu=%d best_energy=%llu",
+      |                                                             ~~~^
+      |                                                                |
+      |                                                                long long unsigned int
+      |                                                             %lu
+In file included from ./include/trace/define_trace.h:96,
+                 from ./include/trace/events/sched.h:1755,
+                 from kernel/sched/core.c:33:
+./include/trace/events/sched.h:1295:12: warning: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 9 has type ‘long unsigned int’ [-Wformat=]
+ 1295 |  TP_printk("pid=%d comm=%s util=%lu prev_cpu=%d prev_energy=%llu eval_cpu=%d eval_energy=%llu best_energy_cpu=%d best_energy=%llu",
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./include/trace/trace_events.h:360:22: note: in definition of macro ‘DECLARE_EVENT_CLASS’
+  360 |  trace_seq_printf(s, print);     \
+      |                      ^~~~~
+./include/trace/trace_events.h:79:9: note: in expansion of macro ‘PARAMS’
+   79 |         PARAMS(print));         \
+      |         ^~~~~~
+./include/trace/events/sched.h:1260:1: note: in expansion of macro ‘TRACE_EVENT’
+ 1260 | TRACE_EVENT(sched_compute_energy,
+      | ^~~~~~~~~~~
+./include/trace/events/sched.h:1295:2: note: in expansion of macro ‘TP_printk’
+ 1295 |  TP_printk("pid=%d comm=%s util=%lu prev_cpu=%d prev_energy=%llu eval_cpu=%d eval_energy=%llu best_energy_cpu=%d best_energy=%llu",
+      |  ^~~~~~~~~
+In file included from ./include/trace/trace_events.h:394,
+                 from ./include/trace/define_trace.h:96,
+                 from ./include/trace/events/sched.h:1755,
+                 from kernel/sched/core.c:33:
+./include/trace/events/sched.h:1295:93: note: format string is defined here
+ 1295 |  TP_printk("pid=%d comm=%s util=%lu prev_cpu=%d prev_energy=%llu eval_cpu=%d eval_energy=%llu best_energy_cpu=%d best_energy=%llu",
+      |                                                                                          ~~~^
+      |                                                                                             |
+      |                                                                                             long long unsigned int
+      |                                                                                          %lu
+In file included from ./include/trace/define_trace.h:96,
+                 from ./include/trace/events/sched.h:1755,
+                 from kernel/sched/core.c:33:
+./include/trace/events/sched.h:1295:12: warning: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 11 has type ‘long unsigned int’ [-Wformat=]
+ 1295 |  TP_printk("pid=%d comm=%s util=%lu prev_cpu=%d prev_energy=%llu eval_cpu=%d eval_energy=%llu best_energy_cpu=%d best_energy=%llu",
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./include/trace/trace_events.h:360:22: note: in definition of macro ‘DECLARE_EVENT_CLASS’
+  360 |  trace_seq_printf(s, print);     \
+      |                      ^~~~~
+./include/trace/trace_events.h:79:9: note: in expansion of macro ‘PARAMS’
+   79 |         PARAMS(print));         \
+      |         ^~~~~~
+./include/trace/events/sched.h:1260:1: note: in expansion of macro ‘TRACE_EVENT’
+ 1260 | TRACE_EVENT(sched_compute_energy,
+      | ^~~~~~~~~~~
+./include/trace/events/sched.h:1295:2: note: in expansion of macro ‘TP_printk’
+ 1295 |  TP_printk("pid=%d comm=%s util=%lu prev_cpu=%d prev_energy=%llu eval_cpu=%d eval_energy=%llu best_energy_cpu=%d best_energy=%llu",
+      |  ^~~~~~~~~
+In file included from ./include/trace/trace_events.h:394,
+                 from ./include/trace/define_trace.h:96,
+                 from ./include/trace/events/sched.h:1755,
+                 from kernel/sched/core.c:33:
+./include/trace/events/sched.h:1295:129: note: format string is defined here
+ 1295 |  TP_printk("pid=%d comm=%s util=%lu prev_cpu=%d prev_energy=%llu eval_cpu=%d eval_energy=%llu best_energy_cpu=%d best_energy=%llu",
+      |                                                                                                                              ~~~^
+      |                                                                                                                                 |
+      |                                                                                                                                 long long unsigned int
+      |                                                                                                                              %lu
+In file included from ./include/trace/define_trace.h:96,
+                 from ./include/trace/events/sched.h:1755,
+                 from kernel/sched/core.c:33:
+./include/trace/events/walt.h: In function ‘trace_raw_output_sched_update_task_ravg’:
+./include/trace/events/walt.h:284:16: warning: format ‘%u’ expects argument of type ‘unsigned int’, but argument 27 has type ‘u64’ {aka ‘long long unsigned int’} [-Wformat=]
+  284 |      TP_printk("wc %llu ws %llu delta %llu event %s cpu %d cur_freq %u cur_pid %d task %d (%s) ms %llu delta %llu demand %u coloc_demand: %u sum %u irqtime %llu pred_demand %u rq_cs %llu rq_ps %llu cur_window %u (%s) prev_window %u (%s) nt_cs %llu nt_ps %llu active_time %u grp_cs %lld grp_ps %lld, grp_nt_cs %llu, grp_nt_ps: %llu curr_top %u prev_top %u",
+      |                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+./include/trace/trace_events.h:360:22: note: in definition of macro ‘DECLARE_EVENT_CLASS’
+  360 |  trace_seq_printf(s, print);     \
+      |                      ^~~~~
+./include/trace/trace_events.h:79:9: note: in expansion of macro ‘PARAMS’
+   79 |         PARAMS(print));         \
+      |         ^~~~~~
+./include/trace/events/walt.h:204:1: note: in expansion of macro ‘TRACE_EVENT’
+  204 | TRACE_EVENT(sched_update_task_ravg,
+      | ^~~~~~~~~~~
+./include/trace/events/walt.h:284:6: note: in expansion of macro ‘TP_printk’
+  284 |      TP_printk("wc %llu ws %llu delta %llu event %s cpu %d cur_freq %u cur_pid %d task %d (%s) ms %llu delta %llu demand %u coloc_demand: %u sum %u irqtime %llu pred_demand %u rq_cs %llu rq_ps %llu cur_window %u (%s) prev_window %u (%s) nt_cs %llu nt_ps %llu active_time %u grp_cs %lld grp_ps %lld, grp_nt_cs %llu, grp_nt_ps: %llu curr_top %u prev_top %u",
+      |      ^~~~~~~~~
+In file included from ./include/trace/events/sched.h:1750,
+                 from ./include/trace/trace_events.h:394,
+                 from ./include/trace/define_trace.h:96,
+                 from ./include/trace/events/sched.h:1755,
+                 from kernel/sched/core.c:33:
+./include/trace/events/walt.h:284:256: note: format string is defined here
+  284 |      TP_printk("wc %llu ws %llu delta %llu event %s cpu %d cur_freq %u cur_pid %d task %d (%s) ms %llu delta %llu demand %u coloc_demand: %u sum %u irqtime %llu pred_demand %u rq_cs %llu rq_ps %llu cur_window %u (%s) prev_window %u (%s) nt_cs %llu nt_ps %llu active_time %u grp_cs %lld grp_ps %lld, grp_nt_cs %llu, grp_nt_ps: %llu curr_top %u prev_top %u",
+      |                                                                                                                                                                                                                                                               ~^
+      |                                                                                                                                                                                                                                                                |
+      |                                                                                                                                                                                                                                                                unsigned int
+      |                                                                                                                                                                                                                                                               %llu
+In file included from kernel/sched/core.c:30:
+At top level:
+kernel/sched/walt.h:444:12: warning: ‘in_sched_bug’ defined but not used [-Wunused-variable]
+  444 | static int in_sched_bug;
+      |            ^~~~~~~~~~~~
+  CC      kernel/time/timer_list.o
+  CC      mm/compaction.o
+  CC      kernel/sched/clock.o
+  CC      kernel/trace/trace.o
+  CC      kernel/time/timeconv.o
+  CC      kernel/time/timecounter.o
+  CC      mm/vmacache.o
+  CC      mm/interval_tree.o
+  CC      kernel/sched/cputime.o
+In file included from kernel/sched/cputime.c:6:
+kernel/sched/walt.h: In function ‘walt_task_dump’:
+kernel/sched/walt.h:348:49: warning: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 3 has type ‘pid_t’ {aka ‘int’} [-Wformat=]
+  348 | #define SCHED_PRINT(arg)        printk_deferred("%s=%llu", #arg, arg)
+      |                                                 ^~~~~~~~~
+......
+  357 |  SCHED_PRINT(p->pid);
+      |              ~~~~~~                              
+      |               |
+      |               pid_t {aka int}
+kernel/sched/walt.h:357:2: note: in expansion of macro ‘SCHED_PRINT’
+  357 |  SCHED_PRINT(p->pid);
+      |  ^~~~~~~~~~~
+kernel/sched/walt.h:348:56: note: format string is defined here
+  348 | #define SCHED_PRINT(arg)        printk_deferred("%s=%llu", #arg, arg)
+      |                                                     ~~~^
+      |                                                        |
+      |                                                        long long unsigned int
+      |                                                     %u
+kernel/sched/walt.h:348:49: warning: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 3 has type ‘u32’ {aka ‘unsigned int’} [-Wformat=]
+  348 | #define SCHED_PRINT(arg)        printk_deferred("%s=%llu", #arg, arg)
+      |                                                 ^~~~~~~~~
+......
+  359 |  SCHED_PRINT(p->ravg.demand);
+      |              ~~~~~~~~~~~~~~                      
+      |                     |
+      |                     u32 {aka unsigned int}
+kernel/sched/walt.h:359:2: note: in expansion of macro ‘SCHED_PRINT’
+  359 |  SCHED_PRINT(p->ravg.demand);
+      |  ^~~~~~~~~~~
+kernel/sched/walt.h:348:56: note: format string is defined here
+  348 | #define SCHED_PRINT(arg)        printk_deferred("%s=%llu", #arg, arg)
+      |                                                     ~~~^
+      |                                                        |
+      |                                                        long long unsigned int
+      |                                                     %u
+kernel/sched/walt.h:348:49: warning: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 3 has type ‘u32’ {aka ‘unsigned int’} [-Wformat=]
+  348 | #define SCHED_PRINT(arg)        printk_deferred("%s=%llu", #arg, arg)
+      |                                                 ^~~~~~~~~
+......
+  360 |  SCHED_PRINT(p->ravg.coloc_demand);
+      |              ~~~~~~~~~~~~~~~~~~~~                
+      |                     |
+      |                     u32 {aka unsigned int}
+kernel/sched/walt.h:360:2: note: in expansion of macro ‘SCHED_PRINT’
+  360 |  SCHED_PRINT(p->ravg.coloc_demand);
+      |  ^~~~~~~~~~~
+kernel/sched/walt.h:348:56: note: format string is defined here
+  348 | #define SCHED_PRINT(arg)        printk_deferred("%s=%llu", #arg, arg)
+      |                                                     ~~~^
+      |                                                        |
+      |                                                        long long unsigned int
+      |                                                     %u
+kernel/sched/walt.h:348:49: warning: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 3 has type ‘unsigned int’ [-Wformat=]
+  348 | #define SCHED_PRINT(arg)        printk_deferred("%s=%llu", #arg, arg)
+      |                                                 ^~~~~~~~~
+......
+  361 |  SCHED_PRINT(sched_ravg_window);
+      |              ~~~~~~~~~~~~~~~~~                   
+      |              |
+      |              unsigned int
+kernel/sched/walt.h:361:2: note: in expansion of macro ‘SCHED_PRINT’
+  361 |  SCHED_PRINT(sched_ravg_window);
+      |  ^~~~~~~~~~~
+kernel/sched/walt.h:348:56: note: format string is defined here
+  348 | #define SCHED_PRINT(arg)        printk_deferred("%s=%llu", #arg, arg)
+      |                                                     ~~~^
+      |                                                        |
+      |                                                        long long unsigned int
+      |                                                     %u
+kernel/sched/walt.h:348:49: warning: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 3 has type ‘unsigned int’ [-Wformat=]
+  348 | #define SCHED_PRINT(arg)        printk_deferred("%s=%llu", #arg, arg)
+      |                                                 ^~~~~~~~~
+......
+  362 |  SCHED_PRINT(new_sched_ravg_window);
+      |              ~~~~~~~~~~~~~~~~~~~~~               
+      |              |
+      |              unsigned int
+kernel/sched/walt.h:362:2: note: in expansion of macro ‘SCHED_PRINT’
+  362 |  SCHED_PRINT(new_sched_ravg_window);
+      |  ^~~~~~~~~~~
+kernel/sched/walt.h:348:56: note: format string is defined here
+  348 | #define SCHED_PRINT(arg)        printk_deferred("%s=%llu", #arg, arg)
+      |                                                     ~~~^
+      |                                                        |
+      |                                                        long long unsigned int
+      |                                                     %u
+kernel/sched/walt.h:348:49: warning: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 3 has type ‘int’ [-Wformat=]
+  348 | #define SCHED_PRINT(arg)        printk_deferred("%s=%llu", #arg, arg)
+      |                                                 ^~~~~~~~~
+......
+  378 |  SCHED_PRINT(p->misfit);
+      |              ~~~~~~~~~                           
+      |               |
+      |               int
+kernel/sched/walt.h:378:2: note: in expansion of macro ‘SCHED_PRINT’
+  378 |  SCHED_PRINT(p->misfit);
+      |  ^~~~~~~~~~~
+kernel/sched/walt.h:348:56: note: format string is defined here
+  348 | #define SCHED_PRINT(arg)        printk_deferred("%s=%llu", #arg, arg)
+      |                                                     ~~~^
+      |                                                        |
+      |                                                        long long unsigned int
+      |                                                     %u
+kernel/sched/walt.h:348:49: warning: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 3 has type ‘u32’ {aka ‘unsigned int’} [-Wformat=]
+  348 | #define SCHED_PRINT(arg)        printk_deferred("%s=%llu", #arg, arg)
+      |                                                 ^~~~~~~~~
+......
+  379 |  SCHED_PRINT(p->unfilter);
+      |              ~~~~~~~~~~~                         
+      |               |
+      |               u32 {aka unsigned int}
+kernel/sched/walt.h:379:2: note: in expansion of macro ‘SCHED_PRINT’
+  379 |  SCHED_PRINT(p->unfilter);
+      |  ^~~~~~~~~~~
+kernel/sched/walt.h:348:56: note: format string is defined here
+  348 | #define SCHED_PRINT(arg)        printk_deferred("%s=%llu", #arg, arg)
+      |                                                     ~~~^
+      |                                                        |
+      |                                                        long long unsigned int
+      |                                                     %u
+kernel/sched/walt.h: In function ‘walt_rq_dump’:
+kernel/sched/walt.h:348:49: warning: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 3 has type ‘u32’ {aka ‘unsigned int’} [-Wformat=]
+  348 | #define SCHED_PRINT(arg)        printk_deferred("%s=%llu", #arg, arg)
+      |                                                 ^~~~~~~~~
+......
+  402 |  SCHED_PRINT(rq->prev_window_size);
+      |              ~~~~~~~~~~~~~~~~~~~~                
+      |                |
+      |                u32 {aka unsigned int}
+kernel/sched/walt.h:402:2: note: in expansion of macro ‘SCHED_PRINT’
+  402 |  SCHED_PRINT(rq->prev_window_size);
+      |  ^~~~~~~~~~~
+kernel/sched/walt.h:348:56: note: format string is defined here
+  348 | #define SCHED_PRINT(arg)        printk_deferred("%s=%llu", #arg, arg)
+      |                                                     ~~~^
+      |                                                        |
+      |                                                        long long unsigned int
+      |                                                     %u
+kernel/sched/walt.h:348:49: warning: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 3 has type ‘unsigned int’ [-Wformat=]
+  348 | #define SCHED_PRINT(arg)        printk_deferred("%s=%llu", #arg, arg)
+      |                                                 ^~~~~~~~~
+......
+  423 |  SCHED_PRINT(sched_capacity_margin_up[cpu]);
+      |              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~       
+      |                                      |
+      |                                      unsigned int
+kernel/sched/walt.h:423:2: note: in expansion of macro ‘SCHED_PRINT’
+  423 |  SCHED_PRINT(sched_capacity_margin_up[cpu]);
+      |  ^~~~~~~~~~~
+kernel/sched/walt.h:348:56: note: format string is defined here
+  348 | #define SCHED_PRINT(arg)        printk_deferred("%s=%llu", #arg, arg)
+      |                                                     ~~~^
+      |                                                        |
+      |                                                        long long unsigned int
+      |                                                     %u
+kernel/sched/walt.h:348:49: warning: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 3 has type ‘unsigned int’ [-Wformat=]
+  348 | #define SCHED_PRINT(arg)        printk_deferred("%s=%llu", #arg, arg)
+      |                                                 ^~~~~~~~~
+......
+  424 |  SCHED_PRINT(sched_capacity_margin_down[cpu]);
+      |              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~     
+      |                                        |
+      |                                        unsigned int
+kernel/sched/walt.h:424:2: note: in expansion of macro ‘SCHED_PRINT’
+  424 |  SCHED_PRINT(sched_capacity_margin_down[cpu]);
+      |  ^~~~~~~~~~~
+kernel/sched/walt.h:348:56: note: format string is defined here
+  348 | #define SCHED_PRINT(arg)        printk_deferred("%s=%llu", #arg, arg)
+      |                                                     ~~~^
+      |                                                        |
+      |                                                        long long unsigned int
+      |                                                     %u
+kernel/sched/walt.h: In function ‘walt_dump’:
+kernel/sched/walt.h:433:46: warning: format ‘%lu’ expects argument of type ‘long unsigned int’, but argument 2 has type ‘u64’ {aka ‘long long unsigned int’} [-Wformat=]
+  433 |  printk_deferred("Time last window changed=%lu\n",
+      |                                            ~~^
+      |                                              |
+      |                                              long unsigned int
+      |                                            %llu
+  434 |    sched_ravg_window_change_time);
+      |    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~              
+      |    |
+      |    u64 {aka long long unsigned int}
+kernel/sched/walt.h:348:49: warning: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 3 has type ‘unsigned int’ [-Wformat=]
+  348 | #define SCHED_PRINT(arg)        printk_deferred("%s=%llu", #arg, arg)
+      |                                                 ^~~~~~~~~
+......
+  438 |  SCHED_PRINT(max_possible_capacity);
+      |              ~~~~~~~~~~~~~~~~~~~~~               
+      |              |
+      |              unsigned int
+kernel/sched/walt.h:438:2: note: in expansion of macro ‘SCHED_PRINT’
+  438 |  SCHED_PRINT(max_possible_capacity);
+      |  ^~~~~~~~~~~
+kernel/sched/walt.h:348:56: note: format string is defined here
+  348 | #define SCHED_PRINT(arg)        printk_deferred("%s=%llu", #arg, arg)
+      |                                                     ~~~^
+      |                                                        |
+      |                                                        long long unsigned int
+      |                                                     %u
+kernel/sched/walt.h:348:49: warning: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 3 has type ‘unsigned int’ [-Wformat=]
+  348 | #define SCHED_PRINT(arg)        printk_deferred("%s=%llu", #arg, arg)
+      |                                                 ^~~~~~~~~
+......
+  439 |  SCHED_PRINT(min_max_possible_capacity);
+      |              ~~~~~~~~~~~~~~~~~~~~~~~~~           
+      |              |
+      |              unsigned int
+kernel/sched/walt.h:439:2: note: in expansion of macro ‘SCHED_PRINT’
+  439 |  SCHED_PRINT(min_max_possible_capacity);
+      |  ^~~~~~~~~~~
+kernel/sched/walt.h:348:56: note: format string is defined here
+  348 | #define SCHED_PRINT(arg)        printk_deferred("%s=%llu", #arg, arg)
+      |                                                     ~~~^
+      |                                                        |
+      |                                                        long long unsigned int
+      |                                                     %u
+At top level:
+kernel/sched/walt.h:444:12: warning: ‘in_sched_bug’ defined but not used [-Wunused-variable]
+  444 | static int in_sched_bug;
+      |            ^~~~~~~~~~~~
+  CC      kernel/trace/trace_output.o
+  CC      kernel/time/alarmtimer.o
+  CC      kernel/trace/trace_seq.o
+  CC      mm/list_lru.o
+  CC      kernel/sched/idle.o
+  CC      kernel/time/posix-timers.o
+  CC      kernel/trace/trace_stat.o
+  CC      mm/workingset.o
+  CC      kernel/trace/trace_printk.o
+  CC      kernel/sched/fair.o
+In file included from kernel/sched/fair.c:27:
+kernel/sched/walt.h: In function ‘walt_task_dump’:
+kernel/sched/walt.h:348:49: warning: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 3 has type ‘pid_t’ {aka ‘int’} [-Wformat=]
+  348 | #define SCHED_PRINT(arg)        printk_deferred("%s=%llu", #arg, arg)
+      |                                                 ^~~~~~~~~
+......
+  357 |  SCHED_PRINT(p->pid);
+      |              ~~~~~~                              
+      |               |
+      |               pid_t {aka int}
+kernel/sched/walt.h:357:2: note: in expansion of macro ‘SCHED_PRINT’
+  357 |  SCHED_PRINT(p->pid);
+      |  ^~~~~~~~~~~
+kernel/sched/walt.h:348:56: note: format string is defined here
+  348 | #define SCHED_PRINT(arg)        printk_deferred("%s=%llu", #arg, arg)
+      |                                                     ~~~^
+      |                                                        |
+      |                                                        long long unsigned int
+      |                                                     %u
+kernel/sched/walt.h:348:49: warning: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 3 has type ‘u32’ {aka ‘unsigned int’} [-Wformat=]
+  348 | #define SCHED_PRINT(arg)        printk_deferred("%s=%llu", #arg, arg)
+      |                                                 ^~~~~~~~~
+......
+  359 |  SCHED_PRINT(p->ravg.demand);
+      |              ~~~~~~~~~~~~~~                      
+      |                     |
+      |                     u32 {aka unsigned int}
+kernel/sched/walt.h:359:2: note: in expansion of macro ‘SCHED_PRINT’
+  359 |  SCHED_PRINT(p->ravg.demand);
+      |  ^~~~~~~~~~~
+kernel/sched/walt.h:348:56: note: format string is defined here
+  348 | #define SCHED_PRINT(arg)        printk_deferred("%s=%llu", #arg, arg)
+      |                                                     ~~~^
+      |                                                        |
+      |                                                        long long unsigned int
+      |                                                     %u
+kernel/sched/walt.h:348:49: warning: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 3 has type ‘u32’ {aka ‘unsigned int’} [-Wformat=]
+  348 | #define SCHED_PRINT(arg)        printk_deferred("%s=%llu", #arg, arg)
+      |                                                 ^~~~~~~~~
+......
+  360 |  SCHED_PRINT(p->ravg.coloc_demand);
+      |              ~~~~~~~~~~~~~~~~~~~~                
+      |                     |
+      |                     u32 {aka unsigned int}
+kernel/sched/walt.h:360:2: note: in expansion of macro ‘SCHED_PRINT’
+  360 |  SCHED_PRINT(p->ravg.coloc_demand);
+      |  ^~~~~~~~~~~
+kernel/sched/walt.h:348:56: note: format string is defined here
+  348 | #define SCHED_PRINT(arg)        printk_deferred("%s=%llu", #arg, arg)
+      |                                                     ~~~^
+      |                                                        |
+      |                                                        long long unsigned int
+      |                                                     %u
+kernel/sched/walt.h:348:49: warning: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 3 has type ‘unsigned int’ [-Wformat=]
+  348 | #define SCHED_PRINT(arg)        printk_deferred("%s=%llu", #arg, arg)
+      |                                                 ^~~~~~~~~
+......
+  361 |  SCHED_PRINT(sched_ravg_window);
+      |              ~~~~~~~~~~~~~~~~~                   
+      |              |
+      |              unsigned int
+kernel/sched/walt.h:361:2: note: in expansion of macro ‘SCHED_PRINT’
+  361 |  SCHED_PRINT(sched_ravg_window);
+      |  ^~~~~~~~~~~
+kernel/sched/walt.h:348:56: note: format string is defined here
+  348 | #define SCHED_PRINT(arg)        printk_deferred("%s=%llu", #arg, arg)
+      |                                                     ~~~^
+      |                                                        |
+      |                                                        long long unsigned int
+      |                                                     %u
+kernel/sched/walt.h:348:49: warning: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 3 has type ‘unsigned int’ [-Wformat=]
+  348 | #define SCHED_PRINT(arg)        printk_deferred("%s=%llu", #arg, arg)
+      |                                                 ^~~~~~~~~
+......
+  362 |  SCHED_PRINT(new_sched_ravg_window);
+      |              ~~~~~~~~~~~~~~~~~~~~~               
+      |              |
+      |              unsigned int
+kernel/sched/walt.h:362:2: note: in expansion of macro ‘SCHED_PRINT’
+  362 |  SCHED_PRINT(new_sched_ravg_window);
+      |  ^~~~~~~~~~~
+kernel/sched/walt.h:348:56: note: format string is defined here
+  348 | #define SCHED_PRINT(arg)        printk_deferred("%s=%llu", #arg, arg)
+      |                                                     ~~~^
+      |                                                        |
+      |                                                        long long unsigned int
+      |                                                     %u
+kernel/sched/walt.h:348:49: warning: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 3 has type ‘int’ [-Wformat=]
+  348 | #define SCHED_PRINT(arg)        printk_deferred("%s=%llu", #arg, arg)
+      |                                                 ^~~~~~~~~
+......
+  378 |  SCHED_PRINT(p->misfit);
+      |              ~~~~~~~~~                           
+      |               |
+      |               int
+kernel/sched/walt.h:378:2: note: in expansion of macro ‘SCHED_PRINT’
+  378 |  SCHED_PRINT(p->misfit);
+      |  ^~~~~~~~~~~
+kernel/sched/walt.h:348:56: note: format string is defined here
+  348 | #define SCHED_PRINT(arg)        printk_deferred("%s=%llu", #arg, arg)
+      |                                                     ~~~^
+      |                                                        |
+      |                                                        long long unsigned int
+      |                                                     %u
+kernel/sched/walt.h:348:49: warning: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 3 has type ‘u32’ {aka ‘unsigned int’} [-Wformat=]
+  348 | #define SCHED_PRINT(arg)        printk_deferred("%s=%llu", #arg, arg)
+      |                                                 ^~~~~~~~~
+......
+  379 |  SCHED_PRINT(p->unfilter);
+      |              ~~~~~~~~~~~                         
+      |               |
+      |               u32 {aka unsigned int}
+kernel/sched/walt.h:379:2: note: in expansion of macro ‘SCHED_PRINT’
+  379 |  SCHED_PRINT(p->unfilter);
+      |  ^~~~~~~~~~~
+kernel/sched/walt.h:348:56: note: format string is defined here
+  348 | #define SCHED_PRINT(arg)        printk_deferred("%s=%llu", #arg, arg)
+      |                                                     ~~~^
+      |                                                        |
+      |                                                        long long unsigned int
+      |                                                     %u
+kernel/sched/walt.h: In function ‘walt_rq_dump’:
+kernel/sched/walt.h:348:49: warning: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 3 has type ‘u32’ {aka ‘unsigned int’} [-Wformat=]
+  348 | #define SCHED_PRINT(arg)        printk_deferred("%s=%llu", #arg, arg)
+      |                                                 ^~~~~~~~~
+......
+  402 |  SCHED_PRINT(rq->prev_window_size);
+      |              ~~~~~~~~~~~~~~~~~~~~                
+      |                |
+      |                u32 {aka unsigned int}
+kernel/sched/walt.h:402:2: note: in expansion of macro ‘SCHED_PRINT’
+  402 |  SCHED_PRINT(rq->prev_window_size);
+      |  ^~~~~~~~~~~
+kernel/sched/walt.h:348:56: note: format string is defined here
+  348 | #define SCHED_PRINT(arg)        printk_deferred("%s=%llu", #arg, arg)
+      |                                                     ~~~^
+      |                                                        |
+      |                                                        long long unsigned int
+      |                                                     %u
+kernel/sched/walt.h:348:49: warning: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 3 has type ‘unsigned int’ [-Wformat=]
+  348 | #define SCHED_PRINT(arg)        printk_deferred("%s=%llu", #arg, arg)
+      |                                                 ^~~~~~~~~
+......
+  423 |  SCHED_PRINT(sched_capacity_margin_up[cpu]);
+      |              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~       
+      |                                      |
+      |                                      unsigned int
+kernel/sched/walt.h:423:2: note: in expansion of macro ‘SCHED_PRINT’
+  423 |  SCHED_PRINT(sched_capacity_margin_up[cpu]);
+      |  ^~~~~~~~~~~
+kernel/sched/walt.h:348:56: note: format string is defined here
+  348 | #define SCHED_PRINT(arg)        printk_deferred("%s=%llu", #arg, arg)
+      |                                                     ~~~^
+      |                                                        |
+      |                                                        long long unsigned int
+      |                                                     %u
+kernel/sched/walt.h:348:49: warning: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 3 has type ‘unsigned int’ [-Wformat=]
+  348 | #define SCHED_PRINT(arg)        printk_deferred("%s=%llu", #arg, arg)
+      |                                                 ^~~~~~~~~
+......
+  424 |  SCHED_PRINT(sched_capacity_margin_down[cpu]);
+      |              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~     
+      |                                        |
+      |                                        unsigned int
+kernel/sched/walt.h:424:2: note: in expansion of macro ‘SCHED_PRINT’
+  424 |  SCHED_PRINT(sched_capacity_margin_down[cpu]);
+      |  ^~~~~~~~~~~
+kernel/sched/walt.h:348:56: note: format string is defined here
+  348 | #define SCHED_PRINT(arg)        printk_deferred("%s=%llu", #arg, arg)
+      |                                                     ~~~^
+      |                                                        |
+      |                                                        long long unsigned int
+      |                                                     %u
+kernel/sched/walt.h: In function ‘walt_dump’:
+kernel/sched/walt.h:433:46: warning: format ‘%lu’ expects argument of type ‘long unsigned int’, but argument 2 has type ‘u64’ {aka ‘long long unsigned int’} [-Wformat=]
+  433 |  printk_deferred("Time last window changed=%lu\n",
+      |                                            ~~^
+      |                                              |
+      |                                              long unsigned int
+      |                                            %llu
+  434 |    sched_ravg_window_change_time);
+      |    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~              
+      |    |
+      |    u64 {aka long long unsigned int}
+kernel/sched/walt.h:348:49: warning: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 3 has type ‘unsigned int’ [-Wformat=]
+  348 | #define SCHED_PRINT(arg)        printk_deferred("%s=%llu", #arg, arg)
+      |                                                 ^~~~~~~~~
+......
+  438 |  SCHED_PRINT(max_possible_capacity);
+      |              ~~~~~~~~~~~~~~~~~~~~~               
+      |              |
+      |              unsigned int
+kernel/sched/walt.h:438:2: note: in expansion of macro ‘SCHED_PRINT’
+  438 |  SCHED_PRINT(max_possible_capacity);
+      |  ^~~~~~~~~~~
+kernel/sched/walt.h:348:56: note: format string is defined here
+  348 | #define SCHED_PRINT(arg)        printk_deferred("%s=%llu", #arg, arg)
+      |                                                     ~~~^
+      |                                                        |
+      |                                                        long long unsigned int
+      |                                                     %u
+kernel/sched/walt.h:348:49: warning: format ‘%llu’ expects argument of type ‘long long unsigned int’, but argument 3 has type ‘unsigned int’ [-Wformat=]
+  348 | #define SCHED_PRINT(arg)        printk_deferred("%s=%llu", #arg, arg)
+      |                                                 ^~~~~~~~~
+......
+  439 |  SCHED_PRINT(min_max_possible_capacity);
+      |              ~~~~~~~~~~~~~~~~~~~~~~~~~           
+      |              |
+      |              unsigned int
+kernel/sched/walt.h:439:2: note: in expansion of macro ‘SCHED_PRINT’
+  439 |  SCHED_PRINT(min_max_possible_capacity);
+      |  ^~~~~~~~~~~
+kernel/sched/walt.h:348:56: note: format string is defined here
+  348 | #define SCHED_PRINT(arg)        printk_deferred("%s=%llu", #arg, arg)
+      |                                                     ~~~^
+      |                                                        |
+      |                                                        long long unsigned int
+      |                                                     %u
+kernel/sched/fair.c: In function ‘get_start_cpu’:
+kernel/sched/fair.c:7066:2: error: implicit declaration of function ‘trace_sched_cpu_sel’; did you mean ‘trace_sched_cpu_util’? [-Werror=implicit-function-declaration]
+ 7066 |  trace_sched_cpu_sel(p,
+      |  ^~~~~~~~~~~~~~~~~~~
+      |  trace_sched_cpu_util
+kernel/sched/fair.c:7073:4: error: implicit declaration of function ‘test_task_ux’; did you mean ‘set_task_rq’? [-Werror=implicit-function-declaration]
+ 7073 |    test_task_ux(p),
+      |    ^~~~~~~~~~~~
+      |    set_task_rq
+kernel/sched/fair.c:7075:4: error: ‘sysctl_prefer_silver’ undeclared (first use in this function)
+ 7075 |    sysctl_prefer_silver,
+      |    ^~~~~~~~~~~~~~~~~~~~
+kernel/sched/fair.c:7075:4: note: each undeclared identifier is reported only once for each function it appears in
+kernel/sched/fair.c: In function ‘find_best_target’:
+kernel/sched/fair.c:7117:7: warning: unused variable ‘skip_big_cluster’ [-Wunused-variable]
+ 7117 |  bool skip_big_cluster = false;
+      |       ^~~~~~~~~~~~~~~~
+kernel/sched/fair.c: In function ‘detach_tasks’:
+kernel/sched/fair.c:9186:7: warning: unused variable ‘skip_big_cluster’ [-Wunused-variable]
+ 9186 |  bool skip_big_cluster = false;
+      |       ^~~~~~~~~~~~~~~~
+In file included from kernel/sched/fair.c:27:
+At top level:
+kernel/sched/walt.h:444:12: warning: ‘in_sched_bug’ defined but not used [-Wunused-variable]
+  444 | static int in_sched_bug;
+      |            ^~~~~~~~~~~~
+cc1: some warnings being treated as errors
+make[2]: *** [scripts/Makefile.build:338: kernel/sched/fair.o] Error 1
+make[1]: *** [scripts/Makefile.build:642: kernel/sched] Error 2
+make[1]: *** Waiting for unfinished jobs....
+  CC      mm/debug.o
+  CC      kernel/time/posix-cpu-timers.o
+  CC      kernel/trace/trace_nop.o
+  AR      security/integrity/built-in.a
+  CC      security/keys/gc.o
+  CC      kernel/trace/trace_sched_switch.o
+  CC      kernel/time/posix-clock.o
+  CC      security/keys/key.o
+  CC      security/keys/keyring.o
+  CC      security/keys/keyctl.o
+  CC      security/keys/permission.o
+  CC      mm/gup.o
+  CC      security/keys/process_keys.o
+  CC      security/keys/request_key.o
+  CC      security/keys/request_key_auth.o
+  CC      security/keys/user_defined.o
+  CC      security/keys/compat.o
+  CC      security/keys/proc.o
+  CC      security/keys/sysctl.o
+  AR      security/keys/built-in.a
+  GEN     security/selinux/flask.h security/selinux/av_permissions.h
+  CC      security/selinux/avc.o
+  CC      kernel/trace/blktrace.o
+  CC      security/selinux/hooks.o
+  CC      security/selinux/selinuxfs.o
+  CC      mm/highmem.o
+  CC      security/selinux/netlink.o
+  CC      kernel/time/itimer.o
+  CC      security/selinux/nlmsgtab.o
+  CC      security/selinux/netif.o
+  CC      security/selinux/netnode.o
+  CC      security/selinux/netport.o
+  CC      security/selinux/exports.o
+  CC      security/selinux/ss/ebitmap.o
+  CC      security/selinux/ss/hashtab.o
+  CC      security/selinux/ss/symtab.o
+  CC      security/selinux/ss/sidtab.o
+  CC      security/selinux/ss/avtab.o
+  CC      security/selinux/ss/policydb.o
+  CC      security/selinux/ss/services.o
+  CC      security/selinux/ss/conditional.o
+  CC      security/selinux/ss/mls.o
+  CC      kernel/time/clockevents.o
+  CC      security/selinux/ss/status.o
+  CC      security/selinux/netlabel.o
+  AR      security/selinux/built-in.a
+  CC      security/smack/smack_lsm.o
+  CC      security/smack/smack_access.o
+  CC      security/smack/smackfs.o
+  AR      security/smack/built-in.a
+  CC      security/commoncap.o
+  CC      security/min_addr.o
+  CC      security/security.o
+  CC      security/lsm_audit.o
+  AR      security/built-in.a
+  CC      kernel/time/tick-common.o
+  CC      kernel/trace/trace_events.o
+  CC      mm/mincore.o
+  CC      kernel/time/tick-broadcast.o
+  CC      kernel/trace/trace_export.o
+  CC      kernel/trace/trace_event_perf.o
+  CC      mm/memory.o
+  CC      kernel/time/tick-broadcast-hrtimer.o
+  CC      kernel/time/sched_clock.o
+  CC      mm/mlock.o
+  CC      crypto/asymmetric_keys/public_key.o
+  AR      crypto/asymmetric_keys/built-in.a
+  CC      kernel/time/tick-oneshot.o
+  CC      kernel/trace/trace_events_filter.o
+  CC      crypto/crypto_wq.o
+  CC      kernel/time/tick-sched.o
+  CC      kernel/trace/trace_events_trigger.o
+  CC      kernel/time/vsyscall.o
+  AR      kernel/time/built-in.a
+  CC      crypto/aead.o
+  CC      mm/mmap.o
+  CC      crypto/seqiv.o
+  CC      mm/mprotect.o
+  CC      mm/mremap.o
+  CC      crypto/echainiv.o
+  CC      kernel/trace/bpf_trace.o
+  CC      block/partitions/check.o
+  CC      mm/msync.o
+  CC      crypto/akcipher.o
+  CC      block/partitions/msdos.o
+  CC      mm/page_vma_mapped.o
+  CC      crypto/kpp.o
+  CC      mm/pagewalk.o
+  CC      block/partitions/efi.o
+  AR      block/partitions/built-in.a
+  CC      crypto/cmac.o
+  CC      kernel/trace/power-traces.o
+  CC      mm/pgtable-generic.o
+  CC      crypto/hmac.o
+  CC      kernel/trace/rpm-traces.o
+  CC      crypto/xcbc.o
+  CC      block/bio.o
+  CC      mm/rmap.o
+  CC      kernel/trace/trace_probe.o
+  CC      crypto/crypto_null.o
+  CC      block/elevator.o
+  CC      crypto/md5.o
+  CC      kernel/trace/trace_uprobe.o
+  CC      crypto/sha1_generic.o
+  CC      mm/vmalloc.o
+  CC      kernel/trace/ipc_logging.o
+  AR      kernel/trace/built-in.a
+make: *** [Makefile:1275: kernel] Error 2
+make: *** Waiting for unfinished jobs....
+  CC      mm/process_vm_access.o
+  CC      crypto/sha256_generic.o
+  CC      block/blk-tag.o
+  CC      mm/showmem.o
+  CC      crypto/sha512_generic.o
+  CC      mm/vmpressure.o
+  CC      crypto/gf128mul.o
+  CC      mm/init-mm.o
+  CC      block/blk-core.o
+block/blk-core.c: In function ‘blk_dequeue_request’:
+block/blk-core.c:3052:24: warning: unused variable ‘q’ [-Wunused-variable]
+ 3052 |  struct request_queue *q = rq->q;
+      |                        ^
+  CC      crypto/ecb.o
+  CC      mm/nobootmem.o
+  CC      block/blk-sysfs.o
+  CC      crypto/cbc.o
+  CC      mm/madvise.o
+  CC      block/blk-flush.o
+  CC      crypto/cts.o
+  CC      block/blk-settings.o
+  CC      mm/memblock.o
+  CC      block/blk-ioc.o
+  CC      crypto/xts.o
+  CC      mm/page_io.o
+  CC      block/blk-map.o
+  CC      mm/swap_state.o
+  CC      block/blk-exec.o
+  CC      crypto/ctr.o
+  CC      block/blk-merge.o
+  CC      mm/swap_slots.o
+  CC      crypto/gcm.o
+  CC      block/blk-softirq.o
+  CC      mm/swapfile.o
+  CC      mm/swap_ratio.o
+  CC      block/blk-timeout.o
+  CC      crypto/cryptd.o
+  CC      crypto/des_generic.o
+  CC      mm/dmapool.o
+  CC      block/blk-lib.o
+  CC      mm/sparse.o
+  CC      crypto/twofish_generic.o
+  CC      crypto/twofish_common.o
+  CC      mm/sparse-vmemmap.o
+  CC      crypto/aes_generic.o
+  CC      crypto/arc4.o
+  CC      crypto/deflate.o
+  CC      block/blk-mq-tag.o
+  CC      block/blk-mq.o
+  CC      crypto/crc32c_generic.o
+  CC      block/blk-stat.o
+  CC      crypto/crc32_generic.o
+  CC      mm/slub.o
+mm/slub.c: In function ‘alloc_trace_locations’:
+mm/slub.c:6135:27: warning: format ‘%p’ expects argument of type ‘void *’, but argument 3 has type ‘long unsigned int’ [-Wformat=]
+ 6135 |   "alloc_list: call_site=%pS count=%zu object_size=%zu slab_size=%zu slab_name=%s\n",
+      |                          ~^
+      |                           |
+      |                           void *
+      |                          %ld
+ 6136 |    l->addr, l->count, s->object_size, s->size, s->name);
+      |    ~~~~~~~                 
+      |     |
+      |     long unsigned int
+mm/slub.c:6135:54: warning: format ‘%zu’ expects argument of type ‘size_t’, but argument 5 has type ‘unsigned int’ [-Wformat=]
+ 6135 |   "alloc_list: call_site=%pS count=%zu object_size=%zu slab_size=%zu slab_name=%s\n",
+      |                                                    ~~^
+      |                                                      |
+      |                                                      long unsigned int
+      |                                                    %u
+ 6136 |    l->addr, l->count, s->object_size, s->size, s->name);
+      |                       ~~~~~~~~~~~~~~                  
+      |                        |
+      |                        unsigned int
+mm/slub.c:6135:68: warning: format ‘%zu’ expects argument of type ‘size_t’, but argument 6 has type ‘unsigned int’ [-Wformat=]
+ 6135 |   "alloc_list: call_site=%pS count=%zu object_size=%zu slab_size=%zu slab_name=%s\n",
+      |                                                                  ~~^
+      |                                                                    |
+      |                                                                    long unsigned int
+      |                                                                  %u
+ 6136 |    l->addr, l->count, s->object_size, s->size, s->name);
+      |                                       ~~~~~~~                       
+      |                                        |
+      |                                        unsigned int
+  CC      mm/migrate.o
+  CC      block/blk-mq-sysfs.o
+  CC      mm/page_counter.o
+  CC      block/blk-mq-cpumap.o
+  CC      crypto/authenc.o
+  CC      crypto/authencesn.o
+  CC      mm/swap_cgroup.o
+  CC      block/blk-mq-sched.o
+  CC      crypto/lzo.o
+  CC      crypto/lz4.o
+  CC      block/ioctl.o
+  CC      block/genhd.o
+  CC      crypto/rng.o
+  CC      mm/page_isolation.o
+  CC      crypto/ansi_cprng.o
+  CC      block/partition-generic.o
+  CC      mm/memcontrol.o
+  CC      block/ioprio.o
+  CC      mm/zsmalloc.o
+  CC      crypto/drbg.o
+  CC      mm/early_ioremap.o
+  CC      block/badblocks.o
+  CC      crypto/ghash-generic.o
+  CC      mm/cma.o
+  CC      block/blk-rq-qos.o
+  CC      crypto/hash_info.o
+  CC      mm/usercopy.o
+  CC      crypto/zstd.o
+  AR      crypto/built-in.a
+  CC      block/scsi_ioctl.o
+  CC      mm/memfd.o
+  CC      block/noop-iosched.o
+  CC      mm/process_reclaim.o
+  CC      mm/nl_compat.o
+  AR      mm/built-in.a
+  CC      block/blk-cgroup.o
+  CC      block/mq-deadline.o
+  CC      block/kyber-iosched.o
+  CC      block/blk-mq-pci.o
+  CC      block/compat_ioctl.o
+  CC      block/cfq-iosched.o
+  CC      block/bio-crypt-ctx.o
+  CC      block/keyslot-manager.o
+  CC      block/blk-wbt.o
+  CC      block/blk-crypto.o
+  CC      block/blk-crypto-fallback.o
+  AR      block/built-in.a
