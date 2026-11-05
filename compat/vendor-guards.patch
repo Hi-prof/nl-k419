@@ -1,0 +1,12 @@
+diff --git a/vendor/oplus/kernel/secureguard/rootguard/oplus_guard_general.c b/vendor/oplus/kernel/secureguard/rootguard/oplus_guard_general.c
+--- a/vendor/oplus/kernel/secureguard/rootguard/oplus_guard_general.c
++++ b/vendor/oplus/kernel/secureguard/rootguard/oplus_guard_general.c
+@@ -83,7 +83,7 @@
+ 	return 0;
+ }
+ 
+-static void __exit boot_state_exit()
++static void __exit boot_state_exit(void)
+ {
+ 	return ;
+ }
