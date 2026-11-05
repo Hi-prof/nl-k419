@@ -161,7 +161,7 @@ jobs:
           set -o pipefail
           cd ksrc
           export CCACHE_SLOPPINESS=time_macros,include_file_mtime,include_file_ctime
-          timeout 19500 make -j"$JOBS" ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- \
+          timeout 19500 make -k -j"$JOBS" ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- \
                CC="ccache $CROSS_CC" HOSTCC="ccache gcc" KCFLAGS="-Wno-error" \
                --output-sync=target Image 2>&1 | tee "$GITHUB_WORKSPACE/build.log" | tail -5
           ls -l arch/arm64/boot/Image
