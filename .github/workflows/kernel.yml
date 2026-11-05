@@ -71,9 +71,13 @@ jobs:
           du -sh .git .
           df -h /
 
+      - name: 修补公开源码缺失项
+        run: |
+          chmod +x compat/*.sh
+          ./compat/prep_source.sh ksrc
+
       - name: 打厂商符号补丁
         run: |
-          chmod +x compat/apply_compat.sh
           ./compat/apply_compat.sh ksrc
 
       - name: 以设备真实配置为基线生成 .config
@@ -85,7 +89,7 @@ jobs:
           scripts/config --file .config -d MODVERSIONS
           scripts/config --file .config --set-str LOCALVERSION "-perf"
           scripts/config --file .config -e MODULES
-          make ARCH=arm64 olddefconfig
+          make ARCH=arm64 CC="$CROSS_CC" HOSTCC=gcc olddefconfig
           echo "==== 关键项 ===="
           grep -E '^CONFIG_MODULE_SIG|^# CONFIG_MODULE_SIG|MODVERSIONS|^CONFIG_LOCALVERSION=|^CONFIG_MODULES=' .config
           echo "==== 版本 ===="
@@ -96,7 +100,7 @@ jobs:
           set -o pipefail
           cd ksrc
           make -j"$JOBS" ARCH=arm64 CROSS_COMPILE=aarch64-linux-gnu- \
-               CC="$CROSS_CC" KCFLAGS="-Wno-error" \
+               CC="$CROSS_CC" HOSTCC=gcc KCFLAGS="-Wno-error" \
                Image dtbs 2>&1 | tee ../build.log
           ls -l arch/arm64/boot/Image
 
