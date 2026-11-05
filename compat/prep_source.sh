@@ -28,7 +28,8 @@ for path in glob.glob(os.path.join(K, "**", "Kconfig*"), recursive=True):
     out, mod = [], False
     for ln in src.splitlines(True):
         # 注意：内核 Kconfig 的 source 既可能带引号也可能不带（本树 block/Kconfig:248/251 就没引号）
-        m = re.match(r'\s*source\s+(?:"([^"]+)"|(\S+))', ln)
+        # 只认行首（无缩进）的 source 指令：帮助文本里以 "\tsource to the ..." 开头的行会被误伤
+        m = re.match(r'source\s+(?:"([^"]+)"|(\S+))', ln)
         if m:
             tgt = m.group(1) or m.group(2)
             if not tgt.startswith("$"):
