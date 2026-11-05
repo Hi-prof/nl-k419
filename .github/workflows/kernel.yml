@@ -180,13 +180,29 @@ jobs:
           grep -E 'kmalloc_debug_(enable|caches)' Module.symvers || {
             echo "::error::厂商符号未导出，模块会 Unknown symbol"; exit 1; }
           echo "== vmlinux 里是否真的存在 =="
-          nm vmlinux | grep -E 'kmalloc_debug_(enable|caches)' || true
+          aarch64-linux-gnu-nm vmlinux | grep -E 'kmalloc_debug_(enable|caches)'
           echo "== kernel release =="
           cat include/config/kernel.release
           echo "== 预期 vermagic =="
           echo "$(cat include/config/kernel.release) SMP preempt mod_unload aarch64"
           echo "== Image 头 =="
           python3 -c "d=open('arch/arm64/boot/Image','rb').read(); print(len(d), d[0x38:0x3c])"
+          python3 - <<'PY'
+          from pathlib import Path
+          config = Path('.config').read_text().splitlines()
+          for line in ('# CONFIG_MODULE_SIG_FORCE is not set', '# CONFIG_MODVERSIONS is not set',
+                       'CONFIG_MODULE_SIG=y', 'CONFIG_LOCALVERSION="-perf"'):
+              assert line in config, line
+          assert Path('include/config/kernel.release').read_text().strip() == '4.19.157-perf+'
+          exports = {line.split()[1] for line in Path('Module.symvers').read_text().splitlines()}
+          assert {'kmalloc_debug_enable', 'kmalloc_debug_caches'} <= exports
+          symbols = {parts[2]: int(parts[0], 16) for line in Path('System.map').read_text().splitlines()
+                     if len(parts := line.split()) == 3}
+          assert symbols['__bss_start'] <= symbols['selinux_state'] < symbols['__bss_stop'] <= symbols['_end']
+          image = Path('arch/arm64/boot/Image').read_bytes()
+          assert image[0x38:0x3c] == b'ARM\x64'
+          print('PASS: release, module configuration, exports, Image header and SELinux BSS layout')
+          PY
 
       - name: 上传产物
         if: always()
@@ -196,6 +212,8 @@ jobs:
           path: |
             ksrc/arch/arm64/boot/Image
             ksrc/Module.symvers
+            ksrc/System.map
+            ksrc/arch/arm64/kernel/vmlinux.lds
             ksrc/.config
             ksrc/include/config/kernel.release
             ksrc/include/generated/autoconf.h
